@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.smallbar {
+  // display: inline;
+  // position: absolute;
+  // top: 70%;
+  width: 80%;
+  background: transparent;
+  padding: 0.1rem auto;
+  margin-left: 3.5rem;
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+.smallbar-links {
+  align-self: center;
+  list-style-type: circle white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: left;
+  padding-left: 2rem;
+  // color: white;
+}
+.smallbar-link {
+  word-spacing: -0.4px;
+  color: $mainGrey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $mainYellow;
+  }
+}
+// .active {
+// color: $mainYellow;
+// }
+
+h1 {
+  align-self: center;
+  text-transform: uppercase;
+}

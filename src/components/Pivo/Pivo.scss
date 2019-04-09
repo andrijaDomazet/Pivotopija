@@ -1,0 +1,60 @@
+@import "../../index.scss";
+
+.img-container {
+  position: relative;
+}
+.pivo {
+  background: $mainYellow;
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  -webkit-box-shadow: 4px 5px 7px 5px rgba(150, 28, 8, 0.84);
+  box-shadow: 4px 5px 7px 5px rgba(150, 28, 8, 0.84);
+  img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+  }
+}
+.infoPiva {
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  background: #c59237;
+  background: -moz-linear-gradient(top, #c59237 0%, #876426 50%, #3d2d11 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #c59237 0%,
+    #876426 50%,
+    #3d2d11 100%
+  );
+  background: linear-gradient(to bottom, #c59237 0%, #876426 50%, #3d2d11 100%);
+}
+h2 {
+  border-top: 2px solid black;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.abv {
+  -moz-transform: rotate(325deg);
+  -webkit-transform: rotate(325deg);
+  -o-transform: rotate(325deg);
+  -ms-transform: rotate(325deg);
+  transform: rotate(325deg);
+  width: 2.5rem;
+  border: 1px solid black;
+  color: white;
+  background: red;
+  padding: 0.1rem;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  top: 5%;
+  left: 5%;
+  text-align: center;
+  letter-spacing: -1px;
+  word-spacing: -0.6px;
+  font-size: 0.8rem;
+}

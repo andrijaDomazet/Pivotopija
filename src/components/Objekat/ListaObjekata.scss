@@ -1,0 +1,28 @@
+// @import "../../index.scss";
+
+.objektiLista {
+  width: 70vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .objektiLista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .objektiLista {
+    width: 85vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1140px) {
+  .objektiLista {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 0;
+  }
+}

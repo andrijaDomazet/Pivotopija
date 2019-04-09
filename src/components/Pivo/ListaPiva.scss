@@ -1,0 +1,17 @@
+@import "../../index.scss";
+
+.lista_piva {
+  margin: 0 auto;
+  width: 65vw;
+  color: $mainBlack;
+  //   padding: 2rem 0;
+}
+
+@media screen and(min-width:768px) {
+  .lista_piva {
+    display: grid;
+    width: 60vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3.5rem;
+  }
+}

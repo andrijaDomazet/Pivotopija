@@ -1,0 +1,11 @@
+@import "../../index.scss";
+
+.main_cover {
+  background: white;
+  color: black;
+  width: 90%;
+  height: 60vh;
+  margin: 0 auto;
+  border: 5px solid $mainYellow;
+border-radius: 50px 0px 50px 0px;
+}

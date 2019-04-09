@@ -1,0 +1,43 @@
+@import "../../index.scss";
+
+.topbar {
+  background: #523d00;
+  background: -moz-linear-gradient(left, #523d00 0%, #856300 31%, #cc9900 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #523d00 0%,
+    #856300 31%,
+    #cc9900 100%
+  );
+  background: linear-gradient(to right, #523d00 0%, #856300 31%, #cc9900 100%);
+
+  padding: 0.1rem 1rem;
+  // display: grid;
+  // grid-template-columns: auto 1fr;
+}
+.top-links {
+  margin-left: 20rem;
+  margin-right: 2rem;
+  align-self: center;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: right;
+}
+.top-link {
+  //display: inline-block;
+  color: $mainBlack;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $mainYellow;
+    background: $mainBlack;
+    border: 2px solid $mainYellow;
+    border-radius: 0.5rem;
+  }
+}
+.active {
+  color: $mainGreen;
+}

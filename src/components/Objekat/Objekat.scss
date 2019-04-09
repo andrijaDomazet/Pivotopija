@@ -1,0 +1,72 @@
+@import "../../index.scss";
+
+.objekat {
+  background: $mainGrey;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  img {
+    width: 100%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    display: block;
+  }
+}
+
+.img-container {
+  position: relative;
+}
+.ocenjivanje {
+  position: absolute;
+  display: block;
+  top: 80%;
+  right: 5%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  color: $mainGreen;
+}
+
+.close-btn {
+  position: absolute;
+  display: block;
+  top: 5%;
+  right: 5%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  opacity: 0;
+
+  color: $mainGreen;
+}
+
+.img-container:hover .close-btn {
+  opacity: 1;
+}
+
+.objekat-info {
+  padding: 1rem 0.5rem;
+  h3 {
+    text-transform: uppercase;
+    color: $mainGreen;
+  }
+  h4 {
+    text-transform: capitalize;
+    margin: 0.2rem 0 0.6rem 0;
+    color: $mainBlack;
+  }
+  h5 {
+    text-transform: capitalize;
+    span {
+      color: $mainGreen;
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and(min-width:1140px) {
+  .objekat {
+    margin: 0.5rem 0;
+  }
+}
