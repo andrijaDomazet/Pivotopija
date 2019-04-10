@@ -13,6 +13,7 @@ class App extends Component {
     var pozadina = {
       width: "100%",
       height: "95vh",
+      marginTop: "1.5rem",
       backgroundImage: `url(${Background})`
     };
     return (
