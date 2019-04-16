@@ -18,7 +18,7 @@ export class Slider2 extends Component {
                 consequuntur sed, illum nisi fugit perferendis quo perspiciatis
                 vero nostrum, recusandae reprehenderit minus. Laborum, nulla!
               </p>
-              <button style={btn} onClick={this.props.toggle}>
+              <button style={btn} onClick={this.props.toggle1}>
                 Toggle Slider3
               </button>
             </div>

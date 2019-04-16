@@ -1,42 +1,62 @@
 @import "../../index.scss";
 
-.navbar {
-  margin-left: 5rem;
-  // position: absolute;
-  // display: block;
-  width: 75%;
-  // top: 55%;
-  // left: 20%;
+.navBar {
+  display: flex;
+  width: 70%;
+  align-self: center;
+  padding: auto 1rem;
   background: transparent;
-  padding: 0.5rem 1rem;
-  display: grid;
-  //grid-template-columns: auto 1fr;
-  grid-template-columns: 50px 200px auto;
+}
+.nav-links {
+  align-self: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    align-self: center;
+    padding: 0 10px;
+    color: $mainYellow;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+  }
+}
+
+.spacer {
+  flex: 1;
 }
 .naziv {
+  flex: 1;
   align-self: center;
   font-size: 1.5rem;
   padding: auto auto;
   font-family: "Courgette", cursive;
 }
-.nav-links {
-  // margin-left: 5rem;
-  align-self: center;
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  // text-align: center;
-}
+
 .nav-link {
   color: $mainGrey;
   text-decoration: none;
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  transition: all 0.3s linear;
+  opacity: 0.8;
+  transition: 0.3s;
+
   &:hover {
+    color: $mainGrey;
+    opacity: 1;
+    font-weight: bold;
+  }
+
+  &.active {
     color: $mainYellow;
+    opacity: 1;
   }
 }
-.active {
-  color: $mainYellow;
+
+@media screen and(max-width:768px) {
+  .nav-links {
+    display: none;
+  }
 }

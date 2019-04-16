@@ -1,5 +1,6 @@
 import React from "react";
 import { Spring } from "react-spring/renderprops";
+import banner1 from "../../img/banner1.jpg";
 
 export default function Banner3() {
   return (
@@ -11,6 +12,9 @@ export default function Banner3() {
       {props => (
         <div style={props}>
           <div className="banners">
+            <div>
+              <img src={banner1} alt="" />
+            </div>
             <h1>Banner3</h1>
             <p>Mesto za Vašu reklamu</p>
           </div>
