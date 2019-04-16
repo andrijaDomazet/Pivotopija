@@ -1,0 +1,34 @@
+@import "../../index.scss";
+
+.Lstyle {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 600px;
+  height: auto;
+}
+
+.lady {
+  z-index: +5;
+  top: 20%;
+  width: 720px;
+  height: 100%;
+  position: absolute;
+}
+.srednjilogo {
+  z-index: +5;
+  width: 720px;
+  position: absolute;
+}
+
+.pluto {
+  z-index: +5;
+  width: 720px;
+  position: absolute;
+}
+
+.papir {
+  z-index: -5;
+  width: 100%;
+  position: absolute;
+}
