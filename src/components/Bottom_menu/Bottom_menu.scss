@@ -4,28 +4,31 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  // grid-template-columns: 150px auto auto auto;
-  // grid-column-gap: 2rem;
   background: white;
   color: black;
-  width: 90%;
-  // height: 20vh;
+  width: 70%;
   margin: 0 auto;
-  padding: 0.8rem 0.8rem;
-  border: 5px solid $mainYellow;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.1rem;
+  border: 5px solid white;
   justify-content: space-evenly;
   align-items: center;
 }
 .banners {
   display: block;
   flex-grow: 1;
-  background: rgb(165, 87, 24);
-  color: white;
-  width: 12rem;
-  height: 7rem;
-  padding: 1rem 1rem 1rem 1rem;
+  color: blue;
+  width: 15vw;
+  height: 30vh;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.2rem;
+  font-size: 0.9rem;
   border: 2px solid white;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   -webkit-box-shadow: 4px 5px 7px 5px rgba(0, 0, 0, 0.84);
-  box-shadow: 4px 5px 7px 5px rgba(0, 0, 0, 0.84);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.84);
+  img {
+    width: 11rem;
+    border-radius: 0.5rem;
+  }
 }

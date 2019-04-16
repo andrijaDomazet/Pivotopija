@@ -19,6 +19,9 @@ export default class ListaObjekata extends Component {
     const { objekti } = this.state;
     return (
       <div className="glavniDiv">
+        <div className="search_objekata">
+          <input type="text" placeholder="pretraga objekata" />
+        </div>
         <section className="objektiLista">
           {objekti.map(objekat => {
             return (
@@ -30,7 +33,7 @@ export default class ListaObjekata extends Component {
             );
           })}
         </section>{" "}
-        <Search />
+        {/* <Search /> */}
       </div>
     );
   }

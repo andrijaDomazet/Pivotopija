@@ -1,16 +1,16 @@
 import React from "react";
 import "./Topbar.scss";
-import NavLinksTopBar from "./NavLinksTopBar";
 import { NavLink } from "react-router-dom";
+import ToggleButton from "./SideDrawer/ToggleButton";
 
-export default function Topbar() {
+export default function Topbar(props) {
   return (
     <header className="top-header">
-      <nav className="top-nav">
-        <div className="spacer" />
-        <div className="search-bar">
-          <input type="text" placeholder="Search..." />
+      <nav className="topNavBar">
+        <div className="toggle-button">
+          <ToggleButton click={props.drawerClickHandler} />
         </div>
+        <div className="spacer" />
         <div className="navigation-items">
           <ul>
             <li>
@@ -29,6 +29,9 @@ export default function Topbar() {
               </NavLink>
             </li>
           </ul>
+        </div>{" "}
+        <div className="search-bar">
+          <input type="text" placeholder="Search..." />
         </div>
       </nav>
     </header>
