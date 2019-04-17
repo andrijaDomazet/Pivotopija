@@ -1,34 +1,28 @@
 @import "../../index.scss";
 
-.Lstyle {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 600px;
-  height: auto;
+
+.Lstyle{
+    margin: 0;
+    padding: 0;
+    display:flex;
+    img{
+        z-index: +5;
+        width: 220px;
+        height: auto;
+        position: absolute;
+        top:12%; 
+        }
 }
 
-.lady {
-  z-index: +5;
-  top: 20%;
-  width: 720px;
-  height: 100%;
-  position: absolute;
-}
-.srednjilogo {
-  z-index: +5;
-  width: 720px;
-  position: absolute;
-}
-
-.pluto {
-  z-index: +5;
-  width: 720px;
-  position: absolute;
+.pluto{
+    position: absolute;
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    top: 4%;
+    left: 68%;
 }
 
-.papir {
-  z-index: -5;
-  width: 100%;
-  position: absolute;
-}

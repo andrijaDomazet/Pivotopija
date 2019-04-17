@@ -24,8 +24,9 @@
   padding: 0;
   border: none;
   box-sizing: border-box;
-  top: 30%;
-  left: 45%;
+  width: 35px;
+  top: 18%;
+  left: 42%;
   &:hover {
     transform: scale(1.1);
     transform: skew(-10deg);
@@ -50,7 +51,7 @@
     transform: translateY(-10px);
   }
 }
-.btn_bottle {
+/*.btn_bottle {
   position: absolute;
   display: flex;
   background: transparent;
@@ -68,4 +69,4 @@
   &:hover {
     animation: bounce 1s;
   }
-}
+}*/
