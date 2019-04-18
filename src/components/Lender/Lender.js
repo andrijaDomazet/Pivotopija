@@ -8,17 +8,17 @@ import { Spring } from "react-spring";
 export default function Lender() {
   return (
     <div className="Lstyle">
-      <div className="Lady1">
+      {/* <div className="Lady1">
         <img src={BeerLady1} alt="slika2" />
-      </div>
+      </div> */}
 
       {/*<div className='srednjiLogo'>
           <img src={srednjiLogo}  alt='slika2'/>
         </div> */}
 
-      <div className="pluto">
+      {/* <div className="pluto">
         <img src={pluto} alt="slika3" />
-      </div>
+      </div> */}
     </div>
   );
 }
