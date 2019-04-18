@@ -6,6 +6,8 @@ import cover from "../../img/cover.jpg";
 import srednjiLogo from "../Lender/lenderIMG/srednjilogo.png";
 import bottle from "../Lender/lenderIMG/pluto.png";
 import Lender from "../Lender/Lender";
+import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
+import pluto from "../Lender/lenderIMG/pluto.png";
 
 export default class Mainscreen extends Component {
   state = {
@@ -21,10 +23,16 @@ export default class Mainscreen extends Component {
       <React.Fragment>
         <div className="main_cover">
           <img src={cover} alt="" width="100%" height="100%" />
-          <Lender />
+          <div className="Lady1">
+            <img src={BeerLady1} width="25%" alt="slika2" />
+          </div>
+          <div className="pluto">
+            <img src={pluto} width="30%" alt="slika3" />
+          </div>
           <button className="btn_zanatskaPiva" onClick={this.toggle2}>
             <img src={srednjiLogo} width="200px" alt="" />
           </button>
+
           {/*<div className="btn_bottle">
             <img src={bottle} alt=""  />
           </div>*/}

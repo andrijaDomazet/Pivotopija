@@ -1,28 +1,48 @@
 @import "../../index.scss";
 
-
-.Lstyle{
-    margin: 0;
-    padding: 0;
-    display:flex;
-    img{
-        z-index: +5;
-        width: 220px;
-        height: auto;
-        position: absolute;
-        top:12%; 
-        }
-}
-
-.pluto{
+.Lstyle {
+  position: relative;
+  // margin: 0;
+  // padding: 0;
+  // display: flex;
+  border: 1px solid red;
+  height: 100%;
+  img {
     position: absolute;
-    display: flex;
-    background: transparent;
-    cursor: pointer;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
-    top: 4%;
-    left: 68%;
+    z-index: +1;
+    width: 220px;
+    height: auto;
+    left: 0;
+    bottom: 0;
+  }
 }
 
+.pluto {
+  position: absolute;
+  cursor: pointer;
+
+  right: 30%;
+  bottom: 0;
+}
+
+@media screen and(max-width:768px) {
+  .pluto {
+    display: none;
+  }
+  .Lstyle {
+    position: relative;
+    // margin-bottom: 0;
+    // padding-bottom: 0;
+    // display: flex;
+    img {
+      position: absolute;
+      bottom: 0;
+      z-index: +5;
+      width: 180px;
+      //   height: auto;
+      //   position: absolute;
+      //   bottom: 2%;
+      //   box-sizing: border-box;
+    }
+  }
+}

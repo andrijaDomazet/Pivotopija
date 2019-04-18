@@ -2,20 +2,28 @@
 
 .main_cover {
   // top: 1.5rem;
-  background: transparent;
+  // background: transparent;
+  position: relative;
+  display: flex;
   color: black;
   width: 70%;
   height: 50vh;
   margin: 0 auto;
-  border: 5px solid white;
+  // border: 2px solid green;
   // border-radius: 50px 0px 50px 0px;
 
   img {
-    position: relative;
-    border-top-left-radius: 0%;
+    // position: relative;
+    // border-top-left-radius: 0%;
+    border: 2px solid gray;
   }
 }
-
+// .dodaci {
+//   position: absolute;
+//   display: flex;
+//   top: 18%;
+//   box-sizing: border-box;
+// }
 .btn_zanatskaPiva {
   position: absolute;
   display: flex;
@@ -25,13 +33,38 @@
   border: none;
   box-sizing: border-box;
   width: 35px;
-  top: 18%;
-  left: 42%;
+  top: 4rem;
+  left: 40%;
+  z-index: +1;
   &:hover {
     transform: scale(1.1);
     transform: skew(-10deg);
   }
 }
+.Lady1 {
+  position: absolute;
+  display: flex;
+  z-index: +1;
+  // width: 10%;
+  // height: auto;
+  left: 0;
+  bottom: 0;
+  border: 2px solid red;
+  height: 85%;
+}
+
+.pluto {
+  position: absolute;
+  display: flex;
+  z-index: +1;
+  cursor: pointer;
+  height: 110%;
+  // right: 0;
+  // bottom: -15%;
+  left: 75%;
+  width: 70%;
+}
+
 @keyframes bounce {
   0%,
   20%,
