@@ -9,7 +9,7 @@ import Info from "./components/Info/Info";
 import ListaPiva from "./components/Pivo/ListaPiva";
 import SideDrawer from "./components/Topbar/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
-import NoMatch from "./components/NoMatch/NoMatch";
+import NoMatch from "./components/Tools/NoMatch/NoMatch";
 
 class App extends Component {
   state = {
