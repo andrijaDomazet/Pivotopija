@@ -23,6 +23,7 @@ export default class Mainscreen extends Component {
     return (
       <React.Fragment>
         <Lender toggle2={toggle2} />
+        {/* dfsdfdsfds */}
         {/* <div className="main_cover">
           <img src={cover} alt="" width="100%" height="100%" />
           <div className="Lady1">
