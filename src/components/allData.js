@@ -10,7 +10,7 @@ export const spisakObjekta = [
   },
   {
     id: 2,
-    price: 3,
+    price: 31,
     city: "zemun",
     img: "./img/objekti/crni_mata_pub.jpg",
     name: "crni mata pub",
