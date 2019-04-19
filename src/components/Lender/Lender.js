@@ -19,7 +19,7 @@ export default class Lender extends Component {
 
   render() {
     // console.log(this.props.toggle2);
-    // const { toggle2 } = this.props.toggle2;
+    const { toggle2 } = this.props;
     return (
       <div className="main_cover">
         <img src={cover} alt="" width="100%" height="100%" />
@@ -29,9 +29,9 @@ export default class Lender extends Component {
         <div className="pluto">
           <img src={pluto} width="30%" alt="slika3" />
         </div>
-        {/* <button className="btn_zanatskaPiva" onClick={toggle2}>
+        <button className="btn_zanatskaPiva" onClick={toggle2}>
           <img src={srednjiLogo} width="200px" alt="" />
-        </button> */}
+        </button>
       </div>
     );
   }
