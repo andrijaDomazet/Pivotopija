@@ -19,9 +19,11 @@ export default class Mainscreen extends Component {
   };
 
   render() {
+    const { toggle2 } = this.props;
     return (
       <React.Fragment>
-        <div className="main_cover">
+        <Lender toggle2={toggle2} />
+        {/* <div className="main_cover">
           <img src={cover} alt="" width="100%" height="100%" />
           <div className="Lady1">
             <img src={BeerLady1} width="25%" alt="slika2" />
@@ -32,11 +34,7 @@ export default class Mainscreen extends Component {
           <button className="btn_zanatskaPiva" onClick={this.toggle2}>
             <img src={srednjiLogo} width="200px" alt="" />
           </button>
-
-          {/*<div className="btn_bottle">
-            <img src={bottle} alt=""  />
-          </div>*/}
-        </div>
+        </div> */}
         <Smallbar />
         <BottomCover />
       </React.Fragment>

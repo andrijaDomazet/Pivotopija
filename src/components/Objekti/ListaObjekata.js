@@ -4,17 +4,17 @@ import { spisakObjekta } from "../allData";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ListaObjekata extends Component {
-  // state = {
-  //   search: "Level Up"
-  // };
+  constructor() {
+    super();
+    this.state = {
+      objekti: spisakObjekta,
+      search: ""
+    };
+  }
 
-  // updateSearch(event) {
-  //   this.setState({ search: event.target.value.substr(0, 20) });
-  //   // console.log(this.state.search);
-  // }
-
-  state = {
-    objekti: spisakObjekta
+  updateSearch = event => {
+    this.setState({ search: event.target.value.substr(0, 20) });
+    console.log(this.state.search);
   };
 
   removeObjekat = id => {
@@ -26,20 +26,28 @@ export default class ListaObjekata extends Component {
   };
 
   render() {
+    console.log(this.state.objekti);
+    let filtiraniObjekti = this.state.objekti.filter(objekat => {
+      return (
+        objekat.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !==
+        -1
+      );
+    });
     const { objekti } = this.state;
     // console.log(this.props);
     return (
       <div className="glavniDiv">
         <div className="search_objekata">
-          {/* <input
+          <input
             type="text"
+            placeholder="Search..."
             value={this.state.search}
             onChange={this.updateSearch.bind(this)}
-          /> */}
-        </div>{" "}
+          />
+        </div>
         <Suspense fallback={<div>Loading...</div>}>
           <section className="objektiLista">
-            {objekti.map(objekat => {
+            {filtiraniObjekti.map(objekat => {
               return (
                 <Objekat
                   key={objekat.id}
