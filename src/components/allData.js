@@ -39,7 +39,7 @@ export const spisakObjekta = [
     id: 5,
     price: 1,
     city: "zemun",
-    img: "./img/objekti/fat_cat.jpg",
+    img: "./img/objekti/fest.jpg",
     name: "klub fest",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
@@ -70,7 +70,124 @@ export const spisakObjekta = [
     name: "office pub",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
-  }
+  },
+  {
+    id: 9,
+    price: 4,
+    city: "dorcol",
+    img: "./img/objekti/gvint.jpg",
+    name: "gvint",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 10,
+    price: 4,
+    city: "beograd",
+    img: "./img/objekti/ciglaBG.jpg",
+    name: "Cigla",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 11,
+    price: 4,
+    city: "beograd",
+    img: "./img/objekti/prviMaj.jpg",
+    name: "prvi maj",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 12,
+    price: 4,
+    city: "Novi Beograd",
+    img: "./img/objekti/zirafaNBG.jpg",
+    name: "žirafa",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 13,
+    price: 4,
+    city: "Niš",
+    img: "./img/objekti/minisNI.jpg",
+    name: "Ministarstvo pub",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 14,
+    price: 4,
+    city: "Beograd",
+    img: "./img/objekti/gvo.jpg",
+    name: "Gvožđara 1870",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 15,
+    price: 4,
+    city: "Subotica",
+    img: "./img/objekti/samoSU.jpg",
+    name: "Samo pivo",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 16,
+    price: 4,
+    city: "Subotica",
+    img: "./img/objekti/livpoolSU.jpg",
+    name: "Liverpool pub",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 17,
+    price: 4,
+    city: "niš",
+    img: "./img/objekti/beergardenNI.jpg",
+    name: "Beergarden",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 18,
+    price: 4,
+    city: "Novi sad",
+    img: "./img/objekti/gradskaNS.jpg",
+    name: "Gradska pivnica",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 19,
+    price: 4,
+    city: "novi sad",
+    img: "./img/objekti/gusanNS.jpg",
+    name: "Gusan",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 20,
+    price: 4,
+    city: "Beograd",
+    img: "./img/objekti/samoPivoBG.jpg",
+    name: "Samo pivo",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
+  {
+    id: 21,
+    price: 4,
+    city: "niš",
+    img: "./img/objekti/nemirNI.jpg",
+    name: "Nemir pub",
+    info:
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+  },
 ];
 
 export const spisakPiva = [

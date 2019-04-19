@@ -4,7 +4,6 @@ import Smallbar from "../Smallbar/Smallbar";
 import BottomCover from "../Bottom_menu/Bottom_menu";
 import cover from "../../img/cover.jpg";
 import srednjiLogo from "../Lender/lenderIMG/srednjiLogo.png";
-import bottle from "../Lender/lenderIMG/pluto.png";
 import Lender from '../Lender/Lender';
 
 
