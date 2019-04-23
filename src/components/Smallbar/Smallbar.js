@@ -13,7 +13,7 @@ export default function Smallbar() {
         <ul>
           <li>
             <NavLink to="/istorijat" className="smallBar-link">
-              istorijat piva
+              vrste piva
             </NavLink>
           </li>
           <li>
@@ -23,7 +23,7 @@ export default function Smallbar() {
           </li>
           <li>
             <NavLink to="/zanimljivosti" className="smallBar-link">
-              zanimljivosti
+              predstavljamo
             </NavLink>
           </li>
         </ul>
