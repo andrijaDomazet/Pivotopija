@@ -33,7 +33,7 @@ export default class ListaObjekata extends Component {
         -1
       );
     });
-    const { objekti } = this.state;
+    // const { objekti } = this.state;
     // console.log(this.props);
     return (
       <div className="glavniDiv">

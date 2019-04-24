@@ -9,10 +9,7 @@ export default class SlikaObjekta extends Component {
     return (
       <div className="img-container">
         <img src={img} alt="" />
-        <span className="ocenjivanje">
-          <i className="far fa-thumbs-up" />
-          <i className="far fa-thumbs-down" />
-        </span>
+
         <span
           className="close-btn"
           onClick={() => {

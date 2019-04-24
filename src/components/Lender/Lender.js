@@ -1,20 +1,21 @@
 import React, { Component } from "react";
+
 import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
 import pluto from "../Lender/lenderIMG/pluto.png";
 import srednjiLogo from "../Lender/lenderIMG/srednjilogo.png";
 import "../Lender/Lender.scss";
 import cover from "../../img/cover.jpg";
-import { Spring } from "react-spring";
 
 export default class Lender extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     prikaz_objekata: false
-  //   };
-  // }
+  constructor() {
+    super();
+    this.state = {
+      prikaz_objekata: false
+    };
+  }
   // toggle2 = () => {
-  //   this.props.history.push("/objekti");
+  //   this.history.push("/objekti");
+  //   console.log("idemoooo");
   // };
 
   render() {

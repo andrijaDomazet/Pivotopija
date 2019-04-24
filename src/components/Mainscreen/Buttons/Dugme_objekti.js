@@ -3,8 +3,6 @@ import React from "react";
 import "./Dugme_objekti.scss";
 export default function Dugme_objekti(props) {
   return (
-    <div>
-      <button onClick={this.props.toggle2}>Objekti</button>
-    </div>
+    <div>{/* <button onClick={this.props.toggle2}>Objekti</button> */}</div>
   );
 }

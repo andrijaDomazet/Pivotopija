@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideDrawer.scss";
 import { NavLink } from "react-router-dom";
-
+import Logo2 from "../../../img/logo.png";
 export default function SideDrawer(props) {
   let drawerClasses = "side-drawer";
   if (props.show) {
@@ -10,24 +10,28 @@ export default function SideDrawer(props) {
   return (
     <div>
       <nav className={drawerClasses}>
+        {" "}
+        <div className="logo2">
+          <img src={Logo2} alt="pivo" width="30%" />
+        </div>
         <ul>
           <li>
-            <NavLink to="/" exact className="nav-link">
+            <NavLink to="/" exact className="top-link2">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/info" className="nav-link">
+            <NavLink to="/info" className="top-link2">
               info
             </NavLink>
           </li>
           <li>
-            <NavLink to="/piva" className="nav-link">
+            <NavLink to="/piva" className="top-link2">
               Piva
             </NavLink>
           </li>
           <li>
-            <NavLink to="/objekti" className="nav-link">
+            <NavLink to="/objekti" className="top-link2">
               Objekti
             </NavLink>
           </li>

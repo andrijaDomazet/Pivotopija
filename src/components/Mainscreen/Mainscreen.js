@@ -14,8 +14,8 @@ export default class Mainscreen extends Component {
   };
 
   render() {
-    // const { toggle2 } = this.props;
     // console.log(this.toggle2);
+
     return (
       <React.Fragment>
         <Lender toggle2={this.toggle2} />
