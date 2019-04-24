@@ -6,23 +6,23 @@ export default function Smallbar() {
   return (
     <nav className="smallBar">
       <div className="spacer" />
-      <div className="naslov_sb">
+      {/*<div className="naslov_sb">
         <h1>o pivima</h1>
-      </div>
+      </div>*/}
       <div className="smallBar-links">
         <ul>
           <li>
-            <NavLink to="/istorijat" className="smallBar-link">
+            <NavLink to="/vrste" className="smallBar-link">
               vrste piva
             </NavLink>
           </li>
           <li>
-            <NavLink to="/izrada" className="smallBar-link">
+            <NavLink to="/postupak" className="smallBar-link">
               postupak izrade
             </NavLink>
           </li>
           <li>
-            <NavLink to="/zanimljivosti" className="smallBar-link">
+            <NavLink to="/predstavljamo" className="smallBar-link">
               predstavljamo
             </NavLink>
           </li>
