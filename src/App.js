@@ -10,6 +10,9 @@ import ListaPiva from "./components/Pivo/ListaPiva";
 import SideDrawer from "./components/Topbar/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 import NoMatch from "./components/Tools/NoMatch/NoMatch";
+import Vrste from "./components/Smallbar/Vrste/Vrste";
+import Postupak from "./components/Smallbar/Postupak/Postupak.js";
+import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
 
 class App extends Component {
   state = {
@@ -50,6 +53,9 @@ class App extends Component {
             <Route path="/info" component={Info} />
             <Route path="/piva" component={ListaPiva} />
             <Route path="/objekti" component={ListaObjekata} />
+            <Route path="/vrste" component={Vrste} />
+            <Route path="/postupak" component={Postupak} />
+            <Route path="/predstavljamo" component={Predstavljamo} />
             <Route component={NoMatch} />
           </Switch>
         </section>
