@@ -25,6 +25,10 @@ export default class PodaciObjekta extends Component {
           </span>
         </h5>
         {this.state.showInfo && <p>{info}</p>}
+        <span className="ocenjivanje">
+          <i className="far fa-thumbs-up" />
+          <i className="far fa-thumbs-down" />
+        </span>
       </div>
     );
   }

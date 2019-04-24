@@ -31,13 +31,13 @@
 @media screen and (min-width: 992px) {
   .objektiLista {
     width: 70vw;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 1140px) {
   .objektiLista {
     width: 70%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 0 0;
   }
 }

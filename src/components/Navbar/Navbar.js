@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 import logo from "../../img/logo.png";
 import { NavLink } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <nav className="navBar">

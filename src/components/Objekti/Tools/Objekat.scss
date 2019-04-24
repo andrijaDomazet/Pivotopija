@@ -24,6 +24,7 @@
   cursor: pointer;
   transition: all 0.3s linear;
   color: $mainGreen;
+  z-index: 1;
 }
 
 .close-btn {
@@ -44,14 +45,14 @@
 }
 
 .objekat-info {
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   h3 {
     text-transform: uppercase;
     color: $mainGreen;
   }
   h4 {
     text-transform: capitalize;
-    margin: 0.2rem 0 0.6rem 0;
+    margin: 0.3rem 0 0.3rem 0;
     color: $mainBlack;
   }
   h5 {
