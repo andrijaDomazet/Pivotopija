@@ -12,7 +12,7 @@ export default function Faza3() {
     >
       {props => (
         <div style={props}>
-          <div className='alestyle'>
+          <div className='f3style'>
           
             <h1>Filtracija i priprema ambalaže za punjenje</h1>
             <p>
