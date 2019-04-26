@@ -12,7 +12,7 @@ export default function Faza2() {
     >
       {props => (
         <div style={props}>
-          <div className='alestyle'>
+          <div className='f2tyle'>
           
             <h1>Fermentacija</h1>
             <p>
