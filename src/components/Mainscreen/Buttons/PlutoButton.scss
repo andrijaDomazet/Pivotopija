@@ -1,26 +1,28 @@
 @import "../../../index.scss";
 
-.btn_zanatskaPiva {
+.btn_pluto {
   display: flex;
   position: absolute;
   top: 1rem;
-  right: 10%;
+  left:60%;
   background: transparent;
   cursor: pointer;
   border: none;
   box-sizing: border-box;
   z-index: +1;
   img {
-    width: 8rem;
-  }
-  &:hover {
-    transform: scale(1.12);
+    width: 10rem;
     
+    &:hover {
+        transform: scale(1.1);
+        
+      }
   }
+ 
 }
 
 @media screen and(min-width:600px) {
-  .btn_zanatskaPiva {
+  .btn_pluto {
     right: 10%;
     img {
       width: 10rem;
@@ -28,11 +30,11 @@
   }
 }
 @media screen and(min-width:992px) {
-  .btn_zanatskaPiva {
-    top: 15%;
-    left: 40%;
+  .btn_pluto {
+    top: -11%;
+    left: 75%;
     img {
-      width: 12rem;
+      width: 11rem;
     }
   }
 }
