@@ -1,16 +1,24 @@
 @import "../../index.scss";
 
-.Lstyle {
+.main_cover {
   position: relative;
-  // margin: 0;
-  // padding: 0;
-  // display: flex;
-  border: 1px solid red;
+  display: flex;
+  color: black;
+  width: 70%;
+  height: 50vh;
+  margin: 0 auto;
+
+  img {
+    // border: 2px solid gray;
+  }
+}
+.lady {
+  position: absolute;
   height: 100%;
   img {
     position: absolute;
     z-index: +1;
-    width: 220px;
+    width: 40vw;
     height: auto;
     left: 0;
     bottom: 0;
@@ -18,31 +26,44 @@
 }
 
 .pluto {
-  position: absolute;
   cursor: pointer;
-
-  right: 30%;
-  bottom: 0;
+  img {
+    position: absolute;
+    right: 1rem;
+    width: auto;
+    height: 110%;
+    bottom: -1rem;
+  }
 }
-
-@media screen and(max-width:768px) {
+@media screen and(max-width:992px) {
   .pluto {
     display: none;
   }
-  .Lstyle {
-    position: relative;
-    // margin-bottom: 0;
-    // padding-bottom: 0;
-    // display: flex;
+}
+@media screen and(min-width:500px) {
+  .lady {
     img {
-      position: absolute;
-      bottom: 0;
-      z-index: +5;
-      width: 180px;
-      //   height: auto;
-      //   position: absolute;
-      //   bottom: 2%;
-      //   box-sizing: border-box;
+      width: 220px;
     }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }

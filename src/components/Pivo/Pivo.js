@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Pivo.scss";
-// import { spisakPiva } from "../allData";
 
 export default class Pivo extends Component {
   render() {

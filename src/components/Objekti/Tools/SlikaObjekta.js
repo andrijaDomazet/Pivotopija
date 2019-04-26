@@ -9,7 +9,6 @@ export default class SlikaObjekta extends Component {
     return (
       <div className="img-container">
         <img src={img} alt="" />
-
         <span
           className="close-btn"
           onClick={() => {

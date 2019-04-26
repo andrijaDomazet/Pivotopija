@@ -5,34 +5,21 @@ import pluto from "../Lender/lenderIMG/pluto.png";
 import srednjiLogo from "../Lender/lenderIMG/srednjilogo.png";
 import "../Lender/Lender.scss";
 import cover from "../../img/cover.jpg";
+import ZanatskoPivoButton from "../Mainscreen/Buttons/ZanatskoPivoButton";
 
 export default class Lender extends Component {
-  constructor() {
-    super();
-    this.state = {
-      prikaz_objekata: false
-    };
-  }
-  // toggle2 = () => {
-  //   this.history.push("/objekti");
-  //   console.log("idemoooo");
-  // };
-
   render() {
-    // console.log(this.props.toggle2);
     const { toggle2 } = this.props;
     return (
       <div className="main_cover">
         <img src={cover} alt="" width="100%" height="100%" />
-        <div className="Lady1">
-          <img src={BeerLady1} width="25%" alt="slika2" />
+        <div className="lady">
+          <img src={BeerLady1} alt="slika2" />
         </div>
         <div className="pluto">
           <img src={pluto} width="30%" alt="slika3" />
         </div>
-        <button className="btn_zanatskaPiva" onClick={toggle2}>
-          <img src={srednjiLogo} width="200px" alt="" />
-        </button>
+        <ZanatskoPivoButton toggle2={toggle2} />
       </div>
     );
   }

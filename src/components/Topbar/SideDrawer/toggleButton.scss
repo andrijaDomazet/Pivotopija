@@ -11,14 +11,12 @@
   cursor: pointer;
   padding: 0;
   box-sizing: border-box;
-}
-
-.toggle:focus {
-  outline: none;
-}
-
-.toggle-button-line {
-  width: 25px;
-  height: 2px;
-  background: white;
+  &:focus {
+    outline: none;
+  }
+  .toggle-button-line {
+    width: 25px;
+    height: 2px;
+    background: white;
+  }
 }
