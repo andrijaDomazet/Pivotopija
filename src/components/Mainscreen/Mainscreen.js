@@ -12,13 +12,16 @@ export default class Mainscreen extends Component {
   toggle2 = () => {
     this.props.history.push("/objekti");
   };
+  toggle3 = () => {
+    this.props.history.push("/predstavljamo");
+  };
 
   render() {
     // console.log(this.toggle2);
 
     return (
       <React.Fragment>
-        <Lender toggle2={this.toggle2} />
+        <Lender toggle2={this.toggle2} toggle3={this.toggle3}/>
         <Smallbar />
         <BottomCover />
       </React.Fragment>
