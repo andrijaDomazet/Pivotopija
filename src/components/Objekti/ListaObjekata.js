@@ -26,10 +26,10 @@ export default class ListaObjekata extends Component {
   };
 
   render() {
-    console.log(this.state.objekti);
+    // console.log(this.state.objekti);
     let filtiraniObjekti = this.state.objekti.filter(objekat => {
       return (
-        objekat.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !==
+        objekat.city.toLowerCase().indexOf(this.state.search.toLowerCase()) !==
         -1
       );
     });
@@ -37,13 +37,26 @@ export default class ListaObjekata extends Component {
     // console.log(this.props);
     return (
       <div className="glavniDiv">
-        <div className="search_objekata">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={this.state.search}
-            onChange={this.updateSearch.bind(this)}
-          />
+        <div className="pretraga">
+          <div className="search_mesta">
+            <input
+              type="text"
+              placeholder="Pretraga po lokaciji objekta"
+              value={this.state.search}
+              onChange={this.updateSearch.bind(this)}
+            />
+          </div>
+          <div className="search_imena">
+            <input
+              type="text"
+              placeholder="Pretraga po nazivu objekta"
+              value={this.state.search}
+              onChange={this.updateSearch.bind(this)}
+            />
+          </div>
+          <div className="dodatno">
+            <p>Dodatna pretraga...</p>
+          </div>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <section className="objektiLista">

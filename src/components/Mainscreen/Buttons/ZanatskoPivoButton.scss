@@ -1,9 +1,38 @@
-@import "../../index.scss";
+@import "../../../index.scss";
 
+.btn_zanatskaPiva {
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  right: 10%;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  z-index: +1;
+  img {
+    width: 8rem;
+  }
+  &:hover {
+    transform: scale(1.4);
+    transform: skew(-5deg);
+  }
+}
 
-.btn_zanatskaPiva{
-    z-index: +5;
-    width: 150px;
-    
-    position: absolute;
+@media screen and(min-width:600px) {
+  .btn_zanatskaPiva {
+    right: 10%;
+    img {
+      width: 10rem;
+    }
+  }
+}
+@media screen and(min-width:992px) {
+  .btn_zanatskaPiva {
+    top: 15%;
+    left: 40%;
+    img {
+      width: 12rem;
+    }
+  }
 }

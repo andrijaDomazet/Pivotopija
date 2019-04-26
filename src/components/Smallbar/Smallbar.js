@@ -6,9 +6,6 @@ export default function Smallbar() {
   return (
     <nav className="smallBar">
       <div className="spacer" />
-      {/*<div className="naslov_sb">
-        <h1>o pivima</h1>
-      </div>*/}
       <div className="smallBar-links">
         <ul>
           <li>
@@ -27,7 +24,7 @@ export default function Smallbar() {
             </NavLink>
           </li>
         </ul>
-      </div>{" "}
+      </div>
       <div className="spacer" />
     </nav>
   );

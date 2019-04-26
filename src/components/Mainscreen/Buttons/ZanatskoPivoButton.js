@@ -1,13 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 import "./ZanatskoPivoButton.scss";
-import srednjiLogo from "../Lender/lenderIMG/srednjiLogo.png";
+import srednjiLogo from "../../Lender/lenderIMG/srednjilogo.png";
 
-export default function ZanatskoPivoButton() {
-  return (
-    <div>
-      {/* <button className="btn_zanatskaPiva" onClick={this.toggle2}>
-        <img src={srednjiLogo} alt="" width="5rem" />
-      </button> */}
-    </div>
-  );
+export default class ZanatskoPivoButton extends Component {
+  render() {
+    const { toggle2 } = this.props;
+    return (
+      <div>
+        <button className="btn_zanatskaPiva" onClick={toggle2}>
+          <img src={srednjiLogo} alt="" />
+        </button>
+      </div>
+    );
+  }
 }

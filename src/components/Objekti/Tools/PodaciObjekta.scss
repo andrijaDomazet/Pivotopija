@@ -1,1 +1,86 @@
 @import "../../../index.scss";
+
+.objekat-info {
+  position: relative;
+
+  .opsti-podaci {
+    padding: 0.5rem 0.5rem;
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      color: $mainGreen;
+    }
+    h4 {
+      text-transform: capitalize;
+      margin: 0.3rem 0 0.3rem 0;
+      color: $mainBlack;
+    }
+    h5 {
+      text-transform: capitalize;
+      span {
+        color: $mainGreen;
+        margin: 0.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .socialButtons {
+    border-top: 2px solid $mainBlack;
+    border-bottom: 2px solid $mainBlack;
+    // background: $mainGrey;
+    width: 100%;
+    // padding: 0rem 0.5rem;
+
+    .ocenjivanje {
+      // background: $mainGrey;
+      display: flex;
+      top: 50%;
+      right: 5%;
+      font-size: 1rem;
+      transition: all 0.3s linear;
+      color: $mainGreen;
+      z-index: 1;
+      .like {
+        // display: inline-block;
+        flex: 1;
+        padding: 0 0;
+        margin: 0 0;
+        border: none;
+        font-size: 0.7rem;
+        color: $mainGreen;
+        background: transparent;
+        transform: rotate(360deg) scaleX(-1);
+        cursor: pointer;
+        i {
+          // float: left;
+          // display: inline-block;
+          padding: 0 0;
+          margin: 0 0;
+        }
+      }
+      .comments {
+        float: right;
+        // border: 1px solid red;
+        flex: 1;
+        // border: 2px solid green;
+        border: none;
+        font-size: 0.7rem;
+        color: $mainGreen;
+        background: transparent;
+        transform: rotate(360deg) scaleX(-1);
+        cursor: pointer;
+        i {
+          padding: 0;
+          margin: 0 0;
+        }
+      }
+      p {
+        flex: 2;
+        font-size: 0.7rem;
+        color: $mainYellow;
+        text-align: center;
+      }
+    }
+  }
+}
