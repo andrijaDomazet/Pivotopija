@@ -3,7 +3,7 @@ import Probali from './Probali/Probali.js';
 import Smallbar from '../Smallbar';
 import './Predstavljamo.scss';
 
-export default class Vrste extends Component {
+export default class Predstavljamo extends Component {
   render() {
     return (
       <div>
