@@ -15,6 +15,7 @@ import Vrste from './components/Smallbar/Vrste/Vrste.js';
 import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
 import Smallbar from './components/Smallbar/Smallbar';
+import Footer from './components/Footer/Footer.js'
 
 
 
@@ -64,6 +65,7 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
         </section>
+        <Footer />
       </Router>
     );
   }
