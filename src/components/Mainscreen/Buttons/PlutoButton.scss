@@ -10,8 +10,11 @@
   border: none;
   box-sizing: border-box;
   z-index: +1;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
   img {
     width: 10rem;
+    
     
     &:hover {
         transform: scale(1.1);
