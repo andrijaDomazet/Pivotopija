@@ -7,10 +7,10 @@ export default function SideDrawer(props) {
   if (props.show) {
     drawerClasses = "side-drawer open";
   }
+
   return (
     <div>
       <nav className={drawerClasses}>
-        {" "}
         <div className="logo2">
           <img src={Logo2} alt="pivo" width="30%" />
         </div>

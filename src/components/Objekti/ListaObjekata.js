@@ -4,13 +4,13 @@ import { spisakObjekta } from "../allData";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ListaObjekata extends Component {
-  constructor() {
-    super();
-    this.state = {
-      objekti: spisakObjekta,
-      search: ""
-    };
-  }
+  // constructor() {
+  //   super();
+  state = {
+    objekti: spisakObjekta,
+    search: ""
+  };
+  // }
 
   updateSearch = event => {
     this.setState({ search: event.target.value.substr(0, 20) });

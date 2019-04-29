@@ -3,12 +3,9 @@ import "./Mainscreen.scss";
 import Smallbar from "../Smallbar/Smallbar";
 import BottomCover from "../Bottom_menu/Bottom_menu";
 import Lender from "../Lender/Lender";
+import Tajmer from "./Tajmer";
 
 export default class Mainscreen extends Component {
-  // state = {
-  //   // prikaz_objekata: false
-  // };
-
   toggle2 = () => {
     this.props.history.push("/objekti");
   };
@@ -21,7 +18,8 @@ export default class Mainscreen extends Component {
 
     return (
       <React.Fragment>
-        <Lender toggle2={this.toggle2} toggle3={this.toggle3}/>
+        {/* <Tajmer /> */}
+        <Lender toggle2={this.toggle2} toggle3={this.toggle3} />
         <Smallbar />
         <BottomCover />
       </React.Fragment>
