@@ -2,42 +2,41 @@
 
 .btn_pluto {
   display: flex;
-  position: absolute;
-  top: 1rem;
-  left:60%;
+  position: relative;
+  left: 75%;
   background: transparent;
   cursor: pointer;
   border: none;
-  box-sizing: border-box;
   z-index: +1;
   animation-delay: 2s;
   animation-iteration-count: infinite;
+
   img {
-    width: 10rem;
-    
-    
+    position: absolute;
+    z-index: +1;
+    width: auto;
+    height: 60vh;
+    bottom: -1.2rem;
     &:hover {
-        transform: scale(1.1);
-        
-      }
+      transform: scale(1.05);
+    }
   }
- 
 }
 
-@media screen and(min-width:600px) {
-  .btn_pluto {
-    right: 10%;
-    img {
-      width: 10rem;
-    }
-  }
-}
-@media screen and(min-width:992px) {
-  .btn_pluto {
-    top: -11%;
-    left: 75%;
-    img {
-      width: 11rem;
-    }
-  }
-}
+// @media screen and(min-width:600px) {
+//   .btn_pluto {
+//     right: 10%;
+//     img {
+//       width: 10rem;
+//     }
+//   }
+// }
+// @media screen and(min-width:992px) {
+//   .btn_pluto {
+//     top: -11%;
+//     left: 75%;
+//     img {
+//       width: 11rem;
+//     }
+//   }
+// }

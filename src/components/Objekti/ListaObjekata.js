@@ -1,6 +1,7 @@
 import React, { Component, lazy, Suspense } from "react";
 import "./ListaObjekata.scss";
 import { spisakObjekta } from "../allData";
+import Tajmer from "../Mainscreen/Tajmer";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ListaObjekata extends Component {
@@ -56,6 +57,7 @@ export default class ListaObjekata extends Component {
           </div>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
+          <Tajmer />
           <section className="objektiLista">
             {filtiraniObjekti.map(objekat => {
               return (

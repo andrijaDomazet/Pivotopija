@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="navBar">
-      <div className="spacer" />
       <img src={logo} alt="" width="50px" height="50px" />
       <span className="naziv">Pivotopija</span>
       <div className="nav-links">
@@ -33,6 +32,7 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+      <div className="spacer" />
     </nav>
   );
 }

@@ -3,41 +3,34 @@
 .navBar {
   display: flex;
   width: 70%;
+  margin-left: 15%;
   align-self: center;
-  // padding: auto 1rem;
   background: transparent;
   text-decoration: none;
-  border: 3px solid green;
+  // border: 1px solid red;
+  // margin: 0 auto;
+  // padding: 0;
 
   .spacer {
     flex: 1;
   }
   .naziv {
     flex: 1;
-    border: 1px solid red;
     padding: 0 0.5rem;
     align-self: center;
-    font-size: 2rem;
-    // padding: 0 0;
-    // margin: 0 0;
+    font-size: 1.8rem;
     font-family: "Courgette", cursive;
   }
   .nav-links {
-    // margin: 0 0;
-    // padding: 0 0;
     align-self: center;
 
     ul {
-      // border:1 px solid blue;
       display: flex;
       list-style: none;
-      // align-self: center;
+      margin: auto 0;
     }
 
     li {
-      border: 1px solid yellow;
-      // align-self: center;
-      // padding: 50px 0;
       padding: 0 0.5rem;
       color: $mainYellow;
       text-transform: capitalize;
@@ -47,7 +40,6 @@
   }
 
   .nav-link {
-    // align-self: center;
     color: $mainGrey;
     text-decoration: none;
     opacity: 0.6;

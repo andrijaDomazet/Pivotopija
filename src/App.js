@@ -14,7 +14,7 @@ import Festivali from "./components/Smallbar/Festivali/Festivali.js";
 import Vrste from "./components/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
-import Smallbar from "./components/Smallbar/Smallbar";
+// import Smallbar from "./components/Smallbar/Smallbar";
 import Footer from "./components/Footer/Footer.js";
 import "./App";
 
@@ -40,7 +40,7 @@ class App extends Component {
     var pozadina = {
       width: "100%",
       height: "100%",
-      marginTop: "1.5rem",
+      marginTop: "1rem",
       backgroundImage: `url(${Background})`
     };
 

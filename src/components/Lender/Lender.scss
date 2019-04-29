@@ -1,24 +1,26 @@
 @import "../../index.scss";
 
 .main_cover {
-  position: relative;
-  display: flex;
+  // position: relative;
+  // display: flex;
   color: black;
   width: 70%;
   height: 50vh;
   margin: 0 auto;
-}
+  // border: 3px solid green;
 
-.lady {
-  position: absolute;
-  height: 100%;
-  img {
-    position: absolute;
-    z-index: +1;
-    width: 40vw;
-    height: auto;
-    left: 0;
-    bottom: 0;
+  .lady {
+    position: relative;
+    // border: 1px solid blue;
+
+    img {
+      position: absolute;
+      z-index: +1;
+      width: auto;
+      height: 45vh;
+      left: 0;
+      bottom: 0;
+    }
   }
 }
 

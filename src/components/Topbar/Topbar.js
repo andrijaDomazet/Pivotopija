@@ -29,7 +29,7 @@ export default function Topbar(props) {
               </NavLink>
             </li>
           </ul>
-        </div>{" "}
+        </div>
         <div className="search-bar">
           <input type="text" placeholder="Search..." />
         </div>

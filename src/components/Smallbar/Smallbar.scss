@@ -2,52 +2,52 @@
 
 .smallBar {
   display: flex;
-  width: 100%;
+  width: 70%;
+  margin-left: 15%;
   background: transparent;
   align-items: center;
-  padding: 3px;
-}
 
-.smallBar-links {
-  align-self: center;
-}
+  .smallBar-links {
+    padding-left: 0rem;
+    align-self: center;
 
-.smallBar-links ul {
-  display: flex;
-  align-self: center;
-  list-style: circle white;
-
-}
-
-.spacer {
-  flex: 1;
-}
-
-
-.smallBar-links li {
-  align-self: center;
-  color: $mainYellow;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-  transition: all 0.3s linear;
-  &:hover {
-    color: $mainYellow;
+    ul {
+      display: flex;
+      align-self: center;
+      margin: 0;
+    }
+    li {
+      align-self: center;
+      color: $mainYellow;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      transition: all 0.3s linear;
+      &:hover {
+        color: $mainYellow;
+      }
+      &:first-child {
+        list-style: none;
+        color: $mainYellow;
+        font-family: "Courgette", cursive;
+        text-transform: uppercase;
+      }
+    }
+    .smallBar-link {
+      padding-right: 2.5rem;
+      color: $mainGrey;
+      text-decoration: none;
+      opacity: 0.8;
+      &:hover {
+        color: $mainYellow;
+        opacity: 1;
+      }
+      &::first-line {
+        background-color: yellow;
+      }
+    }
   }
-}
-.smallBar-link {
-  padding-right: 2rem;
-  color: $mainGrey;
-  text-decoration: none;
-  &:hover {
-    color: $mainYellow;
+  .spacer {
+    flex: 1;
   }
-}
-
-.naslov_sb {
-  flex: 1;
-  align-self: center;
-  text-transform: uppercase;
-  margin-left: 6rem;
-  padding-right: 2rem;
 }

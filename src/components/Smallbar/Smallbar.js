@@ -5,10 +5,9 @@ import { NavLink } from "react-router-dom";
 export default function Smallbar() {
   return (
     <nav className="smallBar">
-      <div className="spacer" />
       <div className="smallBar-links">
         <ul>
-        <li>
+          <li>
             <NavLink to="/festivali" className="smallBar-link">
               festivali 2019
             </NavLink>
