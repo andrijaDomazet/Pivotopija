@@ -9,22 +9,14 @@ import Banner4 from "./Banner4";
 export default class BottomCover extends Component {
   render() {
     return (
-      <React.Fragment>
-        <div className="bottom_cover">
-          <div className="prviBaner">
-            <Banner1 />
-          </div>
-          <div className="prviBaner">
-            <Banner2 />
-          </div>
-          <div className="prviBaner">
-            <Banner3 />
-          </div>
-          <div className="prviBaner">
-            <Banner4 />
-          </div>
-        </div>
-      </React.Fragment>
+      <div className="d-flex p-2 col-example">
+
+        <div className="d-inline-flex p-2 col-example"><Banner1/></div>
+        <div className="d-inline-flex p-2 col-example"><Banner2/></div>
+        <div className="d-inline-flex p-2 col-example"><Banner3/></div>
+        <div className="d-inline-flex p-2 col-example"><Banner4/></div>
+
+      </div>
     );
   }
 }

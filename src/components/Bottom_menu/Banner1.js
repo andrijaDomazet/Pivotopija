@@ -12,10 +12,10 @@ export default function Banner1() {
         <div style={props}>
           <div className="banners">
             <div>
-              <img src={banner1} alt="" />
+              <img src={banner1}  alt="" />
             </div>
-            <h1>Banner1</h1>
-            <p>Mesto za Vašu reklamu</p>
+            <h3>Banner1</h3>
+            
           </div>
         </div>
       )}

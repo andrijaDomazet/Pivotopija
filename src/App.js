@@ -16,6 +16,7 @@ import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
 import Smallbar from './components/Smallbar/Smallbar';
 import Footer from './components/Footer/Footer.js'
+import './App';
 
 
 
@@ -42,7 +43,8 @@ class App extends Component {
       width: "100%",
       height: "100%",
       marginTop: "1.5rem",
-      backgroundImage: `url(${Background})`
+      backgroundImage: `url(${Background})`,
+     
     };
 
     return (
@@ -63,9 +65,9 @@ class App extends Component {
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
             <Route component={NoMatch} />
-          </Switch>
-        </section>
+          </Switch>        
         <Footer />
+        </section>
       </Router>
     );
   }
