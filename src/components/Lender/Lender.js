@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
-import pluto from "../Lender/lenderIMG/pluto.png";
+// import pluto from "../Lender/lenderIMG/pluto.png";
 import "../Lender/Lender.scss";
 import cover from "../../img/cover.jpg";
 import ZanatskoPivoButton from "../Mainscreen/Buttons/ZanatskoPivoButton";
-import PlutoButton from '../Mainscreen/Buttons/PlutoButton';
-
+import PlutoButton from "../Mainscreen/Buttons/PlutoButton";
 
 export default class Lender extends Component {
   render() {
@@ -21,7 +20,7 @@ export default class Lender extends Component {
           <img src={pluto} width="30%" alt="slika3" />
         </div>*/}
         <ZanatskoPivoButton toggle2={toggle2} />
-       <PlutoButton toggle3={toggle3} />
+        <PlutoButton toggle3={toggle3} />
       </div>
     );
   }

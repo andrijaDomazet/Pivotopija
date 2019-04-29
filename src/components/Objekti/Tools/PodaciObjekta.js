@@ -4,20 +4,21 @@ import "./PodaciObjekta.scss";
 
 export default class PodaciObjekta extends Component {
   state = {
-    count: 0,
-    numberOfComments: 0,
+    brojac: 0,
+    brojKomentara: 0,
     showInfo: false
   };
-  comment = () => {
-    let newComment = this.state.numberOfComments + 1;
+
+  komentarisanje = () => {
+    let noviKomentar = this.state.brojKomentara + 1;
     this.setState({
-      numberOfComments: newComment
+      brojKomentara: noviKomentar
     });
   };
-  counter = () => {
-    let newCount = this.state.count + 1;
+  brojacKomentara = () => {
+    let noviBrojac = this.state.brojac + 1;
     this.setState({
-      count: newCount
+      brojac: noviBrojac
     });
   };
 
@@ -32,16 +33,18 @@ export default class PodaciObjekta extends Component {
     return (
       <div className="objekat-info">
         <div className="socialButtons">
-          <span className="ocenjivanje">
-            <p>{this.state.count} sviđanja</p>
-            <button className="like" onClick={this.counter}>
+          <div className="svidjanja">
+            <p>{this.state.brojac} sviđanja</p>
+            <button className="like" onClick={this.brojacKomentara}>
               <i className="far fa-thumbs-up" />
             </button>
-            <p>{this.state.numberOfComments} komentara</p>
-            <button className="comments" onClick={this.comment}>
+          </div>
+          <div className="komentarisanje">
+            <p>{this.state.brojKomentara} komentara</p>
+            <button className="comments" onClick={this.komentarisanje}>
               <i className="far fa-comments" />
             </button>
-          </span>
+          </div>
         </div>
         <div className="opsti-podaci">
           <h3>{name}</h3>

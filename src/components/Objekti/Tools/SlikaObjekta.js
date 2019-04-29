@@ -15,7 +15,7 @@ export default class SlikaObjekta extends Component {
             this.props.removeObjekat(id);
           }}
         >
-          <i className="fas fa-window-close" />
+          <i className="fa fa-window-close" />
         </span>
       </div>
     );

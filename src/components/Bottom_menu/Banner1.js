@@ -1,6 +1,8 @@
 import React from "react";
 import { Spring } from "react-spring/renderprops";
 import banner1 from "../../img/banner1.jpg";
+import "./Bottom_menu.scss";
+
 export default function Banner1() {
   return (
     <Spring
