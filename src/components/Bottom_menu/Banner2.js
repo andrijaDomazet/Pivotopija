@@ -16,7 +16,6 @@ export default function Banner2() {
               <img src={banner2} alt="" />
             </div>
             <h3>Banner2</h3>
-            
           </div>
         </div>
       )}

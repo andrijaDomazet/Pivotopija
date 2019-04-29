@@ -10,15 +10,13 @@ import ListaPiva from "./components/Pivo/ListaPiva";
 import SideDrawer from "./components/Topbar/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 import NoMatch from "./components/Tools/NoMatch/NoMatch";
-import Festivali from './components/Smallbar/Festivali/Festivali.js';
-import Vrste from './components/Smallbar/Vrste/Vrste.js';
+import Festivali from "./components/Smallbar/Festivali/Festivali.js";
+import Vrste from "./components/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
-import Smallbar from './components/Smallbar/Smallbar';
-import Footer from './components/Footer/Footer.js'
-import './App';
-
-
+import Smallbar from "./components/Smallbar/Smallbar";
+import Footer from "./components/Footer/Footer.js";
+import "./App";
 
 class App extends Component {
   state = {
@@ -43,8 +41,7 @@ class App extends Component {
       width: "100%",
       height: "100%",
       marginTop: "1.5rem",
-      backgroundImage: `url(${Background})`,
-     
+      backgroundImage: `url(${Background})`
     };
 
     return (
@@ -65,8 +62,8 @@ class App extends Component {
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
             <Route component={NoMatch} />
-          </Switch>        
-        <Footer />
+          </Switch>
+          <Footer />
         </section>
       </Router>
     );

@@ -26,15 +26,12 @@ export default class ListaObjekata extends Component {
   };
 
   render() {
-    // console.log(this.state.objekti);
     let filtiraniObjekti = this.state.objekti.filter(objekat => {
       return (
         objekat.city.toLowerCase().indexOf(this.state.search.toLowerCase()) !==
         -1
       );
     });
-    // const { objekti } = this.state;
-    // console.log(this.props);
     return (
       <div className="glavniDiv">
         <div className="pretraga">
