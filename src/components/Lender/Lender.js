@@ -16,9 +16,6 @@ export default class Lender extends Component {
         <div className="lady">
           <img src={BeerLady1} alt="slika2" />
         </div>
-        {/*<div className="pluto">
-          <img src={pluto} width="30%" alt="slika3" />
-        </div>*/}
         <ZanatskoPivoButton toggle2={toggle2} />
         <PlutoButton toggle3={toggle3} />
       </div>

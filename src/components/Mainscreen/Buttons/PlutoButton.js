@@ -14,7 +14,7 @@ export default class PlutoButton extends Component {
     return (
       <div>
         <button className="btn_pluto" onClick={toggle3}>
-          <img src={this.state.fotke[0]} alt="" />
+          <img src={pluto1} alt="" />
         </button>
       </div>
     );
