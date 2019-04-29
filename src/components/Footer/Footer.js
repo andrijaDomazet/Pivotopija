@@ -48,7 +48,7 @@ export default function Footer() {
 						<li className="list-inline-item"><a href="/" target="_blank"><i className="fa fa-envelope"></i></a></li>
 					</ul>                    
                     <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center ">                    				
-					    <p className="h6"> All right Reversed.<br/><a className="text-green ml-2" href="https://github.com/andrijaDomazet/Pivotopija" target="_blank">InformationTechnologySchool<br/>Andrija/Bojan/Darko<br/>JavaScriptGrupa1-GitHub</a></p>
+					    <p className="h6"> All rights Reversed.<br/><a className="text-green ml-2" href="https://github.com/andrijaDomazet/Pivotopija" target="_blank">InformationTechnologySchool<br/>Andrija/Bojan/Darko<br/>JavaScriptGrupa1-GitHub</a></p>
 				    </div>
 				</div>
 				
