@@ -33,10 +33,10 @@ class App extends Component {
 
   render() {
     let backdrop;
-
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
+
     var pozadina = {
       width: "100%",
       height: "100%",
@@ -46,7 +46,6 @@ class App extends Component {
 
     return (
       <Router style={{ height: "100%" }}>
-        {/* ????????????????????? proveriti Router style */}
         <Topbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}

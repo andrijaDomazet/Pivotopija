@@ -5,7 +5,8 @@ export const spisakObjekta = [
     city: "zemun",
     img: "./img/objekti/crveni_rak.jpg",
     name: "crveni rak",
-    info: "Adresa: Beogradska 14, Zemun"
+    info: "Adresa: Beogradska 14, Zemun",
+    fb: "https://www.facebook.com/CrveniRak/?ref=br_rs"
   },
   {
     id: 2,
