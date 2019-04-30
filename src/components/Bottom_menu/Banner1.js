@@ -14,10 +14,9 @@ export default function Banner1() {
         <div style={props}>
           <div className="banners">
             <div>
-              <img src={banner1}  alt="" />
+              <img src={banner1} alt="" />
             </div>
             <h3>Banner1</h3>
-            
           </div>
         </div>
       )}

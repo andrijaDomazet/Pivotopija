@@ -48,6 +48,6 @@ const btn = {
   padding: "1rem 2rem",
   border: "none",
   textTransform: "upercase",
-  margin: "15px 0"
+  margin: "1vh 0"
 };
 export default Probali;

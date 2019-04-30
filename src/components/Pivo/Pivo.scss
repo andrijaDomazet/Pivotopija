@@ -35,25 +35,37 @@
       word-spacing: -0.6px;
     }
   }
-}
-.infoPiva {
-  border-bottom-left-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
-  background: #c59237;
-  background: -moz-linear-gradient(top, #c59237 0%, #876426 50%, #3d2d11 100%);
-  background: -webkit-linear-gradient(
-    top,
-    #c59237 0%,
-    #876426 50%,
-    #3d2d11 100%
-  );
-  background: linear-gradient(to bottom, #c59237 0%, #876426 50%, #3d2d11 100%);
-  h2 {
-    border-top: 2px solid black;
-    text-align: center;
-  }
-  h3 {
-    text-align: center;
-    text-transform: uppercase;
+  .infoPiva {
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    background: #c59237;
+    background: -moz-linear-gradient(
+      top,
+      #c59237 0%,
+      #876426 50%,
+      #3d2d11 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      #c59237 0%,
+      #876426 50%,
+      #3d2d11 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      #c59237 0%,
+      #876426 50%,
+      #3d2d11 100%
+    );
+    h2 {
+      border-top: 2px solid black;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0 0;
+      margin: 0 0;
+    }
   }
 }

@@ -2,12 +2,12 @@
 //     display: flex;
 //}
 
-* {
-    box-sizing: border-box;
-  }
-  
-  .box {
-    float: left;
-    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
-    padding: 50px; /* if you want space between the images */
-  }
+// * {
+//     box-sizing: border-box;
+//   }
+
+.box {
+  float: left;
+  width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+  padding: 10vh; /* if you want space between the images */
+}
