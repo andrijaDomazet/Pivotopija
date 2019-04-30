@@ -23,10 +23,8 @@ export default function Porter() {
             stout je verzija regularnog porter-a, samo sa punijim telom, i uglavnom se izvozi za Ameriku i 
             Zapadnu Indiju. Patent slad je nastao 1817. godine, kao zamena za skupe braon, kristal sladove. Ovo je
             učinilo da se porter piva mogu praviti po nižim cenama, s obzirom da se za njihovu proizvodnju
-            može koristiti većinski pale ale slad koji daje dobar ekstrakt (više alkohola), i mali udeo patent
-            slada, u odnosnu na prethodnu kombinaciju kristal i svetlih sladova. Dobar primer za ovu
-            praksu nalazimo kod Guinness piva.
-            sladova.
+            može koristiti većinski pale ale slad koji daje dobar ekstrakt (više alkohola).
+            
             </p>
             </div>
            </div> 
