@@ -11,15 +11,15 @@ export default function Smallbar() {
             <NavLink to="/festivali" className="smallBar-link">
               festivali 2019
             </NavLink>
+          </li>          
+          <li>
+            <NavLink to="/postupak" className="smallBar-link">
+              postupak izrade
+            </NavLink>
           </li>
           <li>
             <NavLink to="/vrste" className="smallBar-link">
               vrste piva
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/postupak" className="smallBar-link">
-              postupak izrade
             </NavLink>
           </li>
           <li>
