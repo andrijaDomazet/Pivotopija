@@ -8,24 +8,23 @@ import UpisKomentara from "./UpisKomentara";
 
 export default class PodaciObjekta extends Component {
   state = {
-    showUpis: false,
     upisKomentaraOpen: false,
-    brojac: 0,
+    brojSvidjanja: 0,
     brojKomentara: 0,
     showInfo: false
   };
   okidacUpisaKomentara = () => {
-    // console.log("idemoooo");
     this.setState(prevState => {
       return { upisKomentaraOpen: !prevState.upisKomentaraOpen };
     });
   };
 
-  // handleUpis = () => {
-  //   this.setState({
-  //     showUpis: !this.state.showUpis
-  //   });
-  // };
+  brojacSvidjanja = () => {
+    let noviBrojac = this.state.brojSvidjanja + 1;
+    this.setState({
+      brojSvidjanja: noviBrojac
+    });
+  };
 
   brojacKomentara = () => {
     let noviKomentar = this.state.brojKomentara + 1;
@@ -33,10 +32,9 @@ export default class PodaciObjekta extends Component {
       brojKomentara: noviKomentar
     });
   };
-  brojacSvidjanja = () => {
-    let noviBrojac = this.state.brojac + 1;
-    this.setState({
-      brojac: noviBrojac
+  removeCommentBox = () => {
+    this.setState(prevState => {
+      return { upisKomentaraOpen: false };
     });
   };
 
@@ -56,7 +54,7 @@ export default class PodaciObjekta extends Component {
       <div className="objekat-info">
         <div className="socialButtons">
           <div className="svidjanja">
-            <p>{this.state.brojac} sviđanja</p>
+            <p>{this.state.brojSvidjanja} sviđanja</p>
             <button className="like" onClick={this.brojacSvidjanja}>
               <i className="far fa-thumbs-up" />
             </button>
@@ -65,7 +63,11 @@ export default class PodaciObjekta extends Component {
             <p>{this.state.brojKomentara} komentara</p>
             <ToggleComments click={this.okidacUpisaKomentara} />
             {/* <FormaKomentara okidacUpisaKomentara={this.okidacUpisaKomentara} /> */}
-            <UpisKomentara show={this.state.upisKomentaraOpen} />
+            <UpisKomentara
+              brojacKomentara={this.brojacKomentara}
+              removeCommentBox={this.removeCommentBox}
+              show={this.state.upisKomentaraOpen}
+            />
           </div>
         </div>
         <div className="opsti-podaci">
