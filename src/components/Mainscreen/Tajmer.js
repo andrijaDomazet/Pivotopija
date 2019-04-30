@@ -13,11 +13,11 @@ export default class Tajmer extends Component {
       seconds: state.seconds + 1
     }));
   }
-  componentDidMount() {
-    this.interval = setInterval(() => this.brojanje(), 1000);
-  }
+  // componentDidMount() {
+  //   this.interval = setInterval(() => this.brojanje(), 1000);
+  // }
   render() {
-    console.log("tajmer");
+    // console.log("tajmer");
     return (
       <div>
         {/* <div>

@@ -2,16 +2,15 @@
 
 .lista_piva {
   margin: 0 auto;
-  width: 65vw;
+  width: 70%;
   color: $mainBlack;
-  //   padding: 2rem 0;
 }
 
 @media screen and(min-width:768px) {
   .lista_piva {
     display: grid;
-    width: 60vw;
+    width: 70%;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 3.5rem;
+    grid-column-gap: 1.5rem;
   }
 }

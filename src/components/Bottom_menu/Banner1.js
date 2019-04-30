@@ -14,8 +14,9 @@ export default function Banner1() {
         <div style={props}>
           <div className="banners">
             <div>
-              <img src={banner1}  alt="" />
+              <img src={banner1} alt="" />
             </div>
+
             <h3>Lager meseca</h3>
             
           </div>

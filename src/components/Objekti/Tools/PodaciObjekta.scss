@@ -39,6 +39,9 @@
         i {
           font-size: 1rem;
         }
+        &:focus {
+          outline: none;
+        }
       }
     }
     .komentarisanje {
@@ -49,7 +52,7 @@
       font-size: 0.7rem;
       color: $mainGreen;
       // background: transparent;
-      cursor: pointer;
+
       p {
         float: right;
         flex: 2;
@@ -61,16 +64,16 @@
       }
       .comments {
         flex: 1;
-        padding: 0 0;
-        margin: 0 0;
-        border: none;
-        font-size: 0.7rem;
-        color: $mainGreen;
-        background: transparent;
-        cursor: pointer;
-        i {
-          font-size: 1rem;
-        }
+        // padding: 0 0;
+        // margin: 0 0;
+        // border: none;
+        // font-size: 0.7rem;
+        // color: $mainGreen;
+        // background: transparent;
+        // cursor: pointer;
+        // i {
+        //   font-size: 1rem;
+        // }
       }
     }
   }

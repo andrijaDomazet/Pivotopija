@@ -43,4 +43,6 @@ export class Probali extends Component {
 //   padding: "1.5rem"
 // };
 
+
+
 export default Probali;

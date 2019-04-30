@@ -1,21 +1,39 @@
 import React, { Component } from "react";
 import "./Objekat.scss";
 import "./PodaciObjekta.scss";
+import FormaKomentara from "./FormaKomentara";
+import ToggleComments from "./ToggleComments";
+import Backdrop from "../../Backdrop/Backdrop";
+import UpisKomentara from "./UpisKomentara";
 
 export default class PodaciObjekta extends Component {
   state = {
+    showUpis: false,
+    upisKomentaraOpen: false,
     brojac: 0,
     brojKomentara: 0,
     showInfo: false
   };
+  okidacUpisaKomentara = () => {
+    // console.log("idemoooo");
+    this.setState(prevState => {
+      return { upisKomentaraOpen: !prevState.upisKomentaraOpen };
+    });
+  };
 
-  komentarisanje = () => {
+  // handleUpis = () => {
+  //   this.setState({
+  //     showUpis: !this.state.showUpis
+  //   });
+  // };
+
+  brojacKomentara = () => {
     let noviKomentar = this.state.brojKomentara + 1;
     this.setState({
       brojKomentara: noviKomentar
     });
   };
-  brojacKomentara = () => {
+  brojacSvidjanja = () => {
     let noviBrojac = this.state.brojac + 1;
     this.setState({
       brojac: noviBrojac
@@ -29,21 +47,25 @@ export default class PodaciObjekta extends Component {
   };
 
   render() {
+    let backdrop;
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
     const { city, name, info } = this.props.podaci;
     return (
       <div className="objekat-info">
         <div className="socialButtons">
           <div className="svidjanja">
             <p>{this.state.brojac} sviđanja</p>
-            <button className="like" onClick={this.brojacKomentara}>
+            <button className="like" onClick={this.brojacSvidjanja}>
               <i className="far fa-thumbs-up" />
             </button>
           </div>
           <div className="komentarisanje">
             <p>{this.state.brojKomentara} komentara</p>
-            <button className="comments" onClick={this.komentarisanje}>
-              <i className="far fa-comments" />
-            </button>
+            <ToggleComments click={this.okidacUpisaKomentara} />
+            {/* <FormaKomentara okidacUpisaKomentara={this.okidacUpisaKomentara} /> */}
+            <UpisKomentara show={this.state.upisKomentaraOpen} />
           </div>
         </div>
         <div className="opsti-podaci">

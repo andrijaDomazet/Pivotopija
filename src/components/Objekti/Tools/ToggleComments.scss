@@ -1,0 +1,17 @@
+@import "../../../index.scss";
+
+.toggleComments {
+  flex: 1;
+  padding: 0 0;
+  margin: 0 0;
+  cursor: pointer;
+  border: none;
+  color: $mainGreen;
+  background: transparent;
+  i {
+    font-size: 1rem;
+  }
+  &:focus {
+    outline: none;
+  }
+}
