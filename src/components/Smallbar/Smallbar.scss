@@ -3,7 +3,7 @@
 .smallBar {
   display: flex;
   width: 70%;
-  margin-left: 15%;
+  margin-left: 15%;  
   background: transparent;
   align-items: center;
 
@@ -12,10 +12,10 @@
     align-self: center;
 
     ul {
-      display: flex;
-      align-self: center;
-      margin: 0;
+      display: flex;      
+      margin: 0 auto;      
     }
+   
     li {
       align-self: center;
       color: $mainYellow;
@@ -23,6 +23,8 @@
       text-transform: capitalize;
       font-size: 1.2rem;
       transition: all 0.3s linear;
+     
+
       &:hover {
         color: $mainYellow;
       }

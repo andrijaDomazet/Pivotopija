@@ -4,13 +4,14 @@ import Lager from './Lager/Lager.js';
 import Stout from './Stout/Stout.js';
 import Malt from './Malt/Malt.js';
 import Smallbar from '../Smallbar';
+import './Vrste.scss';
 
-export default class Postupak extends Component {
+export default class Vrste extends Component {
   render() {
     return (
       <div>
         <Smallbar />
-      <div className='postupakstyle'>
+      <div className='vrstestyle'>
       
         <Ale />
         <Lager />
