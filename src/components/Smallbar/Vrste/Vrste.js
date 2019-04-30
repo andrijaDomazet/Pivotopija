@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Ale from './Ale/Ale.js';
 import Lager from './Lager/Lager.js';
 import Stout from './Stout/Stout.js';
-import Malt from './Malt/Malt.js';
+import Porter from './Porter/Porter.js';
 import Smallbar from '../Smallbar';
 import './Vrste.scss';
 
@@ -16,7 +16,7 @@ export default class Vrste extends Component {
         <Ale />
         <Lager />
         <Stout />
-        <Malt />
+        <Porter />
       </div>
       </div>
     )

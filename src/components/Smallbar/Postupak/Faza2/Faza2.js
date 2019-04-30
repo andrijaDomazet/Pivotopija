@@ -1,5 +1,6 @@
 import "./Faza2.scss";
 import React from "react";
+import Fermentacija from '../img/fermentacija.jpg'
 import { Spring } from "react-spring/renderprops";
 
 
@@ -12,10 +13,11 @@ export default function Faza2() {
     >
       {props => (
         <div style={props}>
-          <div className='f2tyle'>
-          
+          <div className='f2style'>
+          <img className='faza2img' src={Fermentacija}  alt="slika3" />
+            
+            <p className='paragFaza2'>
             <h1>Fermentacija</h1>
-            <p>
             Nakon hlađenja počinje proces fermentacije sladovine. 
             U proizvodnji lager piva razlikuju se dve vrste vrenja: 
             glavno i naknadno vrenje. Od vrenja zavisi vrsta i kvalitet gotovog proizvoda, 
