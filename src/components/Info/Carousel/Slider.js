@@ -11,24 +11,14 @@ export default function Slider() {
       {props => (
         <div style={props}>
           <div style={c1Style}>
-            <h1>Slider</h1>
+            <h1>Otvara se nova pivnica</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur, odit? Beatae illum temporibus mollitia. Numquam
               consequuntur sed, illum nisi fugit perferendis quo perspiciatis
               vero nostrum, recusandae reprehenderit minus. Laborum, nulla!
             </p>
-            <Spring
-              from={{ number: 0 }}
-              to={{ number: 10 }}
-              config={{ duration: 10000 }}
-            >
-              {props => (
-                <div style={props}>
-                  <h1 style={counter}>{props.number.toFixed()}</h1>
-                </div>
-              )}
-            </Spring>
+          
           </div>
         </div>
       )}
@@ -41,10 +31,4 @@ const c1Style = {
   color: "white",
   padding: "1.5rem"
 };
-const counter = {
-  background: "black",
-  textAlign: "center",
-  width: "100px",
-  borderRadius: "50%",
-  margin: "1rem auto"
-};
+

@@ -7,7 +7,7 @@ export default function Banner2() {
     <Spring
       from={{ opacity: 0 }}
       to={{ opacity: 1 }}
-      config={{ delay: 3000, duration: 1500 }}
+      config={{ delay: 1500, duration: 2000 }}
     >
       {props => (
         <div style={props}>
@@ -15,7 +15,7 @@ export default function Banner2() {
             <div>
               <img src={banner2} alt="" />
             </div>
-            <h3>Banner2</h3>
+            <h3>Izbor ambalaze</h3>
           </div>
         </div>
       )}

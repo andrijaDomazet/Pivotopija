@@ -101,7 +101,7 @@ export default function Footer() {
             <h5>Quick links</h5>
             <ul className="list-unstyled quick-links">
               <li>
-                <a href="#" target="_blank">
+                <a href="/#" target="_blank">
                   <i
                     className="fa fa-angle-double-right"
                     rel="noopener noreferrer"

@@ -16,7 +16,9 @@ export default function Banner1() {
             <div>
               <img src={banner1} alt="" />
             </div>
-            <h3>Banner1</h3>
+
+            <h3>Lager meseca</h3>
+            
           </div>
         </div>
       )}

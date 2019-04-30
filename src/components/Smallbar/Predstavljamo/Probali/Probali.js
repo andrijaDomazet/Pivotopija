@@ -12,12 +12,14 @@ export class Probali extends Component {
       >
         {props => (
           <div style={props}>
+
             <div className="probalistyle">
-              <div className="tekst">
-                <img src={pluto} width="12%" alt="slika3" />
+              
+                <img className="plutostyle" src={pluto}  alt="slika3" />
                 <h1>Plutonium</h1>
                 <h4>Dogma Brewery</h4>
                 <br />
+                <div className="probatextstyle">
                 <p>
                   Plutonium Orange Milkshake Double IPA is a beer with a
                   radioactive name. But also it has radioactive taste! Brewed in
@@ -27,11 +29,9 @@ export class Probali extends Component {
                   will make your senses radioactive!
                 </p>
               </div>
-              <button style={btn} onClick={this.props.toggle1}>
-                Komentar
-              </button>
+              </div>
             </div>
-          </div>
+          
         )}
       </Spring>
     );
@@ -42,12 +42,7 @@ export class Probali extends Component {
 //   color: "white",
 //   padding: "1.5rem"
 // };
-const btn = {
-  background: "green",
-  color: "white",
-  padding: "1rem 2rem",
-  border: "none",
-  textTransform: "upercase",
-  margin: "1vh 0"
-};
+
+
+
 export default Probali;
