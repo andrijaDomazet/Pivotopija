@@ -1,12 +1,12 @@
 import React from "react";
 import "./Navbar.scss";
-import logo from "../../img/logo.png";
+import Logo from "../../../src/img/LogoLNK.svg";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navBar">
-      <img src={logo} alt="" width="50px" height="50px" />
+      <img src={Logo} alt="" width="50px" height="50px" />
       <span className="naziv">Pivotopija</span>
       <div className="nav-links">
         <ul>

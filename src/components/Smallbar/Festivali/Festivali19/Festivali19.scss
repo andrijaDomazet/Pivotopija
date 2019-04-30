@@ -1,29 +1,54 @@
  
+
+.lista{            
+            margin: 0 auto;
+            padding: 0;
+            
+         }
+        
 .naslov{
         text-align: center;
         display: inline;
-      }   
-        
+        margin: 0 auto;
+                } 
+
 .imgfest1 
-    {
+     {           
+    width: 100%;        
+        }
+
+.imgfest2{    
+    width: 100%;         
+        }
+
+.prviFestival
+      {
     
-    width: 100%;
-}
+    width:100%;
+        }
+.drugiFestival
+      {
+    
+    width:100%;
+        }
 
 
-    .imgfest2{    
-   
+.paragraf1 {    
+    color: antiquewhite;
+    position: relative;
+    background-color: #5c5c5cb0;      
     width: 100%;
-}
-.paragraf1 {
-    
-    padding: 2%;
+    padding: 5%;
         }     
 
 
  .paragraf2 {
            
-     padding: 2%;
+    color: antiquewhite;
+    position: relative;
+    background-color: #5c5c5cb0;        
+    width: 100%;
+    padding: 5%;
         }
           
     

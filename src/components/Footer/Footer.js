@@ -205,6 +205,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <a href="https://www.freepik.com/free-photos-vectors/frame">macrovector -freepik - www.freepik.com</a>
+        
       </div>
     </section>
   );

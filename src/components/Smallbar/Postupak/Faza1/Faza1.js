@@ -1,7 +1,8 @@
-import "./Faza1.scss";
+
 import React from "react";
 import { Spring } from "react-spring/renderprops";
-
+import Sastojci from '../img/sastojci.jpg'
+import "./Faza1.scss";
 
 export default function Faza1() {
   return (
@@ -12,10 +13,11 @@ export default function Faza1() {
     >
       {props => (
         <div style={props}>
-          <div className='f1tyle'>
-          
+          <div className='f1style'>
+          <img className='faza1img' src={Sastojci}  alt="slika3" />
+            
+            <p className='paragFaza1'>
             <h1>Proizvodnja sladovine</h1>
-            <p>
             Slad je osnovni poluproizvod za dobijanje piva. 
             Aroma, ukus, boja, trajnost i postojanost pene piva u znatnoj 
             meri zavise od osobina slada koji se prerađuje. 
