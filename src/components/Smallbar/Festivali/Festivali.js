@@ -6,10 +6,9 @@ import './Festivali.scss';
 export default class Festivali extends Component {
   render() {
     return (
-      <div>
+      <div className='festibox'>
     <Smallbar />
-    <div className='fstyle'>
-      
+    <div className='fstyle'>      
       <Festivali19/>
 
        </div>

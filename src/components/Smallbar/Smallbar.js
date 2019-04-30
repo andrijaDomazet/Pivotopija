@@ -6,7 +6,7 @@ export default function Smallbar() {
   return (
     <nav className="smallBar">
       <div className="smallBar-links">
-        <ul>
+        <ul className='smolBar'>
           <li>
             <NavLink to="/festivali" className="smallBar-link">
               festivali 2019
