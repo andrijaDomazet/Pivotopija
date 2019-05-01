@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Topbar from "./components/Topbar/Topbar";
+import SignIn from "./components/Topbar/Login/SignIn";
+import SignUp from "./components/Topbar/Login/SignUp";
 import Navbar from "./components/Navbar/Navbar";
 import Background from "../src/img/pozadina.jpg";
 import ListaObjekata from "./components/Objekti/ListaObjekata";
@@ -60,6 +62,8 @@ class App extends Component {
             <Route path="/festivali" component={Festivali} />
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
+            <Route path="/SignIn" component={SignIn} />
+            <Route path="/SignUp" component={signUp} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />
