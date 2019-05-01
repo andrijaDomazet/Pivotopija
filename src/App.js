@@ -63,7 +63,7 @@ class App extends Component {
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
             <Route path="/SignIn" component={SignIn} />
-            <Route path="/SignUp" component={signUp} />
+            <Route path="/SignUp" component={SignUp} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />

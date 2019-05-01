@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+// import "./Topbar.scss";
+// import "./top-link";
 
 class SignIn extends Component {
     state = {
@@ -16,7 +18,7 @@ class SignIn extends Component {
   }
   render() {
     return (
-      <div className="top-link">
+      <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
             <h5 className="grey-text text-darken-2">Sign In</h5>
             <div className="input-field">
@@ -24,11 +26,11 @@ class SignIn extends Component {
                 <input type="email" id="email" onChange={this.handleChange}></input>
              </div>
              <div className="input-field">
-                <label htmlFor="password">Email</label>
+                <label htmlFor="password">Password</label>
                 <input type="password" id="password" onChange={this.handleChange}></input>
              </div>
              <div className="input-field">
-                <button classNam="btn pink lighten-1 z-depth-0">Login</button>
+                <button className="btn pink lighten-1 z-depth-0">Login</button>
              </div>
         </form>
      </div>
