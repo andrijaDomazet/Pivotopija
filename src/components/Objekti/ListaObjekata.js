@@ -5,17 +5,18 @@ import Tajmer from "../Mainscreen/Tajmer";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ListaObjekata extends Component {
-  // constructor() {
-  //   super();
   state = {
     objekti: spisakObjekta,
-    search: ""
+    search1: "",
+    search2: "",
+    search3: ""
   };
-  // }
 
-  updateSearch = event => {
-    this.setState({ search: event.target.value.substr(0, 20) });
-    console.log(this.state.search);
+  updateSearch1 = event => {
+    this.setState({ search1: event.target.value.substr(0, 20) });
+  };
+  updateSearch2 = event => {
+    this.setState({ search2: event.target.value.substr(0, 20) });
   };
 
   removeObjekat = id => {
@@ -27,12 +28,19 @@ export default class ListaObjekata extends Component {
   };
 
   render() {
-    let filtiraniObjekti = this.state.objekti.filter(objekat => {
+    let filtiraniObjekti1 = this.state.objekti.filter(objekat => {
       return (
-        objekat.city.toLowerCase().indexOf(this.state.search.toLowerCase()) !==
+        objekat.city.toLowerCase().indexOf(this.state.search1.toLowerCase()) !==
         -1
       );
     });
+    let filtiraniObjekti2 = this.state.objekti.filter(objekat => {
+      return (
+        objekat.name.toLowerCase().indexOf(this.state.search2.toLowerCase()) !==
+        -1
+      );
+    });
+
     return (
       <div className="glavniDiv">
         <div className="pretraga">
@@ -41,7 +49,7 @@ export default class ListaObjekata extends Component {
               type="text"
               placeholder="Pretraga po lokaciji objekta"
               value={this.state.search}
-              onChange={this.updateSearch.bind(this)}
+              onChange={this.updateSearch1.bind(this)}
             />
           </div>
           <div className="search_imena">
@@ -49,7 +57,7 @@ export default class ListaObjekata extends Component {
               type="text"
               placeholder="Pretraga po nazivu objekta"
               value={this.state.search}
-              onChange={this.updateSearch.bind(this)}
+              onChange={this.updateSearch2.bind(this)}
             />
           </div>
           <div className="dodatno">
@@ -59,16 +67,18 @@ export default class ListaObjekata extends Component {
         <Suspense fallback={<div>Loading...</div>}>
           <Tajmer />
           <section className="objektiLista">
-            {filtiraniObjekti.map(objekat => {
-              return (
-                <Objekat
-                  key={objekat.id}
-                  // key={i}
-                  objekat={objekat}
-                  removeObjekat={this.removeObjekat}
-                />
-              );
-            })}
+            {filtiraniObjekti1
+              .filter(x => filtiraniObjekti2.includes(x))
+              .map(objekat => {
+                return (
+                  <Objekat
+                    key={objekat.id}
+                    // key={i}
+                    objekat={objekat}
+                    removeObjekat={this.removeObjekat}
+                  />
+                );
+              })}
           </section>
         </Suspense>
       </div>
