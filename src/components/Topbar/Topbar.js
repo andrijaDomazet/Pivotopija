@@ -14,7 +14,7 @@ export default function Topbar(props) {
         <div className="navigation-items">
           <ul>
             <li>
-              <NavLink to="/SignIn" className="top-link">
+              <NavLink to="/login" className="top-link">
                 Login
               </NavLink>
             </li>
