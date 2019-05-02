@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Topbar from "./components/Topbar/Topbar";
+// import SignIn from "./components/Topbar/Login/SignIn";
+// import SignUp from "./components/Topbar/Login/SignUp";
 import Navbar from "./components/Navbar/Navbar";
 import Background from "../src/img/pozadina.jpg";
 import ListaObjekata from "./components/Objekti/ListaObjekata";
@@ -17,6 +19,7 @@ import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js"
 // import Smallbar from "./components/Smallbar/Smallbar";
 import Footer from "./components/Footer/Footer.js";
 import "./App";
+import Login from "./components/Topbar/Login/Login";
 
 class App extends Component {
   state = {
@@ -60,6 +63,7 @@ class App extends Component {
             <Route path="/festivali" component={Festivali} />
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
+            <Route path="/login" component={Login} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />
