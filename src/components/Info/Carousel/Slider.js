@@ -1,6 +1,8 @@
-import "./Slider.scss";
-import React from "react";
+import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
+import SH from '../img/SH.jpg'
+import './Slider.scss'
+
 
 export default function Slider() {
   return (
@@ -10,8 +12,8 @@ export default function Slider() {
     >
       {props => (
         <div style={props}>
-          <div style={c1Style}>
-            <h1>Otvara se nova pivnica</h1>
+        <img className='slika1' src={SH}  alt="slika3" />
+          <div className='sl1style'>          
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur, odit? Beatae illum temporibus mollitia. Numquam

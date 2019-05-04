@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import pluto from "../../../Lender/lenderIMG/pluto.png";
+import Komentform from './Komentform/Komentform.js'
 import "./Probali.scss";
 
 export class Probali extends Component {
@@ -15,12 +16,13 @@ export class Probali extends Component {
 
             <div className="probalistyle">
               
-                <img className="plutostyle" src={pluto}  alt="slika3" />
+                <img className="plutoimg" src={pluto}  alt="slika3" />
+                <div className="probatextstyle">
                 <h1>Plutonium</h1>
                 <h4>Dogma Brewery</h4>
-                <br />
-                <div className="probatextstyle">
-                <p>
+               
+                
+                <p className="textstyle">
                   Plutonium Orange Milkshake Double IPA is a beer with a
                   radioactive name. But also it has radioactive taste! Brewed in
                   collab with our Russian friends (Brighton Brew) this tasty and
@@ -30,7 +32,14 @@ export class Probali extends Component {
                 </p>
               </div>
               </div>
+
+            <div className='komentstyle'>
+              <Komentform />
             </div>
+
+
+            </div>
+            
           
         )}
       </Spring>
