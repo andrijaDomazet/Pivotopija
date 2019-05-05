@@ -4,7 +4,19 @@ import pluto from "../../../Lender/lenderIMG/pluto.png";
 import Komentform from './Komentform/Komentform.js'
 import "./Probali.scss";
 
-export class Probali extends Component {
+export default class Probali extends Component {
+
+  state = {
+    ime:'',
+    komentar:'',
+  };
+
+onSubmit = fields => {
+  console.log('Probali kaze:', fields);
+  this.setState({ fields });
+  };
+
+
   render() {
     return (
       <Spring
@@ -19,22 +31,26 @@ export class Probali extends Component {
                 <img className="plutoimg" src={pluto}  alt="slika3" />
                 <div className="probatextstyle">
                 <h1>Plutonium</h1>
-                <h4>Dogma Brewery</h4>
-               
+                <h4>Dogma Brewery</h4>              
                 
                 <p className="textstyle">
-                  Plutonium Orange Milkshake Double IPA is a beer with a
-                  radioactive name. But also it has radioactive taste! Brewed in
-                  collab with our Russian friends (Brighton Brew) this tasty and
-                  juicy beer is full of orange flavour, citrusy hops and
-                  lactose. Smooth, silky and a little bit astrigent, Plutonium
-                  will make your senses radioactive!
+                    Plutonium Orange Milkshake Double IPA is a beer with a
+                    radioactive name. But also it has radioactive taste! Brewed in
+                    collab with our Russian friends (Brighton Brew) this tasty and
+                    juicy beer is full of orange flavour, citrusy hops and
+                    lactose. Smooth, silky and a little bit astrigent, Plutonium
+                    will make your senses radioactive!
                 </p>
               </div>
               </div>
 
             <div className='komentstyle'>
-              <Komentform />
+              <Komentform onSubmit = {fields => this.onSubmit(fields)} />
+                <div className = 'textform'>
+                  <p className = 'ispistyle' >
+                  {JSON.stringify(this.state.fields, null, 2)}
+                  </p>
+                </div>
             </div>
 
 
@@ -46,12 +62,6 @@ export class Probali extends Component {
     );
   }
 }
-// const c2Style = {
-//   background: "grey",
-//   color: "white",
-//   padding: "1.5rem"
-// };
 
 
 
-export default Probali;
