@@ -23,11 +23,11 @@ export default function Festivali19 () {
             <br />  
             <br />          
             <div className='lista'>
-              <img className='imgfest1' src={Bf18}  alt="slika3" />
+              
                 <div className='prviFestival'>       
-                   
-                    <p className='paragraf1'>
-                    <h2>Beogradski festival piva</h2>
+                   <h2>Beogradski festival piva</h2>
+                   <img className='imgfest1' src={Bf18}  alt="slika3" />
+                    <p className='paragraf1'>                    
                     Organizatori festivala posebnu zahvalnost duguju službama grada Beograda bez čije 
                     podrške ne bi bilo moguće realizovati festival ovog obima. 
                     Svakog dana oko 100 radnika sa 15 vozila JKP "Gradska čistoća" i "Zelenilo Beograd" uklanjalo smeća, 
@@ -36,11 +36,11 @@ export default function Festivali19 () {
                     a sve vreme trajanja festivala su dežurale i ekipe električara i javnog osvetljenja.
                     </p>
                 </div>
-              <img className='imgfest2' src={Dani}  alt="slika4" />
+              
                 <div className='drugiFestival'>                    
-                    
-                    <p className='paragraf2'>
                     <h2>Dani piva u Zrenjaninu</h2>
+                    <img className='imgfest2' src={Dani}  alt="slika4" />
+                    <p className='paragraf2'>                    
                     „Dani piva” traju do nedelje, 2. septembra, uz raznovrstan program na više lokacija. 
                      To je jedna od najvećih tradicionalnih manifestacija u Srbiji, a svakako prepoznatljiv 
                      zrenjaninski turistički brend. Između ostalih, nastupiće: „Bajaga i instruktori”, „Riblja Čorba”, 

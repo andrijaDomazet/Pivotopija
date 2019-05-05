@@ -5,7 +5,7 @@ import "./Footer.scss";
 export default function Footer() {
   return (
     <section id="footer">
-      <div className="container">
+      <div className="konteiner">
         <div className="row text-center text-xs-center text-sm-left text-md-left">
           <div className="col-xs-12 col-sm-4 col-md-4">
             <h5>Linkovi</h5>
@@ -201,11 +201,13 @@ export default function Footer() {
                   <br />
                   JavaScriptGrupa1-GitHub
                 </a>
+                <br />
+                <a href="https://www.freepik.com/free-photos-vectors/frame">macrovector -freepik - www.freepik.com</a>
               </p>
             </div>
           </div>
+          <br />
         </div>
-        <a href="https://www.freepik.com/free-photos-vectors/frame">macrovector -freepik - www.freepik.com</a>
         
       </div>
     </section>
