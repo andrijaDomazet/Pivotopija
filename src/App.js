@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Topbar from "./components/Topbar/Topbar";
-import SignIn from "./components/Topbar/Login/SignIn";
-import Register from "./components/Topbar/Login/Register";
 import Navbar from "./components/Navbar/Navbar";
 import Background from "../src/img/pozadina.jpg";
 import ListaObjekata from "./components/Objekti/ListaObjekata";
@@ -19,7 +17,7 @@ import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js"
 // import Smallbar from "./components/Smallbar/Smallbar";
 import Footer from "./components/Footer/Footer.js";
 import "./App";
-import Login from "./components/Topbar/Login/Login";
+//import Login from "./components/Topbar/Login/Login";
 
 class App extends Component {
   state = {
@@ -49,11 +47,11 @@ class App extends Component {
 
     return (
       <Router style={{ height: "100%" }}>
-        <Topbar />
+        <Topbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <section style={pozadina}>
-          <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+          <Navbar />
           <Switch>
             <Route path="/" exact component={Mainscreen} />
             <Route path="/info" component={Info} />
@@ -63,8 +61,8 @@ class App extends Component {
             <Route path="/festivali" component={Festivali} />
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
-            <Route path="/SignIn" component={SignIn} />
-            <Route path="/Register" component={Register} />
+            {/* <Route path="/SignIn" component={SignIn} />
+            <Route path="/Register" component={Register} /> */}
             <Route component={NoMatch} />
           </Switch>
           <Footer />

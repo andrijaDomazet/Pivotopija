@@ -3,6 +3,7 @@ import "./Topbar.scss";
 import { NavLink } from "react-router-dom";
 import ToggleButton from "./SideDrawer/ToggleButton";
 import SignIn from "./Login/SignIn";
+import Register from "./Login/Register";
 
 export default function Topbar(props) {
   return (
@@ -15,9 +16,7 @@ export default function Topbar(props) {
               <SignIn />
             </li>
             <li>
-              <NavLink to="/Register" className="top-link">
-                Register
-              </NavLink>
+              <Register />
             </li>
             <li>
               <NavLink to="/forum" className="top-link">

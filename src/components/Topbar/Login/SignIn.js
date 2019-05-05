@@ -1,85 +1,71 @@
-import React from "react";
-import ReactModalLogin from "react-modal-login";
+import React, { Component } from "react";
+import { Modal } from "react-bootstrap";
+import "../Topbar.scss";
+import "./Login.scss";
 
- 
-class SignIn extends React.Component {
-  constructor(props) {
-    super(props);
- 
-    this.state = {
-      showModal: false,
-      loading: false,
-      error: null
+
+class SignIn extends Component {
+    constructor(props, context) {
+        super(props, context);
+
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+
+        this.state = {
+            show: false,
+            email: "",
+            password: "",
+        };
+    }
+
+    handleChange = e => {
+        this.setState({
+            [e.target.id]: e.target.value
+        });
     };
-  }
- 
-  openModal() {
-    this.setState({
-      showModal: true
-    });
-  }
- 
-  closeModal() {
-    this.setState({
-      showModal: false,
-      error: null
-    });
-  }
- 
-  onLoginSuccess(method, response) {
-    console.log("logged successfully with " + method);
-  }
- 
-  onLoginFail(method, response) {
-    console.log("logging failed with " + method);
-    this.setState({
-      error: response
-    });
-  }
- 
-  startLoading() {
-    this.setState({
-      loading: true
-    });
-  }
- 
-  finishLoading() {
-    this.setState({
-      loading: false
-    });
-  }
- 
-  afterTabsChange() {
-    this.setState({
-      error: null
-    });
-  }
- 
-  render() {
-    return (
-      <div>
-        <button onClick={() => this.openModal()}>Sign In</button>
- 
-        <ReactModalLogin
-          visible={this.state.showModal}
-          onCloseModal={this.closeModal.bind(this)}
-          loading={this.state.loading}
-          error={this.state.error}
-          tabs={{
-            afterChange: this.afterTabsChange.bind(this)
-          }}
-          loginError={{
-            label: "Couldn't sign in, please try again."
-          }}
-          registerError={{
-            label: "Couldn't sign up, please try again."
-          }}
-          startLoading={this.startLoading.bind(this)}
-          finishLoading={this.finishLoading.bind(this)}
-        />
-      </div>
-    );
-  }
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log(this.state);
+    };
+
+    handleClose() {
+        this.setState({ show: false });
+    }
+
+    handleShow() {
+        this.setState({ show: true });
+    }
+
+    render() {
+        return (
+            <>
+                <p className="top-link" onClick={this.handleShow}>
+                    Sign In
+          </p>
+
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Sign In</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form onSubmit={this.handleSubmit} className="white">
+                            <div className="input-field">
+                                <input type="text" id="email" name="email" required onChange={this.handleChange} />
+                                <label htmlFor="email">Email</label>
+                            </div>
+                            <div className="input-field">
+                                <input type="password" id="password" required onChange={this.handleChange} />
+                                <label htmlFor="password">Password</label>
+                            </div>
+                            <div className="input-field">
+                                <button className="myButton">Sign In</button>
+                            </div>
+                        </form>
+                    </Modal.Body>
+                </Modal>
+            </>
+        );
+    }
 }
 
-export default SignIn;
+export default SignIn

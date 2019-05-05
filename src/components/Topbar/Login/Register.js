@@ -1,13 +1,24 @@
 import React, { Component } from "react";
+import { Modal } from "react-bootstrap";
+import "../Topbar.scss";
 import "./Login.scss";
 
-class SignUp extends Component {
-  state = {
-    email: "",
-    password: "",
-    firstName: "",
-    lastName: ""
-  };
+class Register extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+
+    this.state = {
+      show: false,
+      email: "",
+      password: "",
+      firstName: "",
+      lastName: "",
+    };
+  }
+
   handleChange = e => {
     this.setState({
       [e.target.id]: e.target.value
@@ -17,34 +28,53 @@ class SignUp extends Component {
     e.preventDefault();
     console.log(this.state);
   };
+
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
+  }
+
   render() {
     return (
-      <div className="modal">
-        <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="Login">Register</h5>
-          <div className="input-field">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="password">Email</label>
-            <input type="password" id="password" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
-          </div>
-        </form>
-      </div>
+      <>
+        <p className="top-link" onClick={this.handleShow}>
+          Register
+          </p>
+
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Register</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <form onSubmit={this.handleSubmit} className="white">
+              <div className="input-field">
+                <input type="email" id="email" required onChange={this.handleChange} />
+                <label htmlFor="email">Email</label>
+              </div>
+              <div className="input-field">
+                <input type="password" id="password" required onChange={this.handleChange} />
+                <label htmlFor="password">Password</label>
+              </div>
+              <div className="input-field">
+                <input type="text" id="firstName" required onChange={this.handleChange} />
+                <label htmlFor="firstName">First Name</label>
+              </div>
+              <div className="input-field">
+                <input type="text" id="lastName" required onChange={this.handleChange} />
+                <label htmlFor="lastName">Last Name</label>
+              </div>
+              <div className="input-field">
+                <button className="myButton">Register</button>
+              </div>
+            </form>
+          </Modal.Body>
+        </Modal>
+      </>
     );
   }
 }
 
-export default SignUp;
+export default Register
