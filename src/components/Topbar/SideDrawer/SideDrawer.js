@@ -1,7 +1,8 @@
 import React from "react";
 import "./SideDrawer.scss";
 import { NavLink } from "react-router-dom";
-import Logo2 from "../../../img/logo.png";
+import Logo from "../../../img/LogoLNK.svg";
+
 export default function SideDrawer(props) {
   let drawerClasses = "side-drawer";
   if (props.show) {
@@ -11,9 +12,10 @@ export default function SideDrawer(props) {
   return (
     <div>
       <nav className={drawerClasses}>
-        <div className="logo2">
-          <img src={Logo2} alt="pivo" width="30%" />
+        <div className="logo">
+          <img src={Logo} alt="pivo" width="30%" />
         </div>
+        <span className="naziv">Pivotopija</span>
         <ul>
           <li>
             <NavLink to="/" exact className="top-link2">

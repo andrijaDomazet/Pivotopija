@@ -1,14 +1,26 @@
 @import "../../index.scss";
 
 .col-example {
+  // font-size: 0.8rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #a0a0a02d;
   color: #fff;
   text-align: center;
-  width: 70%;
+  width: 90%;
   img {
     width: 100%;
     height: auto;
+  }
+}
+@media screen and(min-width:769px) {
+  .col-example {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 70%;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
