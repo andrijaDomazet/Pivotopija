@@ -9,8 +9,9 @@ export default class Komentform extends Component {
 
     onSubmit = e => {
       e.preventDefault();
-      console.log(this.state);
-      this.setState({
+      this.props.onSubmit(this.state)
+      console.log('Komentform kaze:',this.state);
+      this.setState({ //ovo sklanja unete vrednosti iz polja, nakon submit-a
         ime:'',
         komentar:'',
       })
@@ -22,7 +23,7 @@ export default class Komentform extends Component {
       <div className='komentstyle'>      
       <h4>Komentari</h4>
       <p>Vaša ocena:</p>
-      <form>
+      <form className='formastyle'>
       
           <input  className='imestyle'
           placeholder='Vaše ime' 
