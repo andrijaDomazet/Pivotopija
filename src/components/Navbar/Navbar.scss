@@ -2,18 +2,16 @@
 
 .navBar {
   display: flex;
-  width: 70%;
-  margin-left: 15%;
-  margin-top: 1%;
+  width: 90%;
+  margin: 0.2rem auto;
   align-self: center;
   background: transparent;
   text-decoration: none;
-  // border: 1px solid red;
-  // margin: 0 auto;
-  // padding: 0;
+  border: 1px solid green;
 
-  .spacer {
+  .spacer1 {
     flex: 1;
+    border: 1px solid red;
   }
   .naziv {
     flex: 1;
@@ -22,6 +20,14 @@
     font-size: 1.8rem;
     font-family: "Courgette", cursive;
   }
+  .toggle-button {
+    align-self: center;
+    flex: 1;
+    display: inline;
+    margin: 0 auto;
+    border: 1px solid blue;
+  }
+
   .nav-links {
     align-self: center;
 
@@ -55,9 +61,25 @@
     }
   }
 }
-
+.spacer2 {
+  flex: 1;
+  border: 1px solid red;
+}
 @media screen and(max-width:768px) {
   .nav-links {
     display: none;
+  }
+  .spacer2 {
+    display: none;
+  }
+}
+@media screen and(min-width:769px) {
+  .navBar {
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    .toggle-button {
+      display: none;
+    }
   }
 }

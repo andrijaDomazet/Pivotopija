@@ -8,9 +8,6 @@ export default function Topbar(props) {
   return (
     <header className="top-header">
       <nav className="topNavBar">
-        <div className="toggle-button">
-          <ToggleButton click={props.drawerClickHandler} />
-        </div>
         <div className="spacer" />
         <div className="navigation-items">
           <ul>

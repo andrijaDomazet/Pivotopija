@@ -2,35 +2,41 @@
 
 .btn_zanatskaPiva {
   position: absolute;
+<<<<<<< Updated upstream
   top: 18vh;
   left: 43%;
+=======
+  top: 16vh;
+  left: 50%;
+>>>>>>> Stashed changes
   background: transparent;
   cursor: pointer;
   border: none;
   z-index: +1;
   img {
     height: auto;
-    width: 15vw;
+    width: 12rem;
   }
   &:hover {
     transform: scale(1.12);
   }
 }
 
-// @media screen and(min-width:600px) {
-//   .btn_zanatskaPiva {
-//     right: 10%;
-//     img {
-//       width: 10rem;
-//     }
-//   }
-// }
-// @media screen and(min-width:992px) {
-//   .btn_zanatskaPiva {
-//     top: 15%;
-//     left: 40%;
-//     img {
-//       width: 12rem;
-//     }
-//   }
-// }
+@media screen and(min-width:700px) {
+  .btn_zanatskaPiva {
+    left: 50%;
+    img {
+      width: 12rem;
+    }
+  }
+}
+@media screen and(min-width:992px) {
+  .btn_zanatskaPiva {
+    top: 18%;
+    left: 40%;
+    img {
+      width: 12rem;
+      height: auto;
+    }
+  }
+}

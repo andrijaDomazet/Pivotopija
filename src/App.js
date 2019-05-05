@@ -49,11 +49,11 @@ class App extends Component {
 
     return (
       <Router style={{ height: "100%" }}>
-        <Topbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <Topbar />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <section style={pozadina}>
-          <Navbar />
+          <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
           <Switch>
             <Route path="/" exact component={Mainscreen} />
             <Route path="/info" component={Info} />
