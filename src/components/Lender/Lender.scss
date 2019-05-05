@@ -1,8 +1,10 @@
 @import "../../index.scss";
 
 .main_cover {
+  // position: relative;
+  // display: flex;
   color: black;
-  width: 90%;
+  width: 70%;
   height: 50vh;
   margin: 0 auto;
   // border: 3px solid green;
@@ -22,12 +24,19 @@
   }
 }
 
-@media screen and(min-width:769px) {
-  .main_cover {
-    width: 70%;
-    .pluto {
-      display: none;
-    }
+.pluto {
+  cursor: pointer;
+  img {
+    position: absolute;
+    right: 1rem;
+    width: auto;
+    height: 110%;
+    bottom: -1rem;
+  }
+}
+@media screen and(max-width:992px) {
+  .pluto {
+    display: none;
   }
 }
 @media screen and(min-width:500px) {

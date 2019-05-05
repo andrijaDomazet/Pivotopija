@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Spring } from "react-spring/renderprops";
 import SH from '../img/SH.jpg'
 import './Slider.scss'
@@ -28,9 +28,5 @@ export default function Slider() {
   );
 }
 
-const c1Style = {
-  background: "steelblue",
-  color: "white",
-  padding: "1.5rem"
-};
+
 

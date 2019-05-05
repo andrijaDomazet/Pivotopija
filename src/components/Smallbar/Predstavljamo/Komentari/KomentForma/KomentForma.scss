@@ -6,20 +6,14 @@
     background-color: #a0a0a02d;    
     position: relative;
     color: #cc9900;  
-    padding-bottom: 15%;
+    padding-bottom: 15%; 
+
  ul{
     
         margin-top: -150px;
-        
+        list-style-type: none;      
    
-}   
-
-}
-
-.komentlista{     
-    margin-left: 60%;
-    
-}
+}  
 input{
     padding: 1%;
     color: #cc9900; 
@@ -27,6 +21,16 @@ input{
 
     
 }
+
+
+}
+
+.komentlista{     
+    margin-left: 60%;
+    font-size: 22px;
+    
+}
+
 .komentstyle{
     width:70%;
     height: auto;    
@@ -50,7 +54,7 @@ input{
     position: relative;
     padding-left: 55%;
     margin-top: -55px;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     border-left: #cc9900 solid 1px;
 
 }

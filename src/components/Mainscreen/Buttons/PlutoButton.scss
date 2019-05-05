@@ -1,7 +1,7 @@
 @import "../../../index.scss";
 
 .btn_pluto {
-  display: none;
+  display: flex;
   position: relative;
   left: 75%;
   background: transparent;
@@ -23,21 +23,20 @@
   }
 }
 
-@media screen and(min-width:800px) {
-  .btn_pluto {
-    display: flex;
-    right: 10%;
-    img {
-      width: 10rem;
-    }
-  }
-}
-@media screen and(min-width:992px) {
-  .btn_pluto {
-    top: -11%;
-    left: 75%;
-    img {
-      width: 11rem;
-    }
-  }
-}
+// @media screen and(min-width:600px) {
+//   .btn_pluto {
+//     right: 10%;
+//     img {
+//       width: 10rem;
+//     }
+//   }
+// }
+// @media screen and(min-width:992px) {
+//   .btn_pluto {
+//     top: -11%;
+//     left: 75%;
+//     img {
+//       width: 11rem;
+//     }
+//   }
+// }

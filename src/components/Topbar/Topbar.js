@@ -2,21 +2,21 @@ import React from "react";
 import "./Topbar.scss";
 import { NavLink } from "react-router-dom";
 import ToggleButton from "./SideDrawer/ToggleButton";
-import SignIn from "./Login/SignIn";
-import Register from "./Login/Register";
 
 export default function Topbar(props) {
   return (
     <header className="top-header">
       <nav className="topNavBar">
+        <div className="toggle-button">
+          <ToggleButton click={props.drawerClickHandler} />
+        </div>
         <div className="spacer" />
         <div className="navigation-items">
           <ul>
             <li>
-              <SignIn />
-            </li>
-            <li>
-              <Register />
+              <NavLink to="/login" className="top-link">
+                Login
+              </NavLink>
             </li>
             <li>
               <NavLink to="/forum" className="top-link">

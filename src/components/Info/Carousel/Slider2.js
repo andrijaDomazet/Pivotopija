@@ -3,7 +3,7 @@ import { Spring } from "react-spring/renderprops";
 import CB from '../img/CB.png'
 import './Slider2.scss';
 
-export class Slider2 extends Component {
+export default class Slider2 extends Component {
   render() {
     return (
       <Spring
@@ -29,17 +29,6 @@ export class Slider2 extends Component {
     );
   }
 }
-const c2Style = {
-  background: "grey",
-  color: "white",
-  padding: "1.5rem"
-};
-const btn = {
-  background: "green",
-  color: "white",
-  padding: "1rem 2rem",
-  border: "none",
-  textTransform: "upercase",
-  margin: "15px 0"
-};
-export default Slider2;
+
+
+

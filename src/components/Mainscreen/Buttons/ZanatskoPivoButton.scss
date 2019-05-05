@@ -2,36 +2,35 @@
 
 .btn_zanatskaPiva {
   position: absolute;
-  top: 16vh;
-  left: 50%;
+  top: 18vh;
+  left: 40%;
   background: transparent;
   cursor: pointer;
   border: none;
   z-index: +1;
   img {
     height: auto;
-    width: 12rem;
+    width: 15vw;
   }
   &:hover {
     transform: scale(1.12);
   }
 }
 
-@media screen and(min-width:700px) {
-  .btn_zanatskaPiva {
-    left: 50%;
-    img {
-      width: 12rem;
-    }
-  }
-}
-@media screen and(min-width:992px) {
-  .btn_zanatskaPiva {
-    top: 18%;
-    left: 40%;
-    img {
-      width: 12rem;
-      height: auto;
-    }
-  }
-}
+// @media screen and(min-width:600px) {
+//   .btn_zanatskaPiva {
+//     right: 10%;
+//     img {
+//       width: 10rem;
+//     }
+//   }
+// }
+// @media screen and(min-width:992px) {
+//   .btn_zanatskaPiva {
+//     top: 15%;
+//     left: 40%;
+//     img {
+//       width: 12rem;
+//     }
+//   }
+// }

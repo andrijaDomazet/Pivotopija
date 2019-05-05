@@ -2,16 +2,18 @@
 
 .navBar {
   display: flex;
-  width: 90%;
-  margin: 0.2rem auto;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 1%;
   align-self: center;
   background: transparent;
   text-decoration: none;
-  border: 1px solid green;
+  // border: 1px solid red;
+  // margin: 0 auto;
+  // padding: 0;
 
-  .spacer1 {
+  .spacer {
     flex: 1;
-    border: 1px solid red;
   }
   .naziv {
     flex: 1;
@@ -21,14 +23,6 @@
     font-family: "Courgette", cursive;
     color: #cc9900;
   }
-  .toggle-button {
-    align-self: center;
-    flex: 1;
-    display: inline;
-    margin: 0 auto;
-    border: 1px solid blue;
-  }
-
   .nav-links {
     align-self: center;
 
@@ -62,25 +56,9 @@
     }
   }
 }
-.spacer2 {
-  flex: 1;
-  border: 1px solid red;
-}
+
 @media screen and(max-width:768px) {
   .nav-links {
     display: none;
-  }
-  .spacer2 {
-    display: none;
-  }
-}
-@media screen and(min-width:769px) {
-  .navBar {
-    display: flex;
-    width: 70%;
-    margin-left: 15%;
-    .toggle-button {
-      display: none;
-    }
   }
 }

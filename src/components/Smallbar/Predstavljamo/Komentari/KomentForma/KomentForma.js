@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './KomentForma.scss';
 
 
-
-
 export default class KomentForma extends Component {
 
   constructor (){
@@ -16,18 +14,18 @@ export default class KomentForma extends Component {
   add(){
     var ime = this.refs.ime.value;
     var ocena = this.refs.ocena.value;
-    console.log("Ime:" + ime + " " + "Komentar:" + ocena);
+    console.log(ime + "-" + ocena);
     if(localStorage.getItem('upis') == null){      //---------------unos u lokal storidz
         var upis =[];
-        upis.push(ime); 
+        upis.push(ime+":"); 
         upis.push("-"+ocena);       
         localStorage.setItem('upis', JSON.stringify(upis));
     } 
     else{                                           //----------------dodaje nove vrednosti nakon unosa
-      var upis = JSON.parse(localStorage.getItem('upis'))
-      upis.push(ime ); 
-      upis.push("-"+ocena);  
-      localStorage.setItem('upis', JSON.stringify(upis));
+      var upisNovi = JSON.parse(localStorage.getItem('upis'))
+      upisNovi.push(ime +":"); 
+      upisNovi.push("-"+ocena);  
+      localStorage.setItem('upis', JSON.stringify(upisNovi));
     }
 
     this.setState({
@@ -35,9 +33,7 @@ export default class KomentForma extends Component {
     })
 
   }
-
-
-  render() {
+   render() {
     return (
       <div className='formastyle'>
       <div className='unosstyle'>
