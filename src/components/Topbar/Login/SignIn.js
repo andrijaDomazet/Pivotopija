@@ -1,38 +1,82 @@
-import React, { Component } from "react";
-// import "./Topbar.scss";
-// import "./top-link";
+import React from "react";
+import ReactModalLogin from "react-modal-login";
 
-class SignIn extends Component {
-  state = {
-    email: "",
-    password: ""
-  };
-  handleChange = e => {
+ 
+class SignIn extends React.Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      showModal: false,
+      loading: false,
+      error: null
+    };
+  }
+ 
+  openModal() {
     this.setState({
-      [e.target.id]: e.target.value
+      showModal: true
     });
-  };
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(this.state);
-  };
+  }
+ 
+  closeModal() {
+    this.setState({
+      showModal: false,
+      error: null
+    });
+  }
+ 
+  onLoginSuccess(method, response) {
+    console.log("logged successfully with " + method);
+  }
+ 
+  onLoginFail(method, response) {
+    console.log("logging failed with " + method);
+    this.setState({
+      error: response
+    });
+  }
+ 
+  startLoading() {
+    this.setState({
+      loading: true
+    });
+  }
+ 
+  finishLoading() {
+    this.setState({
+      loading: false
+    });
+  }
+ 
+  afterTabsChange() {
+    this.setState({
+      error: null
+    });
+  }
+ 
   render() {
     return (
-      <div className="container">
-        <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text text-darken-2">Sign In</h5>
-          <div className="input-field">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
-          </div>
-        </form>
+      <div>
+        <button onClick={() => this.openModal()}>Sign In</button>
+ 
+        <ReactModalLogin
+          visible={this.state.showModal}
+          onCloseModal={this.closeModal.bind(this)}
+          loading={this.state.loading}
+          error={this.state.error}
+          tabs={{
+            afterChange: this.afterTabsChange.bind(this)
+          }}
+          loginError={{
+            label: "Couldn't sign in, please try again."
+          }}
+          registerError={{
+            label: "Couldn't sign up, please try again."
+          }}
+          startLoading={this.startLoading.bind(this)}
+          finishLoading={this.finishLoading.bind(this)}
+        />
       </div>
     );
   }
