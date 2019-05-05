@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Login.scss";
 
 class SignUp extends Component {
   state = {
@@ -18,9 +19,9 @@ class SignUp extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <div className="modal">
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text text-darken-3">Sign Up</h5>
+          <h5 className="Login">Register</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange} />
