@@ -1,21 +1,37 @@
 import React, { Component } from "react";
 import "./Objekat.scss";
 import "./PodaciObjekta.scss";
-import FormaKomentara from "./FormaKomentara";
 import ToggleComments from "./ToggleComments";
 import Backdrop from "../../Backdrop/Backdrop";
 import UpisKomentara from "./UpisKomentara";
+import PrikazKomentara from "./PrikazKomentara";
+import InfoObjekta from "./InfoObjekta";
 
 export default class PodaciObjekta extends Component {
   state = {
     upisKomentaraOpen: false,
+    prikazKomentaraOpen: false,
+    prikazInfoObjekta: false,
     brojSvidjanja: 0,
     brojKomentara: 0,
     showInfo: false
   };
+
+  okidacPrikazaKomentara = () => {
+    this.setState(prevState => {
+      return { prikazKomentaraOpen: !prevState.prikazKomentaraOpen };
+    });
+  };
+
   okidacUpisaKomentara = () => {
     this.setState(prevState => {
       return { upisKomentaraOpen: !prevState.upisKomentaraOpen };
+    });
+  };
+
+  okidacInfoObjekta = () => {
+    this.setState(prevState => {
+      return { prikazInfoObjekta: !prevState.prikazInfoObjekta };
     });
   };
 
@@ -33,8 +49,10 @@ export default class PodaciObjekta extends Component {
     });
   };
   removeCommentBox = () => {
-    this.setState(prevState => {
-      return { upisKomentaraOpen: false };
+    this.setState({
+      upisKomentaraOpen: false,
+      prikazKomentaraOpen: false,
+      prikazInfoObjekta: false
     });
   };
 
@@ -60,18 +78,31 @@ export default class PodaciObjekta extends Component {
             </button>
           </div>
           <div className="komentarisanje">
-            <p>{this.state.brojKomentara} komentara</p>
+            <p onClick={this.okidacPrikazaKomentara}>
+              {this.state.brojKomentara} komentara
+            </p>
             <ToggleComments click={this.okidacUpisaKomentara} />
-            {/* <FormaKomentara okidacUpisaKomentara={this.okidacUpisaKomentara} /> */}
             <UpisKomentara
               brojacKomentara={this.brojacKomentara}
               removeCommentBox={this.removeCommentBox}
               show={this.state.upisKomentaraOpen}
             />
+            {backdrop}
+            <PrikazKomentara
+              komentari={this.state.komentari}
+              naziv={this.props.podaci}
+              removeCommentBox={this.removeCommentBox}
+              show={this.state.prikazKomentaraOpen}
+            />
+            <InfoObjekta
+              podaci={this.props.podaci}
+              removeCommentBox={this.removeCommentBox}
+              show={this.state.prikazInfoObjekta}
+            />
           </div>
         </div>
         <div className="opsti-podaci">
-          <h3>{name}</h3>
+          <h3 onClick={this.okidacInfoObjekta}>{name}</h3>
           <h4>{city}</h4>
           <h5>
             info

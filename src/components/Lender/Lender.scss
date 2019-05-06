@@ -5,12 +5,9 @@
   width: 90%;
   height: 50vh;
   margin: 0 auto;
-  // border: 3px solid green;
 
   .lady {
     position: relative;
-    // border: 1px solid blue;
-
     img {
       position: absolute;
       z-index: +1;
@@ -22,19 +19,9 @@
   }
 }
 
-@media screen and(min-width:769px) {
+@media screen and(min-width:996px) {
   .main_cover {
     width: 70%;
-    .pluto {
-      display: none;
-    }
-  }
-}
-@media screen and(min-width:500px) {
-  .lady {
-    img {
-      width: 220px;
-    }
   }
 }
 

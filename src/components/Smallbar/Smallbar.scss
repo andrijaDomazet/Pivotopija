@@ -3,28 +3,31 @@
 .smallBar {
   margin: 0 auto;
   display: flex;
-  width: 70%;
-  margin-left: 15%;
+  width: 90%;
+  margin-left: 5%;
   background: transparent;
   align-items: center;
   
 
   .smallBar-links {
-    padding-left: 0rem;
-    align-self: center;
+    width: 100%;
+
     ul {
       width: 100%;
       display: flex;
-      margin: 0 auto;
     }
 
     li {
+      display: flex;
+      margin: 0.2rem 0.1rem;
+      padding: 0 0.2rem;
       align-self: center;
       color: $mainYellow;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 0.9rem;
       transition: all 0.3s linear;
-
+      justify-content: center;
+      border-right: 1px solid $mainYellow;
       &:hover {
         color: $mainYellow;
       }
@@ -39,7 +42,6 @@
       }
     }
     .smallBar-link {
-      padding-right: 2rem;
       color: $mainGrey;
       text-decoration: none;
       opacity: 0.8;
@@ -53,22 +55,26 @@
     flex: 1;
   }
 }
-@media screen and(max-width:768px) {
-  .smallBar {
-    width: 90%;
-    margin-left: 5%;
 
-    .smallBar-link {
-      padding-right: 0.1rem;
-      font-size: 0.8rem;
-      padding-left: 0.2rem;
-      border-right: 1px solid $mainYellow;
+@media screen and(max-width:768px) {
+  .smallBar-links {
+    margin: 0 auto;
+  }
+}
+@media screen and(min-width:769px) {
+  .smallBar {
+    width: 70%;
+    margin-left: 15%;
+    font-size: 1.5rem;
+    li {
+      border: none;
     }
   }
 }
-
-@media screen and(max-width:769px) {
-  li {
-    list-style: none;
+@media screen and(min-width:996px) {
+  .smallBar-links {
+    li {
+      border: none;
+    }
   }
 }

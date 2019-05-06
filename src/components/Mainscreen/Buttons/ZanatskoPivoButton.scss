@@ -2,7 +2,7 @@
 
 .btn_zanatskaPiva {
   position: absolute;
-  top: 16vh;
+  top: 17vh;
   left: 50%;
   background: transparent;
   cursor: pointer;
@@ -10,22 +10,25 @@
   z-index: +1;
   img {
     height: auto;
-    width: 12rem;
+    width: 11rem;
   }
   &:hover {
     transform: scale(1.12);
   }
+  &:focus {
+    outline: none;
+  }
 }
 
-@media screen and(min-width:700px) {
+@media screen and(min-width:769px) {
   .btn_zanatskaPiva {
-    left: 50%;
+    left: 40%;
     img {
       width: 12rem;
     }
   }
 }
-@media screen and(min-width:992px) {
+@media screen and(min-width:996px) {
   .btn_zanatskaPiva {
     top: 18%;
     left: 40%;

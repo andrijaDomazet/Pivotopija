@@ -2,27 +2,23 @@
 
 .objekat-info {
   position: relative;
-  // border: 1px solid red;
 
   .socialButtons {
     display: flex;
     align-self: center;
     border-top: 2px solid $mainBlack;
     border-bottom: 2px solid $mainBlack;
-    // width: 100%;
-    // height: 100%;
-    // margin: auto 0;
+
     .svidjanja {
       flex: 1;
       display: flex;
       transition: all 0.3s linear;
-      color: $mainGreen;
+      color: $mainBlack;
       z-index: 1;
       p {
         flex: 2;
         font-size: 0.7rem;
         align-self: center;
-        // border: 1px solid red;
         text-align: center;
         margin: auto 0;
       }
@@ -47,11 +43,10 @@
     .komentarisanje {
       flex: 1;
       display: flex;
-      // float: right;
       border: none;
       font-size: 0.7rem;
-      color: $mainGreen;
-      // background: transparent;
+      color: $mainBlack;
+      cursor: pointer;
 
       p {
         float: right;
@@ -59,40 +54,33 @@
         font-size: 0.7rem;
         align-self: center;
         text-align: center;
-        // border: 1px solid red;
         margin: auto 0;
       }
       .comments {
         flex: 1;
-        // padding: 0 0;
-        // margin: 0 0;
-        // border: none;
-        // font-size: 0.7rem;
-        // color: $mainGreen;
-        // background: transparent;
-        // cursor: pointer;
-        // i {
-        //   font-size: 1rem;
-        // }
       }
     }
   }
   .opsti-podaci {
-    padding: 0.5rem 0 0 0.5rem;
+    padding: 0.5rem;
 
     h3 {
       font-size: 1.2rem;
       text-align: center;
       text-transform: uppercase;
       color: $mainGreen;
+      font-weight: bold;
+      cursor: pointer;
     }
     h4 {
+      margin-top: 0.5rem;
       font-size: 1rem;
       text-transform: capitalize;
-      margin: 0.3rem 0 0.3rem 0;
       color: $mainBlack;
     }
     h5 {
+      color: $mainBlack;
+      margin-top: 0.5rem;
       font-size: 1rem;
       text-transform: capitalize;
       span {

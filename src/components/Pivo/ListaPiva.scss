@@ -1,5 +1,5 @@
 @import "../../index.scss";
-@import "../../index.scss";
+
 .glavniDiv {
   width: 70vw;
   margin: 0 auto;
@@ -12,7 +12,7 @@
   display: flex;
   margin: 2vh auto;
 
-  .search_imena {
+  .search_imena_piva {
     flex: 1;
     border-radius: 0.3rem;
     color: white;
@@ -55,6 +55,8 @@
       margin: 0;
       background: $mainYellow;
       border: 2px solid white;
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
       font-size: 1rem;
       text-align: center;
       color: white;
@@ -75,34 +77,13 @@
       }
     }
   }
-  .dodatno {
-    color: white;
-    padding: 0 0;
-    flex: 1;
-    border-radius: 0.3rem;
-    background: $mainYellow;
-    text-align: center;
-    p {
-      width: 100%;
-      font-size: 1rem;
-      margin: 0;
-      border: 2px solid white;
-      border-top-right-radius: 0.3rem;
-      border-bottom-right-radius: 0.3rem;
-    }
-  }
 }
-// .lista_piva {
-//   margin: 0 auto;
-//   width: 70%;
-//   color: $mainBlack;
-// }
 
 @media screen and(min-width:768px) {
   .lista_piva {
     display: grid;
     // width: 70%;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1.5rem;
+    grid-column-gap: 3rem;
   }
 }
