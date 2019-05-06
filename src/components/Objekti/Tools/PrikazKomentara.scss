@@ -1,0 +1,106 @@
+@import "../../../index.scss";
+
+.comments {
+  top: 25vh;
+  height: 60vh;
+  background: black;
+  opacity: 0.95;
+  // background: transparent;
+  box-shadow: 2px 0px 7px $mainBlack;
+  position: fixed;
+  // opacity: 0.8;
+  left: 30vw;
+  width: 40vw;
+  //   max-width: 400px;
+  z-index: 200;
+  transform: translateX(-400%);
+  transition: transform 0.5s ease-out;
+
+  .glavniDiv {
+    padding-left: 5%;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 0.6rem;
+    border: 2px solid white;
+    .close-btn {
+      position: absolute;
+      display: block;
+      top: 5%;
+      right: 5%;
+      font-size: 5vh;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      opacity: 1;
+      color: red;
+    }
+    .nazivObjekta {
+      // flex: 1;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      border-radius: 0.1rem;
+      color: $mainYellow;
+      margin-top: 5%;
+      opacity: 1;
+      //   border: 1px solid red;
+    }
+
+    .upisKomentara {
+      // flex: 1;
+      border-radius: 0.1rem;
+      color: $mainBlack;
+      padding-top: 5%;
+      align-items: center;
+      height: 70%;
+
+      input {
+        // opacity: 1;
+        color: $mainYellow;
+        height: 100%;
+        font-size: 1rem;
+        width: 95%;
+        padding: 0.5rem 0.5rem;
+        background: $mainGrey;
+        transition: 0.5s;
+        border: 2px solid $mainYellow;
+        border-radius: 0.1rem;
+        // align-self: flex-start;
+        // border-bottom-left-radius: 0.3rem;
+        // text-align: center;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          color: $mainYellow;
+        }
+        &:focus {
+          background: black;
+          transition: 0.5s;
+          &::placeholder {
+            color: #333333;
+          }
+        }
+        &::placeholder {
+          color: $mainYellow;
+        }
+      }
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border: 2px solid white;
+    color: white;
+    background: $mainYellow;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.1rem;
+    padding: 0 0.2rem;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.comments.open {
+  transform: translateX(0);
+}

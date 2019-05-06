@@ -17,27 +17,35 @@
     width: auto;
     height: 60vh;
     bottom: -1.2rem;
+    // text-decoration: none;
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
   }
+  &:focus {
+    outline: none;
+  }
 }
-
-@media screen and(min-width:800px) {
+@media screen and(min-width:769px) {
   .btn_pluto {
     display: flex;
-    right: 10%;
+    right: 20%;
     img {
-      width: 10rem;
+      width: auto;
     }
   }
 }
-@media screen and(min-width:992px) {
+@media screen and(min-width:996px) {
   .btn_pluto {
-    top: -11%;
-    left: 75%;
-    img {
-      width: 11rem;
-    }
+    right: 10%;
   }
 }
+// @media screen and(min-width:992px) {
+//   .btn_pluto {
+//     // top: -11%;
+//     // left: 75%;
+//     img {
+//       width: 11rem;
+//     }
+//   }
+// }

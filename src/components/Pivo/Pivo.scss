@@ -35,7 +35,7 @@
       word-spacing: -0.6px;
     }
   }
-  .infoPiva {
+  .glavniInfoPiva {
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     background: #c59237;
@@ -58,13 +58,14 @@
       #3d2d11 100%
     );
     h2 {
+      padding: 0.2rem;
       border-top: 2px solid black;
       text-align: center;
     }
     h3 {
       text-align: center;
       text-transform: uppercase;
-      padding: 0 0;
+      padding: 0.3rem;
       margin: 0 0;
     }
   }

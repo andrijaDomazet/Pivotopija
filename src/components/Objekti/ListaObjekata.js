@@ -1,15 +1,13 @@
 import React, { Component, lazy, Suspense } from "react";
 import "./ListaObjekata.scss";
 import { spisakObjekta } from "../allData";
-import Tajmer from "../Mainscreen/Tajmer";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ListaObjekata extends Component {
   state = {
     objekti: spisakObjekta,
     search1: "",
-    search2: "",
-    search3: ""
+    search2: ""
   };
 
   updateSearch1 = event => {
@@ -60,12 +58,9 @@ export default class ListaObjekata extends Component {
               onChange={this.updateSearch2.bind(this)}
             />
           </div>
-          <div className="dodatno">
-            <p>Dodatna pretraga...</p>
-          </div>
         </div>
+
         <Suspense fallback={<div>Loading...</div>}>
-          <Tajmer />
           <section className="objektiLista">
             {filtiraniObjekti1
               .filter(x => filtiraniObjekti2.includes(x))

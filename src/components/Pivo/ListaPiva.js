@@ -34,7 +34,7 @@ export default class ListaPiva extends Component {
     return (
       <div className="glavniDiv">
         <div className="pretraga">
-          <div className="search_imena">
+          <div className="search_imena_piva">
             <input
               type="text"
               placeholder="Pretraga po imenu piva"
@@ -49,9 +49,6 @@ export default class ListaPiva extends Component {
               value={this.state.searchPiva2}
               onChange={this.updateSearch2.bind(this)}
             />
-          </div>
-          <div className="dodatno">
-            <p>Dodatna pretraga...</p>
           </div>
         </div>
         <div className="lista_piva">

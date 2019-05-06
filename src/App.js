@@ -14,10 +14,8 @@ import Festivali from "./components/Smallbar/Festivali/Festivali.js";
 import Vrste from "./components/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
-// import Smallbar from "./components/Smallbar/Smallbar";
 import Footer from "./components/Footer/Footer.js";
 import "./App";
-//import Login from "./components/Topbar/Login/Login";
 
 class App extends Component {
   state = {

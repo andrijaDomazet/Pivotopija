@@ -3,12 +3,8 @@ import "./SlikaObjekta.scss";
 import "./Objekat.scss";
 
 export default class SlikaObjekta extends Component {
-  handler = fb => {
-    window.location.replace({ fb });
-    console.log(fb);
-  };
   render() {
-    const { id, img, fb } = this.props.podaci;
+    const { id, img } = this.props.podaci;
 
     return (
       <div className="img-container">
@@ -20,11 +16,6 @@ export default class SlikaObjekta extends Component {
           }}
         >
           <i className="fa fa-window-close" />
-        </span>
-        <span className="fb" onClick={this.handler}>
-          <i className="fab fa-facebook-square">
-            <a href={fb} />
-          </i>
         </span>
       </div>
     );

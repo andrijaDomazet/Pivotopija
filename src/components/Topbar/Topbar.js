@@ -1,7 +1,6 @@
 import React from "react";
 import "./Topbar.scss";
 import { NavLink } from "react-router-dom";
-import ToggleButton from "./SideDrawer/ToggleButton";
 import SignIn from "./Login/SignIn";
 import Register from "./Login/Register";
 
