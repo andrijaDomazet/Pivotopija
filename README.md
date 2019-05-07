@@ -14,9 +14,9 @@ Website for beer and beer related activites, presenting different types of beer,
 - Sass (npm i node-sass)
 
 <h4>Built with:</h4>
-- HTML
-- CSS
-- JavaScript
+- HTML</br>
+- CSS</br>
+- JavaScript</br>
 - Reactjs
 
 <h4>Authors:</h4>
