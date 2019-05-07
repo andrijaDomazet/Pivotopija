@@ -7,8 +7,6 @@ import ListaObjekata from "./components/Objekti/ListaObjekata";
 import Mainscreen from "./components/Mainscreen/Mainscreen";
 import Info from "./components/Info/Info";
 import ListaPiva from "./components/Pivo/ListaPiva";
-import SideDrawer from "./components/Topbar/SideDrawer/SideDrawer";
-import Backdrop from "./components/Backdrop/Backdrop";
 import NoMatch from "./components/Tools/NoMatch/NoMatch";
 import Festivali from "./components/Smallbar/Festivali/Festivali.js";
 import Vrste from "./components/Smallbar/Vrste/Vrste.js";
@@ -19,24 +17,7 @@ import Kontakt from "./components/Topbar/Kontakt/Kontakt.js";
 import "./App";
 
 class App extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
-  drawerToggleClickHandler = () => {
-    this.setState(prevState => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
-  };
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  };
-
   render() {
-    let backdrop;
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
-
     var pozadina = {
       width: "100%",
       height: "100%",
@@ -46,9 +27,7 @@ class App extends Component {
 
     return (
       <Router style={{ height: "100%" }}>
-        <Topbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {backdrop}
+        <Topbar />
         <section style={pozadina}>
           <Navbar />
           <Switch>

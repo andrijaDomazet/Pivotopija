@@ -3,7 +3,7 @@
 .btn_zanatskaPiva {
   position: absolute;
   top: 17vh;
-  left: 50%;
+  left: 55%;
   background: transparent;
   cursor: pointer;
   border: none;
@@ -30,8 +30,18 @@
 }
 @media screen and(min-width:996px) {
   .btn_zanatskaPiva {
-    top: 18%;
-    left: 40%;
+    top: 19%;
+    left: 42%;
+    img {
+      width: 13rem;
+      height: auto;
+    }
+  }
+}
+@media screen and(max-height:600px) {
+  .btn_zanatskaPiva {
+    top: 19%;
+    left: 42%;
     img {
       width: 12rem;
       height: auto;

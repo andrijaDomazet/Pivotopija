@@ -18,7 +18,7 @@ export default class PrikazKomentara extends Component {
     const { name } = this.props.naziv;
     // const { komentari } = this.props.komentari;
     // console.log(name);
-
+    // const { noviKomentar } = this.props.noviKomentar;
     return (
       <div className={commentsClasses}>
         <div className="glavniDiv">
@@ -29,10 +29,16 @@ export default class PrikazKomentara extends Component {
             <h3>{name}</h3>
           </div>
           <div className="upisKomentara">
-            {/* <div style={{ ...style.topLabel, color: primaryColor }}>
-              I am Sibling 2
-            </div>
-            <div style={style.label}>{this.state.text}</div> */}
+            {/* <ul>
+              {this.state.noviKomentar.map(function(noviKomentar, index) {
+                return (
+                  <li className="komentlista" key={index}>
+                    {noviKomentar}
+                  </li>
+                );
+              }, this)}
+            </ul> */}
+            {/* <p>PrikazKomentara:{this.props.noviKomentar}</p> */}
           </div>
         </div>
       </div>

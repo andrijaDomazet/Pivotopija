@@ -1,33 +1,34 @@
 @import "../../index.scss";
 
 .smallBar {
-  margin: 0 auto;
   display: flex;
   width: 90%;
+  margin: 0 auto;
+
   margin-left: 5%;
   background: transparent;
   align-items: center;
-  
 
   .smallBar-links {
     width: 100%;
 
     ul {
-      width: 100%;
       display: flex;
+      margin: 0 0;
     }
 
     li {
       display: flex;
-      margin: 0.2rem 0.1rem;
-      padding: 0 0.2rem;
+      width: 100%;
+      padding: 0 0;
       align-self: center;
       color: $mainYellow;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       transition: all 0.3s linear;
       justify-content: center;
       border-right: 1px solid $mainYellow;
+
       &:hover {
         color: $mainYellow;
       }
@@ -58,23 +59,45 @@
 
 @media screen and(max-width:768px) {
   .smallBar-links {
-    margin: 0 auto;
+    margin-left: 0;
+    font-size: 2rem;
+    text-decoration: none;
+    li {
+      margin-top: 0.2rem;
+    }
   }
 }
 @media screen and(min-width:769px) {
   .smallBar {
+    display: flex;
     width: 70%;
-    margin-left: 15%;
-    font-size: 1.5rem;
-    li {
-      border: none;
+    margin-left: 5%;
+    .smallBar-links {
+      // border: 1px solid red;
+      ul {
+        li {
+          border-right: none;
+          list-style-type: circle;
+          // color: red;
+        }
+      }
+
+      .smallBar-link {
+        font-size: 1rem;
+        padding-right: 1.5rem;
+      }
     }
   }
 }
 @media screen and(min-width:996px) {
-  .smallBar-links {
-    li {
-      border: none;
+  .smallBar {
+    width: 50%;
+    margin-left: 15%;
+
+    .smallBar-links {
+      // li {
+      //   border: none;
+      // }
     }
   }
 }
