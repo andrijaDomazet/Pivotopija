@@ -19,7 +19,7 @@ Website for beer and beer related activites, presenting different types of beer,
 - JavaScript</br>
 - Reactjs
 
-<h4>Authors:</h4>
-Andrija, Bojan, Darko
+<h5>Authors:</h5>
+Andrija, Bojan, Darko</br>
 
 <i>© 2019 Andrija/Bojan/Darko All Rights Reserved</i>
