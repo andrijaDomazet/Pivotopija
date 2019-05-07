@@ -2,7 +2,7 @@
 
 <h3>Info:</h3>
 Website for beer and beer related activites, presenting different types of beer, and places where they can be found.
-
+----------------------------------------------------
 Prerequisites for running this website:
 - Code editor
 - Web browser
@@ -19,3 +19,5 @@ Built with:
 - JavaScript
 - Reactjs
 
+Authors:
+Andrija, Bojan, Darko
