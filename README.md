@@ -1,5 +1,6 @@
 <h1> Pivotopija </h1>
 
+<h3>Info:</h3>
 Website for beer and beer related activites, presenting different types of beer, and places where they can be found.
 
 Prerequisites for running this website:
