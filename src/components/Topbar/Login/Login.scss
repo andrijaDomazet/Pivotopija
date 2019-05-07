@@ -7,11 +7,10 @@ form {
   > div {
     position: relative;
     overflow: hidden;
-  
   }
   input {
     width: 100%;
-    border: 3px solid gray; 
+    border: 3px solid gray;
     background: none;
     position: relative;
     top: 0;
@@ -20,8 +19,7 @@ form {
     padding: 8px 12px;
     outline: 0;
     &:valid {
-     
-      background: white; 
+      background: white;
     }
     &:focus {
       border-color: #f06d06;
@@ -36,12 +34,7 @@ form {
     }
   }
   #imePolja {
-    transition:
-      background 0.2s,
-      color 0.2s,
-      top 0.2s,
-      bottom 0.2s,
-      right 0.2s,
+    transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s,
       left 0.2s;
     position: absolute;
     color: rgb(168, 0, 0);
@@ -51,7 +44,7 @@ form {
 
 form.white {
   input {
-    padding: 12px 12px 12px 12px; 
+    padding: 12px 12px 12px 12px;
   }
   label {
     top: 0;
@@ -59,17 +52,15 @@ form.white {
     left: 0;
     width: 100%;
   }
-  input:focus, textarea:focus {
-    padding: 4px 6px 20px 6px; 
+  input:focus,
+  textarea:focus {
+    padding: 4px 6px 20px 6px;
   }
   input:focus + label {
     top: 100%;
     margin-top: -16px;
   }
 }
-
-
-
 
 // .modal {
 //     display: block; /* Hidden by default */
@@ -84,7 +75,7 @@ form.white {
 //     background-color: rgba(189, 24, 24, 0.644); /* Fallback color */
 //     background-color: rgba(48, 46, 26, 0.911); /* Black w/ opacity */
 //   }
-  
+
 //    .Login {
 //         padding-bottom: 50px;
 //         font-size: 50px;
@@ -111,17 +102,17 @@ form.white {
 //         cursor: pointer;
 // }
 .myButton {
-    background-color: rgba(190, 156, 0, 0.897);
-    border: none;
-    color: rgb(255, 255, 255);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+  background-color: rgba(190, 156, 0, 0.897);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 //   /* Modal Content */
 //   .modal-content {
@@ -131,4 +122,3 @@ form.white {
 //     border: 1px solid #888;
 //     width: 80%;
 //   }
-  

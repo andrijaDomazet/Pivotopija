@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router";
 import "./Footer.scss";
 
 export default function Footer() {
@@ -202,13 +201,14 @@ export default function Footer() {
                   JavaScriptGrupa1-GitHub
                 </a>
                 <br />
-                <a href="https://www.freepik.com/free-photos-vectors/frame">macrovector -freepik - www.freepik.com</a>
+                <a href="https://www.freepik.com/free-photos-vectors/frame">
+                  macrovector -freepik - www.freepik.com
+                </a>
               </p>
             </div>
           </div>
           <br />
         </div>
-        
       </div>
     </section>
   );

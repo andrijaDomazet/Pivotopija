@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../../img/LogoLNK.svg";
 
 export default function SideDrawer(props) {
+  // console.log("idemooo");
+
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer open";

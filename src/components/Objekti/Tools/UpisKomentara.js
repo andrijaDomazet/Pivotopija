@@ -3,57 +3,88 @@ import "./UpisKomentara.scss";
 
 export default class UpisKomentara extends Component {
   state = {
-    komentari: []
+    noviKomentar: []
   };
 
-  addKomentar = () => {
-    var komentar = this.refs.komen.value;
-    if (localStorage.getItem("komentari") == null) {
-      var komentari = [];
-      komentari.push(komentar);
-      localStorage.setItem("komentar", JSON.stringify(komentari));
+  addKomentar() {
+    var ime = this.refs.ime.value;
+    var ocena = this.refs.ocena.value;
+    console.log("Ime:" + ime + " " + "Komentar:" + ocena);
+    if (localStorage.getItem("noviKomentar") == null) {
+      //---------------unos u lokal storidz
+      var noviKomentar = [];
+      noviKomentar.push(ime);
+      noviKomentar.push("-" + ocena);
+      localStorage.setItem("noviKomentar", JSON.stringify(noviKomentar));
     } else {
-      var komentari = JSON.parse(localStorage.getItem("komentari"));
-      komentari.push(komentar);
-      localStorage.setItem("komentar", JSON.stringify(komentari));
+      //----------------dodaje nove vrednosti nakon unosa
+      var noviKomentar = JSON.parse(localStorage.getItem("noviKomentar"));
+      noviKomentar.push(ime);
+      noviKomentar.push("-" + ocena);
+      localStorage.setItem("noviKomentar", JSON.stringify(noviKomentar));
     }
-    this.setState({
-      komentari: JSON.parse(localStorage.getItem("komentari"))
-    });
-  };
 
+    this.setState({
+      noviKomentar: JSON.parse(localStorage.getItem("noviKomentar"))
+    });
+  }
+  componentDidMount() {
+    const noviKomentar = JSON.parse(localStorage.getItem("noviKomentar"));
+    this.setState({ noviKomentar });
+  }
   render() {
-    let commentsClasses = "comments";
+    const { name } = this.props.naziv;
+    // if (!this.state.noviKomentar.length) {
+    //   return <p>Nema komentara</p>;
+    // }
+    let commentsClasses = "upisKomentara";
     if (this.props.show) {
-      commentsClasses = "comments open";
+      commentsClasses = "upisKomentara open";
     }
 
     return (
       <div className={commentsClasses}>
-        <div className="glavniDiv">
+        <div className="upisKomentara-glavniDiv">
+          <div className="upisKomentara-nazivObjekta">
+            <h3>{name}</h3>
+          </div>
+          <div className="upisKomentara-komentari">
+            {/* <ul>
+              {this.state.noviKomentar.map(function(noviKomentar, index) {
+                return (
+                  <li className="upisKomentara-lista" key={index}>
+                    {noviKomentar}
+                  </li>
+                );
+              }, this)}
+            </ul> */}
+          </div>
+          <div className="upisKomentara-upis">
+            <div className="upisImena">
+              <input type="text" placeholder="Korisničko ime..." ref="ime" />
+            </div>
+            <div className="upisKomentara-input">
+              <input
+                type="text"
+                placeholder="Upišite Vaš komentar..."
+                ref="ocena"
+              />
+            </div>
+
+            <input
+              className="potvrda"
+              type="button"
+              value="Dodajte komentar"
+              onClick={() => {
+                this.props.brojacKomentara();
+                // this.props.removeCommentBox();
+                this.addKomentar();
+              }}
+            />
+          </div>
           <span className="close-btn" onClick={this.props.removeCommentBox}>
             <i className="fa fa-window-close" />
           </span>
-          <div className="upisImena">
-            <input type="text" ref="komen" placeholder="Korisničko ime..." />
-          </div>
-          <div className="upisKomentara">
-            <input
-              type="text"
-              ref="komen"
-              placeholder="Upišite Vaš komentar..."
-            />
-          </div>
-
-          <button
-            onClick={() => {
-              this.props.brojacKomentara();
-              this.props.removeCommentBox();
-              this.addKomentar();
-            }}
-          >
-            Dodaj komentar
-          </button>
         </div>
       </div>
     );

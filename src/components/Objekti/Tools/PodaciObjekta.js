@@ -72,24 +72,24 @@ export default class PodaciObjekta extends Component {
       <div className="objekat-info">
         <div className="socialButtons">
           <div className="svidjanja">
-            <p>{this.state.brojSvidjanja} sviđanja</p>
+            <p>Sviđanja: {this.state.brojSvidjanja}</p>
             <button className="like" onClick={this.brojacSvidjanja}>
               <i className="far fa-thumbs-up" />
             </button>
           </div>
           <div className="komentarisanje">
-            <p onClick={this.okidacPrikazaKomentara}>
-              {this.state.brojKomentara} komentara
+            <p onClick={this.okidacUpisaKomentara}>
+              Komentara: {this.state.brojKomentara}
             </p>
             <ToggleComments click={this.okidacUpisaKomentara} />
             <UpisKomentara
+              naziv={this.props.podaci}
               brojacKomentara={this.brojacKomentara}
               removeCommentBox={this.removeCommentBox}
               show={this.state.upisKomentaraOpen}
             />
             {backdrop}
             <PrikazKomentara
-              komentari={this.state.komentari}
               naziv={this.props.podaci}
               removeCommentBox={this.removeCommentBox}
               show={this.state.prikazKomentaraOpen}
