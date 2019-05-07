@@ -4,11 +4,6 @@ import "../Topbar.scss";
 import "./Login.scss";
 
 class SignIn extends Component {
-  // constructor(props, context) {
-  //     super(props, context);
-
-  //     this.handleShow = this.handleShow.bind(this);
-  //     this.handleClose = this.handleClose.bind(this);
 
   state = {
     show: false,
@@ -49,23 +44,23 @@ class SignIn extends Component {
           <Modal.Body>
             <form onSubmit={this.handleSubmit} className="white">
               <div className="input-field">
-                <input
+                <input className="inputPolje"
                   type="text"
                   id="email"
                   name="email"
                   required
                   onChange={this.handleChange}
                 />
-                <label htmlFor="email">Email</label>
+                <label id="imePolja" htmlFor="email">Email</label>
               </div>
               <div className="input-field">
-                <input
+                <input className="inputPolje"
                   type="password"
                   id="password"
                   required
                   onChange={this.handleChange}
                 />
-                <label htmlFor="password">Password</label>
+                <label id="imePolja" htmlFor="password">Password</label>
               </div>
               <div className="input-field">
                 <button className="myButton">Sign In</button>

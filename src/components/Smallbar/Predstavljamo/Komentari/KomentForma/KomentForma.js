@@ -24,10 +24,10 @@ export default class KomentForma extends Component {
         localStorage.setItem('upis', JSON.stringify(upis));
     } 
     else{                                           //----------------dodaje nove vrednosti nakon unosa
-      var upis = JSON.parse(localStorage.getItem('upis'))
+      var upisU = JSON.parse(localStorage.getItem('upis'))
       upis.push(ime ); 
       upis.push("-"+ocena);  
-      localStorage.setItem('upis', JSON.stringify(upis));
+      localStorage.setItem('upis', JSON.stringify(upisU));
     }
 
     this.setState({
