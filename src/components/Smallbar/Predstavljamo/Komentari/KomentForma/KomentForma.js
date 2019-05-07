@@ -16,7 +16,7 @@ export default class KomentForma extends Component {
   add(){
     var ime = this.refs.ime.value;
     var ocena = this.refs.ocena.value;
-    console.log("Ime:" + ime + " " + "Komentar:" + ocena);
+    console.log("Ime:" + ime  + "Komentar:" + ocena);
     if(localStorage.getItem('upis') == null){      //---------------unos u lokal storidz
         var upis =[];
         upis.push(ime); 
