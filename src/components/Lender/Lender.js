@@ -20,8 +20,12 @@ export default class Lender extends Component {
         <div className="lady">
           <img src={this.state.fotke[0]} alt="slika2" />
         </div>
-        <ZanatskoPivoButton toggle2={toggle2} />
-        <PlutoButton toggle3={toggle3} />
+        <div className="srednjeDugme">
+          <ZanatskoPivoButton toggle2={toggle2} />
+        </div>
+        <div className="desnoDugme">
+          <PlutoButton toggle3={toggle3} />
+        </div>
       </div>
     );
   }
