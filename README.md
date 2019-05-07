@@ -1,4 +1,4 @@
-Pivotopija
+<h1> Pivotopija </h1>
 
 Website for beer and beer related activites, presenting different types of beer, and places where they can be found.
 
