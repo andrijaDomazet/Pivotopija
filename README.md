@@ -21,5 +21,5 @@ Website for beer and beer related activites, presenting different types of beer,
 
 <h5>Authors:</h5>
 Andrija, Bojan, Darko</br>
-
+</br>
 <i>© 2019 Andrija/Bojan/Darko All Rights Reserved</i>
