@@ -5,7 +5,7 @@
   width: 90%;
   height: 50vh;
   margin: 0 auto;
-
+  position: relative;
   .lady {
     position: relative;
     img {
@@ -18,18 +18,22 @@
     }
   }
   .srednjeDugme {
-    position: relative;
+    // display: inline;
+    position: absolute;
     // border: 1px solid red;
-    height: auto;
-    left: 40%;
+    // height:50vh;
+    left: 0;
+    top: 10%;
+    width: 80%;
+    text-align: center;
+    // margin-top: 5%;
     // top: 5%;
     img {
       // border: 1px solid red;
-      position: absolute;
+      // position: absolute;
       z-index: +1;
       width: auto;
-
-      top: -18rem;
+      height: 40vh;
     }
   }
   .desnoDugme {
