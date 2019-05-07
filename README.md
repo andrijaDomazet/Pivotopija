@@ -2,22 +2,22 @@
 
 <h3>Info:</h3>
 Website for beer and beer related activites, presenting different types of beer, and places where they can be found.
-----------------------------------------------------
-Prerequisites for running this website:
+
+<h4>Prerequisites for running this website:</h4>
 - Code editor
 - Web browser
 
 
-Modules needed to run the project:
+<h4>Modules needed to run the project:</h4>
 - Spring (npm i react-spring)
 - Bootstrap (npm i bootstrap)
 - Sass (npm i node-sass)
 
-Built with:
+<h4>Built with:</h4>
 - HTML
 - CSS
 - JavaScript
 - Reactjs
 
-Authors:
+<h4>Authors:</h4>
 Andrija, Bojan, Darko
