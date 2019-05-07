@@ -18,19 +18,11 @@ export default function Topbar(props) {
               <Register />
             </li>
             <li>
-              <NavLink to="/forum" className="top-link">
-                Forum
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/kontakt" className="top-link">
                 Kontakt
               </NavLink>
             </li>
           </ul>
-        </div>
-        <div className="search-bar">
-          <input type="text" placeholder="Search..." />
         </div>
       </nav>
     </header>

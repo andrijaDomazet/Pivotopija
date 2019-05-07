@@ -1,0 +1,57 @@
+#lname [type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(65, 41, 10);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  #fname [type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(65, 41, 10);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+ 
+  input[type=submit] {
+    background-color: rgba(0, 0, 0, 0.774);
+    color: rgb(170, 16, 16);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #ad9300;
+  }
+  
+  .container {
+    background: #9C6921;
+    background: -moz-linear-gradient(top, #9C6921 0%, #ABA41D 50%, #398A2B 100%);
+    background: -webkit-linear-gradient(top, #9C6921 0%, #ABA41D 50%, #398A2B 100%);
+    background: linear-gradient(to bottom, #9C6921 0%, #ABA41D 50%, #398A2B 100%);
+
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  #tekstForma {
+      background-color: rgba(255, 252, 226, 0.233)
+  }
+  #fname {
+      background-color: rgba(255, 252, 226, 0.521)
+  }
+
+  #lname {
+      background-color: rgba(255, 252, 226, 0.521)
+  }
+  
+  #country {
+    background-color: rgba(255, 252, 226, 0.521)
+  }

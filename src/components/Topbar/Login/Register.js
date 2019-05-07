@@ -4,20 +4,14 @@ import "../Topbar.scss";
 import "./Login.scss";
 
 class Register extends Component {
-  constructor(props, context) {
-    super(props, context);
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-
-    this.state = {
+    state = {
       show: false,
       email: "",
       password: "",
       firstName: "",
       lastName: "",
     };
-  }
 
   handleChange = e => {
     this.setState({
@@ -29,11 +23,11 @@ class Register extends Component {
     console.log(this.state);
   };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({ show: false });
   }
 
-  handleShow() {
+  handleShow = () => {
     this.setState({ show: true });
   }
 
@@ -52,19 +46,19 @@ class Register extends Component {
             <form onSubmit={this.handleSubmit} className="white">
               <div className="input-field">
                 <input type="email" id="email" required onChange={this.handleChange} />
-                <label htmlFor="email">Email</label>
+                <label id="imePolja" htmlFor="email">Email</label>
               </div>
               <div className="input-field">
                 <input type="password" id="password" required onChange={this.handleChange} />
-                <label htmlFor="password">Password</label>
+                <label id="imePolja" htmlFor="password">Password</label>
               </div>
               <div className="input-field">
                 <input type="text" id="firstName" required onChange={this.handleChange} />
-                <label htmlFor="firstName">First Name</label>
+                <label id="imePolja" htmlFor="firstName">First Name</label>
               </div>
               <div className="input-field">
                 <input type="text" id="lastName" required onChange={this.handleChange} />
-                <label htmlFor="lastName">Last Name</label>
+                <label id="imePolja" htmlFor="lastName">Last Name</label>
               </div>
               <div className="input-field">
                 <button className="myButton">Register</button>

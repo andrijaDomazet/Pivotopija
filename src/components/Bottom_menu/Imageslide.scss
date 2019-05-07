@@ -1,0 +1,64 @@
+body {
+    background: #032527;
+  }
+  
+  .header h1 {
+    color: white;
+    text-align: center;
+  }
+  #slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 20px auto;
+  }
+  /*the sildeer div has a defined width and height which acts as a screen inside another screen*/
+  
+  #slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+  }
+  /*the list inside has a greater width and height to cover all the slideX with a display block type*/
+  
+  #slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+    text-align: center;
+    font-size: 30px;
+    color: lightblue;
+  }
+  
+  #slider .slide p{
+    position: relative;
+    top: 170px;
+  }
+  
+  
+  
+  /*Each slid has the same width as that of the slider hence covering the whole span*/
+  
+  .slide1 {
+    background: #9e6ce4	;
+  }
+  
+  .slide2 {
+    background: #6c56aa;
+  }
+  
+  .slide3 {
+    background: #483490;
+  }
+  
+  .slide4 {
+    background: #082766;
+  }
+  
+  .slide5 {
+    background: #0d4950;
+  }

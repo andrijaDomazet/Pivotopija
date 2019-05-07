@@ -15,6 +15,7 @@ import Vrste from "./components/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
 import Footer from "./components/Footer/Footer.js";
+import Kontakt from "./components/Topbar/Kontakt/Kontakt.js";
 import "./App";
 
 class App extends Component {
@@ -59,8 +60,7 @@ class App extends Component {
             <Route path="/festivali" component={Festivali} />
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
-            {/* <Route path="/SignIn" component={SignIn} />
-            <Route path="/Register" component={Register} /> */}
+            <Route path="/Kontakt" component={Kontakt} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />
