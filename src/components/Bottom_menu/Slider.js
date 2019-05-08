@@ -3,10 +3,11 @@ import Slide from './Slide';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
 import "./Slider.scss";
-import banner1 from "../../img/banner1.jpg";
-import banner2 from "../../img/banner2.jpg";
-import banner3 from "../../img/banner3.jpg";
-import banner4 from "../../img/banner4.jpg";
+import pivoclear1 from "../../img/pivoclear1.jpg";
+import pivoclear2 from "../../img/pivoclear2.jpg";
+import pivoclear3 from "../../img/pivoclear3.jpg";
+import pivoclear4 from "../../img/pivoclear4.jpg";
+import banner4 from "../../img/banner4.jpg"
 
 export default class Slider extends Component {
     constructor(props) {
@@ -14,10 +15,11 @@ export default class Slider extends Component {
 
         this.state = {
             images: [
-                banner1,
-                banner2,
-                banner3,
-                banner4,
+                pivoclear1,
+                pivoclear2,
+                pivoclear3,
+                pivoclear4,
+                banner4
             ],
             currentIndex: 0,
             translateValue: 0
@@ -59,7 +61,7 @@ export default class Slider extends Component {
                         ))
                     }
                 </div>
-
+                  
                 <LeftArrow
                     goToPrevSlide={this.goToPrevSlide}
                 />
@@ -67,7 +69,9 @@ export default class Slider extends Component {
                 <RightArrow
                     goToNextSlide={this.goToNextSlide}
                 />
+                
             </div>
+            
         );
     }
 }
