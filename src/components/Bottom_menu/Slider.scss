@@ -1,17 +1,17 @@
 .slider {
-    background: rgba(95, 92, 92, 0.295);
+    background: rgba(95, 92, 92, 0);
     position: relative;
-    padding: 0 0;
     width: 500px;
     margin: 0 auto;
     height: auto;
     overflow: hidden;
     white-space: nowrap;
+  
   }
   
   .slider-wrapper {
     position: relative;
-    height: 200%;
+    height: 163%;
     width: 100%;
   }
   
@@ -19,6 +19,9 @@
     display: inline-block;
     height: 100%;
     width: 100%;
+    border-radius: 0.5rem;
+    border-top: 1px solid oldlace;
+    border-bottom: 1px solid oldlace;
   }
   
   .arrow {
@@ -39,6 +42,7 @@
     right: 25px;
     z-index: 999;
     color: #fff;
+    font-size: 13px;
   }
   
   .backArrow {
@@ -47,9 +51,10 @@
     left: 25px;
     z-index: 999;
     color: #fff;
+    font-size: 13px;
   }
   
   .fa-arrow-right:before, .fa-arrow-left:before {
-    color: #222
+    color: #cc9900;
   }
   
