@@ -4,7 +4,7 @@ import "./Bottom_menu.scss";
 import Banner1 from "./Banner1";
 import Banner2 from "./Banner3";
 import Banner3 from "./Banner2";
-import Banner4 from "./Banner4";
+import Slider from "./Slider";
 
 export default class BottomCover extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class BottomCover extends Component {
           <Banner3 />
         </div>
         <div className="d-inline-flex p-2 col-example">
-          <Banner4 />
+          <Slider />
         </div>
         
       </div>
