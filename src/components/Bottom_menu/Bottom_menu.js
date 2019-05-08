@@ -17,10 +17,10 @@ export default class BottomCover extends Component {
           <Banner2 />
         </div>
         <div className="d-inline-flex p-2 col-example">
-          <Banner3 />
+          <Slider />
         </div>
         <div className="d-inline-flex p-2 col-example">
-          <Slider />
+          <Banner3 />
         </div>
         
       </div>

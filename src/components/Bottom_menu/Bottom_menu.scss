@@ -3,12 +3,15 @@
 .col-example {
   // font-size: 0.8rem;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0;
   background-color: #a0a0a02d;
   color: #cc9900;
   text-align: center;
   width: 90%;
   img {
+    border-top: 1px solid oldlace;
+    border-bottom: 1px solid oldlace;
+    border-radius: 0.5rem;
     width: 100%;
     height: auto;
   }
