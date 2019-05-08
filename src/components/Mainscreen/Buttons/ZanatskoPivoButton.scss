@@ -8,11 +8,7 @@
   cursor: pointer;
   border: none;
   z-index: +1;
-  img {
-    // position: absolute;
-    // height: 50vh;
-    // width: auto;
-  }
+
   &:hover {
     transform: scale(1.03);
   }
