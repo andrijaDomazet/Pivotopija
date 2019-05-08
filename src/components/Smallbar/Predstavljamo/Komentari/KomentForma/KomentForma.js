@@ -28,14 +28,14 @@ export default class KomentForma extends Component {
       upis: JSON.parse(localStorage.getItem("upis"))
     });
   }
-  componentDidMount = () => {
-    const upis = JSON.parse(localStorage.getItem("upis"));
-    this.setState({ upis });
-  };
+  // componentDidMount = () => {
+  //   const upis = JSON.parse(localStorage.getItem("upis"));
+  //   this.setState({ upis });
+  // };
   render() {
-    if (!this.state.upis) {
-      return <p>Nema komentara</p>;
-    }
+    // if (!this.state.upis) {
+    //   return <p>Nema komentara</p>;
+    // }
     return (
       <div className="formastyle">
         <div className="unosstyle">
