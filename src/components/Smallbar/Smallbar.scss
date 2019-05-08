@@ -70,10 +70,10 @@
 @media screen and(min-width:769px) {
   .smallBar {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin-left: 5%;
     .smallBar-links {
-      font-size: 3rem;
+      // font-size: 3rem;
       // border: 1px solid red;
       ul {
         li {
@@ -84,8 +84,6 @@
       }
 
       .smallBar-link {
-        font-size: 1rem;
-        padding-right: 1.5rem;
       }
     }
   }
@@ -95,7 +93,9 @@
     width: 50%;
     margin-left: 15%;
 
-    .smallBar-links {
+    .smallBar-link {
+      padding-right: 1.5rem;
+      font-size: 1rem;
       // li {
       //   border: none;
       // }

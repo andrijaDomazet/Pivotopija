@@ -1,6 +1,7 @@
 import React from "react";
 import { Spring } from "react-spring/renderprops";
 import banner2 from "../../img/banner2.jpg";
+import "./Bottom_menu.scss";
 
 export default function Banner2() {
   return (
@@ -15,7 +16,7 @@ export default function Banner2() {
             <div>
               <img src={banner2} alt="" />
             </div>
-            <h3>Izbor ambalaze</h3>
+            <p>Izbor ambalaze</p>
           </div>
         </div>
       )}

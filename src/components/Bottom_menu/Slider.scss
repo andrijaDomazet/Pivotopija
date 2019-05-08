@@ -1,60 +1,104 @@
 .slider {
-    background: rgba(95, 92, 92, 0);
-    position: relative;
+  background: rgba(95, 92, 92, 0);
+  position: relative;
+  width: 25vw;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 5s ease 0s normal forwards 1 fadein;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 150%;
+  width: 100%;
+  // margin: 0 auto;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-top: 1px solid oldlace;
+  border-bottom: 1px solid oldlace;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in 0.1s;
+}
+
+.pivotopija {
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  z-index: 500;
+  // color: #fff;
+  font-size: 1rem;
+}
+.nextArrow {
+  position: absolute;
+  top: 80%;
+  right: 25px;
+  z-index: 500;
+  color: #fff;
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.backArrow {
+  position: absolute;
+  top: 80%;
+  left: 25px;
+  z-index: 500;
+  color: #fff;
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-arrow-right:before,
+.fa-arrow-left:before {
+  color: #cc9900;
+}
+@media screen and(max-width:769px) {
+  .slider {
     width: 500px;
-    margin: 0 auto;
-    height: auto;
-    overflow: hidden;
-    white-space: nowrap;
-  
+    height: 50vh;
   }
-  
-  .slider-wrapper {
-    position: relative;
-    height: 163%;
-    width: 100%;
+  .pivotopija {
+    font-size: 1.5rem;
   }
-  
-  .slide {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 0.5rem;
-    border-top: 1px solid oldlace;
-    border-bottom: 1px solid oldlace;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
   }
-  
-  .arrow {
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f9f9f9;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform ease-in .1s;
+  66% {
+    opacity: 0;
   }
-  
-  .nextArrow {
-    position: absolute;
-    top: 85%;
-    right: 25px;
-    z-index: 999;
-    color: #fff;
-    font-size: 13px;
+  100% {
+    opacity: 1;
   }
-  
-  .backArrow {
-    position: absolute;
-    top: 85%;
-    left: 25px;
-    z-index: 999;
-    color: #fff;
-    font-size: 13px;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
   }
-  
-  .fa-arrow-right:before, .fa-arrow-left:before {
-    color: #cc9900;
+  66% {
+    opacity: 0;
   }
-  
+  100% {
+    opacity: 1;
+  }
+}

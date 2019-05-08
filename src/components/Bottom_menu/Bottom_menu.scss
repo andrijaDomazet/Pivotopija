@@ -1,6 +1,7 @@
 @import "../../index.scss";
 
 .col-example {
+  // border: 1px solid red;
   // font-size: 0.8rem;
   margin: 0 auto;
   padding: 0;
@@ -8,6 +9,7 @@
   color: #cc9900;
   text-align: center;
   width: 90%;
+
   img {
     border-top: 1px solid oldlace;
     border-bottom: 1px solid oldlace;
@@ -15,15 +17,38 @@
     width: 100%;
     height: auto;
   }
+  .banners {
+    p {
+      // padding: 0 0;
+      // border: 1px solid red;
+      font-size: 1rem;
+    }
+  }
 }
 @media screen and(min-width:769px) {
   .col-example {
     padding: 1rem;
     margin: 0 auto;
+    width: 90%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+@media screen and(min-width:996px) {
+  .col-example {
+    // padding: 1rem;
+    // margin: 0 auto;
     width: 70%;
     img {
       width: 100%;
       height: auto;
     }
+  }
+}
+@media screen and(max-width:769px) {
+  .banners {
+    display: none;
   }
 }
