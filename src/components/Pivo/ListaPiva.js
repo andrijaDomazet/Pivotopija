@@ -25,11 +25,7 @@ export default class ListaPiva extends Component {
       );
     });
     let filterPiva2 = this.state.piva.filter(pivo => {
-      return (
-        pivo.name
-          .toLowerCase()
-          .indexOf(this.state.searchPiva2.toLowerCase()) !== -1
-      );
+      return pivo.name.indexOf(this.state.searchPiva2.toLowerCase()) !== -1;
     });
     return (
       <div className="glavniDiv">

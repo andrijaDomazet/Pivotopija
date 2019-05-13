@@ -3,22 +3,35 @@
 .navBar {
   display: flex;
   width: 90%;
-  margin: 0.2rem auto;
+  margin-top: 0.2rem;
   align-self: center;
   background: transparent;
   text-decoration: none;
 
-  .spacer1 {
+  .nav-spacer1 {
     flex: 3;
   }
 
   .naziv {
+    // border: 1px solid red;
     flex: 1;
-    padding: 0 0.5rem;
-    align-self: center;
+    // vertical-align: 50%;
+    // margin: 3rem;
+    // padding: 0 0.5rem;
+    align-items: center;
     font-size: 1.8rem;
     font-family: "Courgette", cursive;
     color: #cc9900;
+    opacity: 0.7;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+      font-weight: 500;
+      transition: all 2s;
+      // font-size: 2rem;
+    }
   }
   .toggle-button {
     align-self: center;
@@ -47,6 +60,7 @@
   }
 
   .nav-link {
+    // border: 1px solid red;
     color: $mainGrey;
     text-decoration: none;
     opacity: 0.6;
@@ -61,7 +75,7 @@
     }
   }
 }
-.spacer2 {
+.nav-spacer2 {
   flex: 1;
 }
 
@@ -69,11 +83,10 @@
   .nav-links {
     display: none;
   }
-  .spacer2 {
+  .nav-spacer2 {
     display: none;
   }
 }
-
 @media screen and(min-width:768px) {
   .navBar {
     display: flex;
@@ -84,7 +97,7 @@
     display: flex;
     width: 70%;
     margin-left: 15%;
-    .spacer1 {
+    .nav-spacer1 {
       flex: 1;
     }
     .toggle-button {

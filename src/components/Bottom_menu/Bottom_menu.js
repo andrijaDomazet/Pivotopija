@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import No_drink from "../../img/no_drink.jpg";
 import "./Bottom_menu.scss";
 import Banner1 from "./Banner1";
 import Banner2 from "./Banner3";
@@ -22,9 +21,7 @@ export default class BottomCover extends Component {
         <div className="d-inline-flex p-2 col-example">
           <Banner3 />
         </div>
-        
       </div>
-      
     );
   }
 }

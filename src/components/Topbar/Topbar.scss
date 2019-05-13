@@ -1,6 +1,6 @@
 @import "../../index.scss";
 
-.top-header {
+.topbar-header {
   z-index: +2;
   position: fixed;
   top: 0;
@@ -20,10 +20,9 @@
   background: linear-gradient(to right, #523d00 0%, #856300 31%, #cc9900 100%);
 }
 
-.topNavBar {
+.topbar-nav {
   display: flex;
   height: 100%;
-  // align-items: center;
   padding: 0 1rem;
 }
 
@@ -74,7 +73,7 @@
   // border: 1px solid blue;
 }
 
-.spacer {
+.topbar-spacer {
   flex: 1;
 }
 
@@ -85,9 +84,9 @@
 }
 
 @media screen and(min-width:996px) {
-  .top-header {
+  .topbar-header {
     padding-right: 15%;
-    .topNavBar {
+    .topbar-nav {
       display: flex;
       height: 100%;
       margin-right: 0 0;

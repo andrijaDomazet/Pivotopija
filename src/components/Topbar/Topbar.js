@@ -6,9 +6,9 @@ import Register from "./Login/Register";
 
 export default function Topbar(props) {
   return (
-    <header className="top-header">
-      <nav className="topNavBar">
-        <div className="spacer" />
+    <header className="topbar-header">
+      <nav className="topbar-nav">
+        <div className="topbar-spacer" />
         <div className="navigation-items">
           <ul>
             <li>
