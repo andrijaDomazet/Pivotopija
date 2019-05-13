@@ -18,19 +18,13 @@
     }
   }
   .srednjeDugme {
-    // display: inline;
     position: absolute;
-    // border: 1px solid red;
-    // height:50vh;
     left: 0;
     top: 10%;
     width: 80%;
     text-align: center;
-    // margin-top: 5%;
-    // top: 5%;
+
     img {
-      // border: 1px solid red;
-      // position: absolute;
       z-index: +1;
       width: auto;
       height: 35vh;
@@ -38,26 +32,29 @@
   }
   .desnoDugme {
     position: absolute;
-    // height: auto;
     left: 75%;
     top: -10%;
     img {
-      // border: 1px solid red;
-      // position: absolute;
       z-index: +1;
       width: auto;
-      // bottom: -2rem;
     }
+  }
+  .preporucenoPivo {
+    position: absolute;
+
+    left: 55%;
+    top: 45%;
+  }
+  span {
+    width: 20vw;
+    height: auto;
+    text-align: center;
   }
 }
 @media screen and(max-width:768px) {
   .srednjeDugme {
-    // display: none;
     position: absolute;
-    // position: relative;
-    // border: 1px solid red;
     margin-left: 15%;
-    // height: auto;
     left: 45%;
     img {
       height: 35vh;

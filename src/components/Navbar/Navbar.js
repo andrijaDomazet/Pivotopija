@@ -10,6 +10,7 @@ export default class Navbar extends Component {
   state = {
     sideDrawerOpen: false
   };
+
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
@@ -29,8 +30,12 @@ export default class Navbar extends Component {
     return (
       <nav className="navBar">
         <img src={Logo} alt="" width="50px" height="50px" />
-        <span className="naziv">Pivotopija</span>
-        <div className="spacer1" />
+
+        <NavLink to="/" exact className="nav-link">
+          <span className="naziv">Pivotopija </span>
+        </NavLink>
+
+        <div className="nav-spacer1" />
         <div className="toggle-button">
           <ToggleButton click={this.drawerToggleClickHandler} />
         </div>
@@ -60,7 +65,7 @@ export default class Navbar extends Component {
         </div>
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <div className="spacer2" />
+        <div className="nav-spacer2" />
       </nav>
     );
   }
