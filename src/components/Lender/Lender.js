@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
 import "../Lender/Lender.scss";
 import cover from "../../img/cover2.jpg";
 import ZanatskoPivoButton from "../Mainscreen/Buttons/ZanatskoPivoButton";
@@ -14,7 +13,6 @@ export default class Lender extends Component {
     display: ["", "none"],
     displayPosition: 0,
     display2: ["none", ""]
-    // displayPosition2: 0
   };
 
   componentDidMount = () => {
@@ -30,7 +28,6 @@ export default class Lender extends Component {
       return this.setState({
         coverPosition: 0,
         displayPosition: 0
-        // displayPosition2: 1
       });
     }
     this.setState({
@@ -44,12 +41,10 @@ export default class Lender extends Component {
     const { toggle2, toggle3 } = this.props;
     return (
       <div className="main_cover">
-        <img
-          src={this.state.cover[this.state.coverPosition]}
-          alt=""
-          width="100%"
-          height="100%"
-        />
+        <div className="wrapper">
+          <img src={this.state.cover[this.state.coverPosition]} alt="" />
+        </div>
+
         <div
           className="lady"
           style={{ display: this.state.display[this.state.displayPosition] }}

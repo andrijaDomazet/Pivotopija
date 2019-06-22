@@ -2,10 +2,25 @@
 
 .main_cover {
   color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  white-space: nowrap;
   width: 90%;
   height: 50vh;
   margin: 0 auto;
   position: relative;
+  .wrapper {
+    bottom: 0;
+    display: block;
+    left: 130%;
+    // margin: auto;
+    min-height: 50%;
+    min-width: 150%;
+    // right: 0;
+    // top: 0;
+  }
   .lady {
     position: relative;
     img {
@@ -42,8 +57,8 @@
   .preporucenoPivo {
     position: absolute;
 
-    left: 55%;
-    top: 45%;
+    left: 50%;
+    top: 65%;
   }
   span {
     width: 20vw;

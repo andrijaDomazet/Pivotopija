@@ -1,6 +1,9 @@
+@import "../../index.scss";
+
 .slider {
-  // border: 1px solid red;
-  background: rgba(95, 92, 92, 0);
+  border: 1px solid oldlace;
+  border-radius: 0.4rem;
+  background: $mainGrey;
   position: relative;
   width: 20vw;
   margin: 0 auto;
@@ -12,12 +15,10 @@
 }
 
 .slider-wrapper {
-  // border: 1px solid oldlace;
   padding-left: 1px;
-  position: relative;
-  height: 80%;
+  // position: relative;
+  height: 85%;
   width: 100%;
-  // margin: 0 auto;
 }
 
 .slide {
@@ -25,11 +26,10 @@
   height: 100%;
   width: 100%;
   border-radius: 0.5rem;
-
-  border: 1px solid oldlace;
 }
 
 .arrow {
+  border: 1px solid red;
   height: 50px;
   width: 50px;
   display: flex;
@@ -43,15 +43,15 @@
 
 .pivotopija {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 40%;
   z-index: 500;
-  // color: #fff;
+  color: blue;
   font-size: 1rem;
 }
 .nextArrow {
   position: absolute;
-  top: 80%;
+  top: 85%;
   right: 25px;
   z-index: 500;
   color: #fff;
@@ -61,7 +61,7 @@
 
 .backArrow {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 25px;
   z-index: 500;
   color: #fff;
@@ -71,7 +71,7 @@
 
 .fa-arrow-right:before,
 .fa-arrow-left:before {
-  color: #cc9900;
+  color: blue;
 }
 @media screen and(max-width:769px) {
   .slider {

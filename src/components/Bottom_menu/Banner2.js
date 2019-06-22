@@ -5,10 +5,31 @@ import { spisakPiva } from "../SpisakPiva";
 
 export default class Banner2 extends Component {
   state = {
-    piva: spisakPiva
+    piva: spisakPiva,
+    pozicijaPiva: 0
   };
+
+  componentDidMount = () => {
+    this.state.intervalId = setInterval(this.timerB2, 7000);
+    this.setState({
+      pozicijaPiva: Math.floor(
+        Math.random() * (this.state.piva.length - 1 - 0) + 0
+      )
+    });
+  };
+  componentWillUnmount = () => {
+    clearInterval(this.state.intervalId);
+  };
+  timerB2 = () => {
+    if (this.state.pozicijaPiva === this.state.piva.length - 1) {
+      this.setState({ pozicijaPiva: 0 });
+    }
+    this.setState({ pozicijaPiva: this.state.pozicijaPiva + 1 });
+  };
+
   render() {
-    var randomPivo = this.state.piva[Math.floor(Math.random() * (20 - 0)) + 0];
+    var randomPivo = this.state.piva[this.state.pozicijaPiva];
+
     return (
       <Spring
         from={{ opacity: 0 }}
@@ -21,7 +42,9 @@ export default class Banner2 extends Component {
               <div className="banner2-slika">
                 <img src={randomPivo.img} alt="" />
               </div>
-              <p>{randomPivo.name}</p>
+              <p>
+                {this.state.pozicijaPiva} {randomPivo.name}
+              </p>
             </div>
           </div>
         )}

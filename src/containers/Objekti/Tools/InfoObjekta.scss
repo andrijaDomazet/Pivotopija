@@ -5,7 +5,6 @@
   width: 80%;
   height: auto;
   background: white;
-  border-radius: 0.6rem;
   box-shadow: 2px 0px 7px $mainBlack;
   position: fixed;
 
@@ -15,28 +14,25 @@
   transition: transform 0.5s ease-out;
 
   .infoDiv {
-    background: black;
-    // padding-left: 5%;
+    background: rgb(10, 17, 13);
     height: 100%;
     width: 100%;
-    border-radius: 0.6rem;
-    border: 2px solid white;
+    border: 1px solid $mainGrey;
     .close-btn {
       position: absolute;
-      display: block;
-      top: 5%;
-      right: 5%;
+      top: 0%;
+      right: 2%;
       font-size: 5vh;
       cursor: pointer;
       transition: all 0.3s linear;
       opacity: 1;
-      color: red;
+      color: $mainRed;
     }
     .infoSlika {
       h1 {
         margin: 0 0;
         padding: 0.5rem 0;
-        color: $mainYellow;
+        color: $mainGrey;
         font-size: 2rem;
         text-transform: uppercase;
       }

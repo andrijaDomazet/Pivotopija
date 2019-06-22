@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Objekat.scss";
 import "./PodaciObjekta.scss";
 import ToggleComments from "./ToggleComments";
-import Backdrop from "../../Backdrop/Backdrop";
+import Backdrop from "../../../components/Backdrop/Backdrop";
 import UpisKomentara from "./UpisKomentara";
 import PrikazKomentara from "./PrikazKomentara";
 import InfoObjekta from "./InfoObjekta";

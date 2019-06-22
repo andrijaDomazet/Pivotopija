@@ -1,13 +1,16 @@
 @import "../../index.scss";
 
 .glavniDiv {
-  width: 70vw;
+  border: 1px solid green;
+  width: 90vw !important;
   margin: 0 auto;
 }
 
-.objektiLista {
-  padding: 2rem 0;
-}
+// .objektiLista {
+//   width: 70%;
+//   border: 1px solid red;
+//   padding: 2rem 0;
+// }
 .pretraga {
   display: flex;
   margin: 2vh auto;

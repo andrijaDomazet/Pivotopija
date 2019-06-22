@@ -61,7 +61,26 @@
     }
   }
 }
-
+@media screen and(max-width:768px) {
+  .smallBar {
+    // display: flex;
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid red;
+    .smallBar-links {
+      ul {
+        flex-direction: column;
+        li {
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          list-style: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
 @media screen and(min-width:769px) {
   .smallBar {
     display: flex;

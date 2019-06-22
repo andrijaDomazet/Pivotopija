@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 $mainBlack: #222;
@@ -10,10 +9,10 @@ $mainGreen: #3a3b38f8;
 $mainWhite: #fff;
 $mainGrey: #e9e9e9;
 $mainYellow: #cc9900;
+$mainRed: #ea4141;
 
 html {
-  height: 100%;  
-  
+  height: 100%;
 }
 
 body {
@@ -26,10 +25,7 @@ body {
   font-weight: normal;
   font-style: normal;
   height: 100%;
-
- 
 }
-
 
 @media screen and (min-width: 1140px) {
   #root {

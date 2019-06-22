@@ -68,7 +68,7 @@ export default class Slider extends Component {
   };
 
   slideWidth = () => {
-    return document.querySelector(".slide").clientWidth + 2.4;
+    return document.querySelector(".slide").clientWidth + 1.8;
   };
 
   render = () => {
@@ -85,9 +85,7 @@ export default class Slider extends Component {
             <Slide key={i} image={image} />
           ))}
         </div>
-
         <LeftArrow goToPrevSlide={this.goToPrevSlide} />
-
         <RightArrow goToNextSlide={this.goToNextSlide} />
         <NazivSlajda />
       </div>

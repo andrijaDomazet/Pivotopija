@@ -1,0 +1,11 @@
+@import "./index.scss";
+
+body {
+  .mainDiv {
+    /** background image */
+    background-image: url("./pozadina.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}

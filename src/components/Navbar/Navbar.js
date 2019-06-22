@@ -29,16 +29,20 @@ export default class Navbar extends Component {
 
     return (
       <nav className="navBar">
-        <img src={Logo} alt="" width="50px" height="50px" />
+        <div className="logo">
+          <img src={Logo} alt="" width="50px" height="50px" />
+        </div>
 
         <NavLink to="/" exact className="nav-link">
           <span className="naziv">Pivotopija </span>
         </NavLink>
 
         <div className="nav-spacer1" />
+
         <div className="toggle-button">
           <ToggleButton click={this.drawerToggleClickHandler} />
         </div>
+
         <div className="nav-links">
           <ul>
             <li>

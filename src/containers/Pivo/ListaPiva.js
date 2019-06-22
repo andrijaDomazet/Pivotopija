@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { spisakPiva } from "../allData";
+import { spisakPiva } from "../../components/allData";
 import "./ListaPiva.scss";
 import Pivo from "./Pivo";
 
@@ -25,7 +25,7 @@ export default class ListaPiva extends Component {
       );
     });
     let filterPiva2 = this.state.piva.filter(pivo => {
-      return pivo.name.indexOf(this.state.searchPiva2.toLowerCase()) !== -1;
+      return pivo.abv !== -1;
     });
     return (
       <div className="glavniDiv">
@@ -40,7 +40,7 @@ export default class ListaPiva extends Component {
           </div>
           <div className="search_abv">
             <input
-              type="text"
+              type="number"
               placeholder="Pretraga po % alkohola"
               value={this.state.searchPiva2}
               onChange={this.updateSearch2.bind(this)}

@@ -4,7 +4,6 @@ import "../Topbar.scss";
 import "./Login.scss";
 
 class SignIn extends Component {
-
   state = {
     show: false,
     email: "",
@@ -44,23 +43,29 @@ class SignIn extends Component {
           <Modal.Body>
             <form onSubmit={this.handleSubmit} className="white">
               <div className="input-field">
-                <input className="inputPolje"
+                <input
+                  className="inputPolje"
                   type="text"
                   id="email"
                   name="email"
                   required
                   onChange={this.handleChange}
                 />
-                <label id="imePolja" htmlFor="email">Email</label>
+                <label id="imePolja" htmlFor="email">
+                  Email
+                </label>
               </div>
               <div className="input-field">
-                <input className="inputPolje"
+                <input
+                  className="inputPolje"
                   type="password"
                   id="password"
                   required
                   onChange={this.handleChange}
                 />
-                <label id="imePolja" htmlFor="password">Password</label>
+                <label id="imePolja" htmlFor="password">
+                  Password
+                </label>
               </div>
               <div className="input-field">
                 <button className="myButton">Sign In</button>
