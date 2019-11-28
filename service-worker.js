@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "andrijaDomazet.github.io/precache-manifest.0f804d78fc5df1d6481821ba16c9a06e.js"
+  "/Pivotopija/precache-manifest.773486bfd88528d1f4543c763589fb88.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("andrijaDomazet.github.io/index.html", {
+workbox.routing.registerNavigationRoute("/Pivotopija/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
