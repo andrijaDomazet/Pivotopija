@@ -31,6 +31,7 @@ class App extends Component {
         <section style={pozadina}>
           <Navbar />
           <Switch>
+            <Route exact path="Pivotopija" />
             <Route path="/" exact component={Mainscreen} />
             <Route path="/info" component={Info} />
             <Route path="/piva" component={ListaPiva} />
