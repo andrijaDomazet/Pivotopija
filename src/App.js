@@ -31,7 +31,7 @@ class App extends Component {
         <section style={pozadina}>
           <Navbar />
           <Switch>
-            <Route path="pivotopija" />
+            <Route exact path="/https://github.com/andrijaDomazet/Pivotopija.git" render={() => <Redirect to="/" />} />
             <Route path="/" exact component={Mainscreen} />
             <Route path="/info" component={Info} />
             <Route path="/piva" component={ListaPiva} />
