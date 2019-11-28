@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Pivotopija/precache-manifest.b86320bec37652b332cc3a43acd5427b.js"
+  "/Pivotopija/precache-manifest.6893c0533f808a2f524fd34d105b75f8.js"
 );
 
 workbox.clientsClaim();
