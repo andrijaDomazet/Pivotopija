@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "074617c94fa7a59b5692",
+    "revision": "b4bb97cc54d006531c1c",
     "url": "/Pivotopija/static/css/main.2460e591.chunk.css"
   },
   {
-    "revision": "074617c94fa7a59b5692",
-    "url": "/Pivotopija/static/js/main.54e455d9.chunk.js"
+    "revision": "b4bb97cc54d006531c1c",
+    "url": "/Pivotopija/static/js/main.9c9acba4.chunk.js"
   },
   {
     "revision": "af1c0633bde97c397c21",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/Pivotopija/static/media/cover2.02d7bb63.jpg"
   },
   {
-    "revision": "84477b4d2daecc9740a1868c9c0cdc9d",
+    "revision": "c8ebd5241a3dda196451d16c750cb4db",
     "url": "/Pivotopija/index.html"
   }
 ];
