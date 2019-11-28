@@ -41,7 +41,7 @@ class App extends Component {
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
             <Route path="/Kontakt" component={Kontakt} />
-            <Route component={NoMatch} />
+            <Route component={Mainscreen} />
           </Switch>
           <Footer />
         </section>
