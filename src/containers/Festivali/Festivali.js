@@ -1,0 +1,16 @@
+import React, { Component } from "react";
+import Festivali19 from "./Festivali19/Festivali19.js";
+import Smallbar from "../../components/Smallbar/Smallbar";
+import "./Festivali.scss";
+
+export default class Festivali extends Component {
+  render() {
+    return (
+      <div className="festibox">
+        <div className="fstyle">
+          <Festivali19 />
+        </div>
+      </div>
+    );
+  }
+}

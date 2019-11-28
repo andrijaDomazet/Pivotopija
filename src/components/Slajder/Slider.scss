@@ -1,0 +1,107 @@
+@import "../../index.scss";
+
+.slider {
+  border: 1px solid oldlace;
+  border-radius: 0.4rem;
+  background: $mainGrey;
+  position: relative;
+  width: 20vw;
+  margin: 0 auto;
+  height: 25vh;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 5s ease 0s normal forwards 1 fadein;
+}
+
+.slider-wrapper {
+  padding-left: 1px;
+  // position: relative;
+  height: 85%;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.arrow {
+  border: 1px solid red;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in 0.1s;
+}
+
+.pivotopija {
+  position: absolute;
+  top: 85%;
+  left: 40%;
+  z-index: 500;
+  color: blue;
+  font-size: 1rem;
+}
+.nextArrow {
+  position: absolute;
+  top: 85%;
+  right: 25px;
+  z-index: 500;
+  color: #fff;
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.backArrow {
+  position: absolute;
+  top: 85%;
+  left: 25px;
+  z-index: 500;
+  color: #fff;
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-arrow-right:before,
+.fa-arrow-left:before {
+  color: blue;
+}
+@media screen and(max-width:769px) {
+  .slider {
+    width: 500px;
+    height: 50vh;
+  }
+  .pivotopija {
+    font-size: 1.5rem;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

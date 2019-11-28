@@ -1,0 +1,79 @@
+@import "../../index.scss";
+
+.col-example {
+  display: flex;
+  background-color: #c7c7c72a;
+  text-align: center;
+  justify-content: space-between;
+  width: 90%;
+
+  .banners {
+    // justify-content: space-between;
+    // border: 1px solid $mainGrey;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    background: rgba(95, 92, 92, 0);
+    position: relative;
+    margin: 0 auto;
+    // width: 20vw;
+    height: 25vh;
+    white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    img {
+      width: 100%;
+      height: 21vh;
+      cursor: pointer;
+    }
+    .banner1-slika {
+      width: 16vw;
+      position: relative;
+      flex: 3;
+    }
+    .banner2-slika {
+      width: 16vw;
+      position: relative;
+      width: 8vw;
+      img {
+        overflow: hidden;
+      }
+    }
+    .banner3-slika {
+      flex: 3;
+    }
+    p {
+      background: $mainGrey;
+      border-bottom-left-radius: 0.4rem;
+      border-bottom-right-radius: 0.4rem;
+      color: blue;
+      font-family: "Courgette", cursive;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and(max-width:769px) {
+  .banners {
+    display: none;
+  }
+}
+@media screen and(min-width:769px) {
+  .col-example {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 90%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+@media screen and(min-width:996px) {
+  .col-example {
+    width: 70%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
