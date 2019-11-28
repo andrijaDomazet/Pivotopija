@@ -32,11 +32,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             {/* <Route exact path="https://andrijadomazet.github.io/Pivotopija/" /> */}
-            <Route
-              path="https://andrijadomazet.github.io/Pivotopija/"
-              exact
-              component={Mainscreen}
-            />
+            <Route path="/" exact component={Mainscreen} />
             <Route path="/info" component={Info} />
             <Route path="/piva" component={ListaPiva} />
             <Route path="/objekti" component={ListaObjekata} />
