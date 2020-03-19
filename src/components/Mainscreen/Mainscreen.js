@@ -14,11 +14,11 @@ export default class Mainscreen extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="mainscreen">
         <Lender toggle2={this.toggle2} toggle3={this.toggle3} />
         <Smallbar />
         <BottomCover />
-      </React.Fragment>
+      </div>
     );
   }
 }

@@ -85,9 +85,7 @@ export default class Slider extends Component {
             <Slide key={i} image={image} />
           ))}
         </div>
-
         <LeftArrow goToPrevSlide={this.goToPrevSlide} />
-
         <RightArrow goToNextSlide={this.goToNextSlide} />
         <NazivSlajda />
       </div>

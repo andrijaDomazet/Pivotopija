@@ -7,31 +7,23 @@ import ListaObjekata from "./components/Objekti/ListaObjekata";
 import Mainscreen from "./components/Mainscreen/Mainscreen";
 import Info from "./components/Info/Info";
 import ListaPiva from "./components/Pivo/ListaPiva";
-import NoMatch from "./components/Tools/NoMatch/NoMatch";
+// import NoMatch from "./components/Tools/NoMatch/NoMatch";
 import Festivali from "./components/Smallbar/Festivali/Festivali.js";
 import Vrste from "./components/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js";
 import Footer from "./components/Footer/Footer.js";
 import Kontakt from "./components/Topbar/Kontakt/Kontakt.js";
-import "./App";
-
+import "./App.scss";
 class App extends Component {
   render() {
-    var pozadina = {
-      width: "100%",
-      height: "100%",
-      marginTop: "1rem",
-      backgroundImage: `url(${Background})`
-    };
-
     return (
-      <Router style={{ height: "100%" }}>
-        <Topbar />
-        <section style={pozadina}>
+      <div className="app">
+        <Router>
+          <Topbar />
           <Navbar />
           <Switch>
-            {/* <Route exact path="https://andrijadomazet.github.io/Pivotopija/" /> */}
+            <Route exact path="https://andrijadomazet.github.io/Pivotopija/" />
             <Route path="/" exact component={Mainscreen} />
             <Route path="/info" component={Info} />
             <Route path="/piva" component={ListaPiva} />
@@ -41,11 +33,12 @@ class App extends Component {
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
             <Route path="/Kontakt" component={Kontakt} />
+            {/* Za potrebe deploy-a je ubacen Mainscreen umesto NoMatch */}
             <Route component={Mainscreen} />
           </Switch>
-          <Footer />
-        </section>
-      </Router>
+          {/* <Footer /> */}
+        </Router>
+      </div>
     );
   }
 }

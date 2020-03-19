@@ -8,17 +8,17 @@ import Slider from "./Slider";
 export default class BottomCover extends Component {
   render() {
     return (
-      <div className="d-flex p-2 col-example">
-        <div className="d-inline-flex p-2 col-example">
+      <div className="bottom__menu">
+        <div className="bottom__menu1">
           <Banner1 />
         </div>
-        <div className="d-inline-flex p-2 col-example">
+        <div className="bottom__menu2">
           <Banner2 />
         </div>
-        <div className="d-inline-flex p-2 col-example">
+        <div className="bottom__menu3">
           <Slider />
         </div>
-        <div className="d-inline-flex p-2 col-example">
+        <div className="bottom__menu4">
           <Banner3 />
         </div>
       </div>

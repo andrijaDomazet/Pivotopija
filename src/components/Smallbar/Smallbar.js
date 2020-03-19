@@ -6,30 +6,26 @@ export default function Smallbar() {
   return (
     <nav className="smallBar">
       <div className="smallBar-links">
-        <ul>
-          <li>
-            <NavLink to="/festivali" className="smallBar-link0">
-              festivali 2019
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/postupak" className="smallBar-link">
-              Postupak izrade
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/vrste" className="smallBar-link">
-              Vrste piva
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/predstavljamo" className="smallBar-link">
-              Predstavljamo
-            </NavLink>
-          </li>
-        </ul>
+        <ul>{options()}</ul>
       </div>
       <div className="spacer" />
     </nav>
   );
 }
+const options = () => {
+  return links.map((link, index) => {
+    return (
+      <li>
+        <NavLink to={link.path} key={index} className="smallBar-link">
+          {link.title}
+        </NavLink>
+      </li>
+    );
+  });
+};
+const links = [
+  { path: "/festivali", title: "festivali 2019" },
+  { path: "/postupak", title: "Postupak izrade" },
+  { path: "/vrste", title: "Vrste piva" },
+  { path: "/presdstavljamo", title: "Predstavljamo" }
+];

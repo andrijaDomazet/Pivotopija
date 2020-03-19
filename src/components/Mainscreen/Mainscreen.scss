@@ -1,1 +1,12 @@
 @import "../../index.scss";
+
+.mainscreen {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  .mainscreen {
+    width: 100%;
+  }
+}

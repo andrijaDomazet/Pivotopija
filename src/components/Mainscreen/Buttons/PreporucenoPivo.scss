@@ -1,14 +1,14 @@
 @import "../../../index.scss";
 
 .preporucenoPivo-poziv {
-  position: flex;
+  // position: flex;
   // top: 0vh;
   // left: 0;
   color: $mainYellow;
   //   background: transparent;
   cursor: pointer;
   background-color: #4948483b;
-  font-size: 1.5rem;
+  // width: 150px;
   z-index: +1;
   //   border: 1px solid $mainYellow;
   &:hover {
@@ -16,5 +16,11 @@
   }
   &:focus {
     outline: none;
+  }
+}
+
+@media screen and(min-width:769px) {
+  .preporucenoPivo-poziv {
+    font-size: 1.5rem;
   }
 }

@@ -10,7 +10,11 @@ export default class Navbar extends Component {
   state = {
     sideDrawerOpen: false
   };
-
+  removeCommentBox = () => {
+    this.setState({
+      sideDrawerOpen: false
+    });
+  };
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
@@ -30,7 +34,6 @@ export default class Navbar extends Component {
     return (
       <nav className="navBar">
         <img src={Logo} alt="" width="50px" height="50px" />
-
         <NavLink to="/" exact className="nav-link">
           <span className="naziv">Pivotopija </span>
         </NavLink>
@@ -63,7 +66,10 @@ export default class Navbar extends Component {
             </li>
           </ul>
         </div>
-        <SideDrawer show={this.state.sideDrawerOpen} />
+        <SideDrawer
+          show={this.state.sideDrawerOpen}
+          removeCommentBox={this.removeCommentBox}
+        />
         {backdrop}
         <div className="nav-spacer2" />
       </nav>

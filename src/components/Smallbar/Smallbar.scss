@@ -2,14 +2,21 @@
 
 .smallBar {
   display: flex;
-  width: 90%;
-  margin: 0 auto;
-  margin-left: 5%;
-  background: transparent;
+  width: 100%;
+  margin: 0.5rem auto;
+  // margin: 0 auto;
+  // margin-left: 5%;
+  // background: transparent;
   align-items: center;
   color: $mainYellow;
+  // ??????????????????????????????????????????
+  text-align: center;
+  justify-content: space-evenly;
 
   .smallBar-links {
+    // :first-child {
+    //   color: red !important;
+    // }
     ul {
       display: flex;
       margin: 0 auto;
@@ -18,7 +25,7 @@
     li {
       padding-left: 0.5rem;
       padding-right: 0.5rem;
-      list-style: inside;
+      list-style: none;
       padding: 0 auto;
       color: $mainYellow;
       text-decoration: none;
@@ -51,6 +58,7 @@
     }
 
     .smallBar-link {
+      // list-style: circle;
       color: $mainGrey;
       padding-right: 1rem;
       text-decoration: none;
