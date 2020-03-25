@@ -2,25 +2,25 @@
 
 .side-drawer {
   position: fixed;
-  height: 100%;
-  background: $mainYellow;
-  box-shadow: 2px 0px 7px $mainBlack;
   top: 0;
   left: 0;
   width: 40%;
   max-width: 250px;
-  z-index: 200;
+  height: 100%;
+  background: $mainYellow;
+  box-shadow: 2px 0px 7px $mainBlack;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
+  z-index: 200;
 
   .logo {
-    display: flex;
+    display: flex; //???????????????????
     margin: 0.5rem auto;
 
     img {
       margin: 0 auto;
       padding: 0 auto;
-      width: 100%;
+      width: 120px;
     }
   }
   .naziv {
@@ -28,7 +28,7 @@
     margin: 0 auto;
     width: 100%;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: "Courgette", cursive;
     color: $mainGrey;
   }

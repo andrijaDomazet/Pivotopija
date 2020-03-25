@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 $mainBlack: #222;
@@ -12,8 +11,7 @@ $mainGrey: #e9e9e9;
 $mainYellow: #cc9900;
 
 html {
-  height: 100%;  
-  
+  height: 100%;
 }
 
 body {
@@ -27,9 +25,11 @@ body {
   font-style: normal;
   height: 100%;
 
- 
-}
+  // var pozadina = {
 
+  // backgroundImage: `url(${Background})`
+  // };
+}
 
 @media screen and (min-width: 1140px) {
   #root {
