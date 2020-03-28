@@ -1,17 +1,11 @@
 @import "../../index.scss";
 
-.col-example {
+.bottom__menu {
   display: flex;
-  // border: 1px solid red;
   margin: 0 auto;
-  padding: 0;
   background-color: #c7c7c72a;
   color: #cc9900;
   text-align: center;
-  // align-items: center;
-  // align-self: center;
-
-  width: 90%;
 
   .banners {
     // display: flex;
@@ -47,6 +41,7 @@
       }
     }
     .banner3-slika {
+      // border: 1px solid red;
       width: 16vw;
       img {
         height: 20vh;
@@ -59,10 +54,13 @@
   }
 }
 @media screen and(min-width:769px) {
-  .col-example {
+  .bottom__menu {
+    display: flex;
+    justify-content: space-between;
     padding: 1rem;
-    margin: 0 auto;
+    // margin: 0 auto;
     width: 90%;
+
     img {
       width: 100%;
       height: auto;
@@ -70,7 +68,7 @@
   }
 }
 @media screen and(min-width:996px) {
-  .col-example {
+  .bottom__menu {
     width: 70%;
     img {
       width: 100%;
@@ -79,7 +77,18 @@
   }
 }
 @media screen and(max-width:769px) {
-  .banners {
+  .bottom__menu1 {
+    display: none;
+  }
+  .bottom__menu2 {
+    display: none;
+  }
+  .bottom__menu3 {
+    // border: 1px solid red;
+    width: 20vw;
+    height: 35vh;
+  }
+  .bottom__menu4 {
     display: none;
   }
 }

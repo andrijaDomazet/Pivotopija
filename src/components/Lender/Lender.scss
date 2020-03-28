@@ -1,18 +1,23 @@
 @import "../../index.scss";
 
 .main_cover {
+  width: 100%;
   color: black;
-  width: 90%;
-  height: 50vh;
-  margin: 0 auto;
+  height: 40vh;
   position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
   .lady {
     position: relative;
     img {
       position: absolute;
       z-index: +1;
       width: auto;
-      height: 50vh;
+      height: 35vh;
       left: 0;
       bottom: 0;
     }
@@ -27,7 +32,7 @@
     img {
       z-index: +1;
       width: auto;
-      height: 35vh;
+      height: 25vh;
     }
   }
   .desnoDugme {
@@ -41,8 +46,7 @@
   }
   .preporucenoPivo {
     position: absolute;
-
-    left: 55%;
+    left: 45%;
     top: 45%;
   }
   span {
@@ -61,6 +65,24 @@
     }
   }
 }
+@media screen and(min-width:769px) {
+  .main_cover {
+    width: 70%;
+    height: 50vh;
+    margin: 0 auto;
+    .lady {
+      img {
+        height: 50vh;
+      }
+    }
+    .srednjeDugme {
+      img {
+        height: 35vh;
+      }
+    }
+  }
+}
+
 @media screen and(min-width:996px) {
   .main_cover {
     width: 70%;

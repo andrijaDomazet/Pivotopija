@@ -1,32 +1,25 @@
 .slider {
-  // border: 1px solid red;
   background: rgba(95, 92, 92, 0);
   position: relative;
-  width: 20vw;
-  margin: 0 auto;
-  height: 25vh;
+  height: 35vh;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
   white-space: nowrap;
   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
   animation: 5s ease 0s normal forwards 1 fadein;
-}
 
-.slider-wrapper {
-  // border: 1px solid oldlace;
-  padding-left: 1px;
-  position: relative;
-  height: 80%;
-  width: 100%;
-  // margin: 0 auto;
-}
+  .slider-wrapper {
+    height: 80%;
 
-.slide {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5rem;
-
-  border: 1px solid oldlace;
+    .slide {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid oldlace;
+    }
+  }
 }
 
 .arrow {
@@ -44,14 +37,13 @@
 .pivotopija {
   position: absolute;
   top: 80%;
-  left: 40%;
+  left: 35%;
   z-index: 500;
-  // color: #fff;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .nextArrow {
   position: absolute;
-  top: 80%;
+  top: 85%;
   right: 25px;
   z-index: 500;
   color: #fff;
@@ -61,7 +53,7 @@
 
 .backArrow {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 25px;
   z-index: 500;
   color: #fff;
@@ -73,13 +65,12 @@
 .fa-arrow-left:before {
   color: #cc9900;
 }
-@media screen and(max-width:769px) {
+@media screen and(width:769px) {
   .slider {
-    width: 500px;
-    height: 50vh;
-  }
-  .pivotopija {
-    font-size: 1.5rem;
+    width: 20vw;
+    .slider-wrapper {
+      width: 20vw;
+    }
   }
 }
 @keyframes fadein {

@@ -14,13 +14,12 @@
   z-index: 200;
 
   .logo {
-    display: flex; //???????????????????
-    margin: 0.5rem auto;
-
+    margin-top: 1rem;
+    text-align: center;
     img {
       margin: 0 auto;
       padding: 0 auto;
-      width: 120px;
+      width: 60%;
     }
   }
   .naziv {
@@ -28,9 +27,10 @@
     margin: 0 auto;
     width: 100%;
     justify-content: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: "Courgette", cursive;
     color: $mainGrey;
+    opacity: 1;
   }
   ul {
     padding: 0.5rem;
@@ -55,10 +55,7 @@
     text-transform: capitalize;
     color: $mainBlack;
     border-bottom: 1px solid $mainGrey;
-    &:hover {
-      color: $mainGrey;
-      font-weight: bold;
-    }
+    &:hover,
     &.active {
       color: $mainGrey;
       font-weight: bold;
