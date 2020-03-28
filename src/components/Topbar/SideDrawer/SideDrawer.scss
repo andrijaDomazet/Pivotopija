@@ -2,16 +2,16 @@
 
 .side-drawer {
   position: fixed;
-  height: 100%;
-  background: $mainYellow;
-  box-shadow: 2px 0px 7px $mainBlack;
   top: 0;
   left: 0;
   width: 40%;
   max-width: 250px;
-  z-index: 200;
+  height: 100%;
+  background: $mainYellow;
+  box-shadow: 2px 0px 7px $mainBlack;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
+  z-index: 200;
 
   .logo {
     margin-top: 1rem;

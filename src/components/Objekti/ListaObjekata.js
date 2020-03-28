@@ -68,7 +68,6 @@ export default class ListaObjekata extends Component {
                 return (
                   <Objekat
                     key={objekat.id}
-                    // key={i}
                     objekat={objekat}
                     removeObjekat={this.removeObjekat}
                   />

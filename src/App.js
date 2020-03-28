@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from "./components/Navbar/Navbar";
-import Background from "../src/img/pozadina.jpg";
 import ListaObjekata from "./components/Objekti/ListaObjekata";
 import Mainscreen from "./components/Mainscreen/Mainscreen";
 import Info from "./components/Info/Info";
@@ -15,7 +14,7 @@ import Predstavljamo from "./components/Smallbar/Predstavljamo/Predstavljamo.js"
 import Footer from "./components/Footer/Footer.js";
 import Kontakt from "./components/Topbar/Kontakt/Kontakt.js";
 import "./App.scss";
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="app">
@@ -42,5 +41,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
