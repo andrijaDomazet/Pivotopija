@@ -1,8 +1,10 @@
 .slider {
   background: rgba(95, 92, 92, 0);
   position: relative;
-  height: 35vh;
-  margin: 0;
+  display: flex;
+  width: 90vw;
+  height: 25vh;
+  margin: auto;
   padding: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -11,12 +13,11 @@
 
   .slider-wrapper {
     height: 80%;
-
+    width: 90vw;
     .slide {
       display: inline-block;
       height: 100%;
       width: 100%;
-      border-radius: 0.5rem;
       border: 1px solid oldlace;
     }
   }
@@ -65,11 +66,14 @@
 .fa-arrow-left:before {
   color: #cc9900;
 }
-@media screen and(width:769px) {
+@media screen and(min-width:769px) {
   .slider {
     width: 20vw;
     .slider-wrapper {
       width: 20vw;
+      .slide {
+        border-radius: 5px;
+      }
     }
   }
 }

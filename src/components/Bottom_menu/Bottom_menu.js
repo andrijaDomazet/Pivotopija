@@ -3,7 +3,7 @@ import "./Bottom_menu.scss";
 import Banner1 from "./Banner1";
 import Banner2 from "./Banner3";
 import Banner3 from "./Banner2";
-import Slider from "./Slider";
+import Slider from "./Slider/Slider";
 
 export default class BottomCover extends Component {
   render() {

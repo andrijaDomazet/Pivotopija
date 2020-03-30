@@ -1,6 +1,6 @@
 import React, { Component, lazy, Suspense } from "react";
 import "./ListaObjekata.scss";
-import { spisakObjekta } from "../allData";
+import { spisakObjekta } from "../../allData";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ListaObjekata extends Component {

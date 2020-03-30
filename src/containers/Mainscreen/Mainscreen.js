@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./Mainscreen.scss";
-import Smallbar from "../Smallbar/Smallbar";
-import BottomCover from "../Bottom_menu/Bottom_menu";
-import Lender from "../Lender/Lender";
+import Smallbar from "../../components/Smallbar/Smallbar";
+import BottomCover from "../../components/Bottom_menu/Bottom_menu";
+import Lender from "../../components/Lender/Lender";
 
 export default class Mainscreen extends Component {
   toggle2 = () => {

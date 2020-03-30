@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ZanatskoPivoButton.scss";
-import srednjiLogo from "../../Lender/lenderIMG/srednjilogo.png";
+import srednjiLogo from "../../components/Lender/lenderIMG/srednjilogo.png";
 
 export default class ZanatskoPivoButton extends Component {
   render() {
