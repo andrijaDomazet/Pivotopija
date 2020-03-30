@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import "./Bottom_menu.scss";
-import { spisakObjekta } from "../allData";
+import { spisakObjekta } from "../../allData";
 
 export default class Banner1 extends Component {
   state = {

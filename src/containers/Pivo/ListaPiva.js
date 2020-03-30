@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { spisakPiva } from "../allData";
+import { spisakPiva } from "../../allData";
 import "./ListaPiva.scss";
-import Pivo from "./Pivo";
+import Pivo from "./Tools/Pivo";
 
 export default class ListaPiva extends Component {
   state = {

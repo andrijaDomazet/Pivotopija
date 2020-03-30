@@ -2,9 +2,9 @@ import React, { Component } from "react";
 // import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
 import "../Lender/Lender.scss";
 import cover from "../../img/cover2.jpg";
-import ZanatskoPivoButton from "../Mainscreen/Buttons/ZanatskoPivoButton";
-import PlutoButton from "../Mainscreen/Buttons/PlutoButton";
-import PreporucenoPivo from "../Mainscreen/Buttons/PreporucenoPivo";
+import ZanatskoPivoButton from "../../UI/Buttons/ZanatskoPivoButton";
+import PlutoButton from "../../containers/Mainscreen/Mainscreen";
+import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
 
 export default class Lender extends Component {
   state = {
@@ -42,14 +42,17 @@ export default class Lender extends Component {
     const { toggle2, toggle3 } = this.props;
     return (
       <div className="main_cover">
-        <img src={this.state.cover[this.state.coverPosition]} alt="" />
+        <img
+          src={this.state.cover[this.state.coverPosition]}
+          alt="cover picture"
+        />
         <div
           className="lady"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
           <img src={this.state.fotke[0]} alt="slika2" />
         </div>
-        <div
+        {/* <div
           className="srednjeDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
@@ -66,7 +69,7 @@ export default class Lender extends Component {
           style={{ display: this.state.display2[this.state.displayPosition] }}
         >
           <PreporucenoPivo />
-        </div>
+        </div> */}
       </div>
     );
   }

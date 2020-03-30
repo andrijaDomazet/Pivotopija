@@ -4,12 +4,12 @@ import LeftArrow from "./LeftArrow";
 import RightArrow from "./RightArrow";
 import NazivSlajda from "./NazivSlajda";
 import "./Slider.scss";
-import "./Bottom_menu.scss";
-import pivoclear1 from "../../img/pivoclear1.jpg";
-import pivoclear2 from "../../img/pivoclear2.jpg";
-import pivoclear3 from "../../img/pivoclear3.jpg";
-import pivoclear4 from "../../img/pivoclear4.jpg";
-import banner4 from "../../img/banner4.jpg";
+import "../Bottom_menu.scss";
+import pivoclear1 from "../../../img/pivoclear1.jpg";
+import pivoclear2 from "../../../img/pivoclear2.jpg";
+import pivoclear3 from "../../../img/pivoclear3.jpg";
+import pivoclear4 from "../../../img/pivoclear4.jpg";
+import banner4 from "../../../img/banner4.jpg";
 
 export default class Slider extends Component {
   state = {
