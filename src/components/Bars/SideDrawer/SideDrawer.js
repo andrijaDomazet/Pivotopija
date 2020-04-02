@@ -24,7 +24,7 @@ export default function SideDrawer(props) {
 const options = props => {
   return links.map((link, index) => {
     return (
-      <li>
+      <li key={index}>
         <NavLink
           exact
           key={index}

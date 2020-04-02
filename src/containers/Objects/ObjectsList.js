@@ -1,11 +1,11 @@
 import React, { Component, lazy, Suspense } from "react";
-import "./ListaObjekata.scss";
-import { spisakObjekta } from "../../allData";
+import "./ObjectsList.scss";
+import { spisakObjekta as objectsList } from "../../allData";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
-export default class ListaObjekata extends Component {
+export default class ObjectsList extends Component {
   state = {
-    objekti: spisakObjekta,
+    objects: objectsList,
     search1: "",
     search2: ""
   };
@@ -18,7 +18,7 @@ export default class ListaObjekata extends Component {
   };
 
   removeObjekat = id => {
-    const { objekti } = this.state;
+    const { objects: objekti } = this.state;
     const filter = objekti.filter(objekat => objekat.id !== id);
     this.setState({
       objekti: filter
@@ -26,13 +26,13 @@ export default class ListaObjekata extends Component {
   };
 
   render() {
-    let filtiraniObjekti1 = this.state.objekti.filter(objekat => {
+    let filtiraniObjekti1 = this.state.objects.filter(objekat => {
       return (
         objekat.city.toLowerCase().indexOf(this.state.search1.toLowerCase()) !==
         -1
       );
     });
-    let filtiraniObjekti2 = this.state.objekti.filter(objekat => {
+    let filtiraniObjekti2 = this.state.objects.filter(objekat => {
       return (
         objekat.name.toLowerCase().indexOf(this.state.search2.toLowerCase()) !==
         -1
@@ -40,9 +40,9 @@ export default class ListaObjekata extends Component {
     });
 
     return (
-      <div className="glavniDiv">
+      <div className="objectsList">
         <div className="pretraga">
-          <div className="search_mesta">
+          <div className="objectsList__search">
             <input
               type="text"
               placeholder="Pretraga po lokaciji objekta"
@@ -50,7 +50,7 @@ export default class ListaObjekata extends Component {
               onChange={this.updateSearch1.bind(this)}
             />
           </div>
-          <div className="search_imena">
+          <div className="objectsList__search">
             <input
               type="text"
               placeholder="Pretraga po nazivu objekta"

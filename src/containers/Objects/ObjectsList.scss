@@ -1,0 +1,66 @@
+@import "../../index.scss";
+
+.objectsList {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  .pretraga {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid red;
+    margin: 10px;
+    .objectsList__search > input {
+      margin-bottom: 5px;
+      padding: 0;
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+      background: $mainYellow;
+      transition: 0.5s;
+      color: white;
+      border: 1px solid white;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        color: $mainYellow;
+      }
+      &:focus {
+        background: black;
+        transition: 0.5s;
+        &::placeholder {
+          color: #333333;
+        }
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+
+  .objektiLista {
+    flex: 3;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .objektiLista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .objektiLista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1140px) {
+  .objektiLista {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 0;
+  }
+}
