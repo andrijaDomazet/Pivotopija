@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { spisakPiva } from "../../allData";
-import "./ListaPiva.scss";
+import "./BeersList.scss";
 import Pivo from "./Tools/Pivo";
 
-export default class ListaPiva extends Component {
+export default class BeersList extends Component {
   state = {
     piva: spisakPiva,
     searchPiva1: "",

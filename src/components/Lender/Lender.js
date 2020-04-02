@@ -42,10 +42,7 @@ export default class Lender extends Component {
     const { toggle2, toggle3 } = this.props;
     return (
       <div className="main_cover">
-        <img
-          src={this.state.cover[this.state.coverPosition]}
-          alt="cover picture"
-        />
+        <img src={this.state.cover[this.state.coverPosition]} alt="cover" />
         <div
           className="lady"
           style={{ display: this.state.display[this.state.displayPosition] }}

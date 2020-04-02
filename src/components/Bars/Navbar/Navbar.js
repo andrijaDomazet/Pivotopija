@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Navbar.scss";
-import Logo from "../../../src/img/LogoLNK.svg";
+import Logo from "../../../../src/img/LogoLNK.svg";
 import { NavLink } from "react-router-dom";
-import ToggleButton from "../Topbar/SideDrawer/ToggleButton";
-import Backdrop from "../Backdrop/Backdrop";
-import SideDrawer from "../Topbar/SideDrawer/SideDrawer";
+import ToggleButton from "../SideDrawer/ToggleButton";
+import Backdrop from "../../Backdrop/Backdrop";
+import SideDrawer from "../SideDrawer/SideDrawer";
 
 export default class Navbar extends Component {
   state = {
