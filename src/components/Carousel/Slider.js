@@ -1,6 +1,6 @@
 import React from "react";
 import { Spring } from "react-spring/renderprops";
-import SH from "../img/SH.jpg";
+import SH from "../../containers/Info/img/SH.jpg";
 import "./Slider.scss";
 
 export default function Slider() {
@@ -9,7 +9,7 @@ export default function Slider() {
       from={{ opacity: 0, marginTop: -500 }}
       to={{ opacity: 1, marginTop: 0 }}
     >
-      {props => (
+      {(props) => (
         <div style={props}>
           <img className="slika1" src={SH} alt="slika3" />
           <div className="sl1style">

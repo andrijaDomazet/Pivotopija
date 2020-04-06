@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./InfoPiva.scss";
+import "./BeersInfo.scss";
 
-export default class InfoPiva extends Component {
+export default class BeersInfo extends Component {
   render() {
-    let infoClassesPiva = "infoPiva";
+    let infoClassesPiva = "beersInfo";
     if (this.props.show) {
-      infoClassesPiva = "infoPiva open";
+      infoClassesPiva = "beersInfo open";
     }
     const { name, img } = this.props.podaci;
 

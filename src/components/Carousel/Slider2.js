@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
-import CB from "../img/CB.png";
+import CB from "../../containers/Info/img/CB.png";
 import "./Slider2.scss";
 
 export class Slider2 extends Component {
@@ -11,7 +11,7 @@ export class Slider2 extends Component {
         to={{ opacity: 1 }}
         config={{ delay: 1000, duration: 1000 }}
       >
-        {props => (
+        {(props) => (
           <div style={props}>
             <img className="slika2" src={CB} alt="slika3" />
             <div className="sl2style">
