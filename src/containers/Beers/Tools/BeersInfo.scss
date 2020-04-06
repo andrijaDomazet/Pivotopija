@@ -1,6 +1,6 @@
 @import "../../../index.scss";
 
-.infoPiva {
+.beersInfo {
   position: fixed;
   top: 25vh;
   left: 10%;
@@ -45,12 +45,12 @@
     }
   }
 }
-.infoPiva.open {
+.beersInfo.open {
   transform: translateX(0);
 }
 
 @media screen and(min-width:769px) {
-  .infoPiva {
+  .beersInfo {
     top: 8vh;
     width: 30%;
     left: 35%;

@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Topbar from "./components/Bars/Topbar/Topbar";
 import Navbar from "./components/Bars/Navbar/Navbar";
 import Mainscreen from "./containers/Mainscreen/Mainscreen";
-import Info from "./components/Info/Info";
+import Info from "./containers/Info/Info";
 // import NoMatch from "./components/Tools/NoMatch/NoMatch";
-import Festivali from "./components/Bars/Smallbar/Festivali/Festivali.js";
+import Festivals from "./containers/Festivals/Festivals.js";
 import Vrste from "./components/Bars/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Bars/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Bars/Smallbar/Predstavljamo/Predstavljamo.js";
@@ -28,7 +28,7 @@ export default class App extends Component {
             <Route path="/piva" component={BeersList} />
             <Route path="/objekti" component={ObjectsList} />
             <Route path="/vrste" component={Vrste} />
-            <Route path="/festivali" component={Festivali} />
+            <Route path="/festivali" component={Festivals} />
             <Route path="/postupak" component={Postupak} />
             <Route path="/predstavljamo" component={Predstavljamo} />
             <Route path="/Kontakt" component={Kontakt} />

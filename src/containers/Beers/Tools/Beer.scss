@@ -1,12 +1,11 @@
 @import "../../../index.scss";
 
-.pivo {
-  // background: $mainYellow;
+.beer {
   border-radius: 0.8rem;
   margin: 1rem 0;
   -webkit-box-shadow: 4px 5px 7px 5px rgba(150, 28, 8, 0.84);
   box-shadow: 4px 5px 7px 5px rgba(150, 28, 8, 0.84);
-  .img-container {
+  .beer__img {
     position: relative;
     img {
       width: 100%;
@@ -35,7 +34,7 @@
       word-spacing: -0.6px;
     }
   }
-  .glavniInfoPiva {
+  .beer__info {
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     background: #c59237;

@@ -1,32 +1,32 @@
 import React, { Component } from "react";
-import "./Pivo.scss";
-import InfoPiva from "./InfoPiva";
+import "./Beer.scss";
+import InfoPiva from "./BeersInfo";
 
-export default class Pivo extends Component {
+export default class Beer extends Component {
   state = {
-    prikazInfoPiva: false
+    prikazInfoPiva: false,
   };
   okidacInfoPiva = () => {
     console.log("idemooo");
 
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { prikazInfoPiva: !prevState.prikazInfoPiva };
     });
   };
   removeCommentBox = () => {
     this.setState({
-      prikazInfoPiva: false
+      prikazInfoPiva: false,
     });
   };
   render() {
     const { id, name, img, abv } = this.props.pivo;
     return (
-      <div className="pivo">
-        <div className="img-container">
-          <img src={img} alt="jelen" onClick={this.okidacInfoPiva} />
+      <div className="beer">
+        <div className="beer__img">
+          <img src={img} alt="beer" onClick={this.okidacInfoPiva} />
           <span className="abv">{abv}%</span>
         </div>
-        <div className="glavniInfoPiva">
+        <div className="beer__info">
           <h2>{id}</h2>
           <h3>{name}</h3>
           <InfoPiva
