@@ -67,17 +67,22 @@
 }
 @media screen and(min-width:769px) {
   .main_cover {
-    width: 70%;
-    height: 50vh;
+    height: 75vh;
     margin: 0 auto;
     .lady {
       img {
-        height: 50vh;
+        height: 65vh;
       }
     }
     .srednjeDugme {
       img {
-        height: 35vh;
+        height: 50vh;
+      }
+    }
+    .desnoDugme {
+      left: 70%;
+      img {
+        height: 90vh;
       }
     }
   }
@@ -85,7 +90,7 @@
 
 @media screen and(min-width:996px) {
   .main_cover {
-    width: 70%;
+    width: 90%;
   }
 }
 

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "../Lender/Lender.scss";
 import cover from "../../img/cover2.jpg";
 import ZanatskoPivoButton from "../../UI/Buttons/ZanatskoPivoButton";
-import PlutoButton from "../../containers/Mainscreen/Mainscreen";
+import PlutoButton from "../../UI/Buttons/PlutoButton";
 import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
 
 export default class Lender extends Component {
@@ -13,7 +13,7 @@ export default class Lender extends Component {
     coverPosition: 0,
     display: ["", "none"],
     displayPosition: 0,
-    display2: ["none", ""]
+    display2: ["none", ""],
   };
 
   componentDidMount = () => {
@@ -28,13 +28,13 @@ export default class Lender extends Component {
     if (this.state.coverPosition === this.state.cover.length - 1) {
       return this.setState({
         coverPosition: 0,
-        displayPosition: 0
+        displayPosition: 0,
       });
     }
     this.setState({
       coverPosition: this.state.coverPosition + 1,
       displayPosition: this.state.displayPosition + 1,
-      displayPosition2: this.state.displayPosition + 1
+      displayPosition2: this.state.displayPosition + 1,
     });
   };
 
@@ -49,7 +49,7 @@ export default class Lender extends Component {
         >
           <img src={this.state.fotke[0]} alt="slika2" />
         </div>
-        {/* <div
+        <div
           className="srednjeDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
@@ -66,7 +66,7 @@ export default class Lender extends Component {
           style={{ display: this.state.display2[this.state.displayPosition] }}
         >
           <PreporucenoPivo />
-        </div> */}
+        </div>
       </div>
     );
   }
