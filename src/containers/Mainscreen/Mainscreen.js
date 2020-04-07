@@ -17,7 +17,7 @@ export default class Mainscreen extends Component {
       <div className="mainscreen">
         <Lender toggle2={this.toggle2} toggle3={this.toggle3} />
         <Smallbar />
-        <BottomCover />
+        {/* <BottomCover /> */}
       </div>
     );
   }
