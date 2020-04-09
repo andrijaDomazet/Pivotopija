@@ -35,7 +35,7 @@ export default class App extends Component {
             {/* Za potrebe deploy-a je ubacen Mainscreen umesto NoMatch */}
             <Route component={Mainscreen} />
           </Switch>
-          {/* <Footer /> */}
+          <Footer />
         </Router>
       </div>
     );
