@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 // import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
 import "../Lender/Lender.scss";
-import cover from "../../img/cover2.jpg";
+// import cover from "../../img/cover2.jpg";
 import ZanatskoPivoButton from "../../UI/Buttons/ZanatskoPivoButton";
 import PlutoButton from "../../UI/Buttons/PlutoButton";
 import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
 
 export default class Lender extends Component {
   state = {
-    cover: ["./img/lenderIMG/cover.jpg", "./img/lenderIMG/cover2.jpg"],
+    cover: ["./img/lenderIMG/cover3.jpg", "./img/lenderIMG/cover2.jpg"],
     fotke: ["./img/lenderIMG/BeerLady1.png"],
     coverPosition: 0,
     display: ["", "none"],
@@ -17,7 +17,14 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    var intervalId = setInterval(this.reklama, 10000);
+    if (this.state.displayPosition == 0) {
+      console.log("Interval", 0);
+
+      var intervalId = setInterval(this.reklama, 10000);
+    } else {
+      clearInterval(this.state.intervalId);
+      var intervalId = setInterval(this.reklama, 1000);
+    }
   };
 
   componentWillUnmount = () => {

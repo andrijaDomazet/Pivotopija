@@ -2,13 +2,11 @@
 
 .btn_zanatskaPiva {
   position: absolute;
-  // top: 0vh;
-  // left: 0;
   background: transparent;
   cursor: pointer;
   border: none;
   z-index: +1;
-
+  animation: pulse 2s ease-in infinite;
   &:hover {
     transform: scale(1.03);
   }
@@ -17,31 +15,11 @@
   }
 }
 
-// @media screen and(min-width:769px) {
-//   .btn_zanatskaPiva {
-//     left: 40%;
-//     img {
-//       width: 12rem;
-//     }
-//   }
-// }
-// @media screen and(min-width:996px) {
-//   .btn_zanatskaPiva {
-//     top: 19%;
-//     left: 42%;
-//     img {
-//       width: 13rem;
-//       height: auto;
-//     }
-//   }
-// }
-// @media screen and(max-height:600px) {
-//   .btn_zanatskaPiva {
-//     top: 19%;
-//     left: 42%;
-//     img {
-//       width: 12rem;
-//       height: auto;
-//     }
-//   }
-// }
+@keyframes pulse {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}

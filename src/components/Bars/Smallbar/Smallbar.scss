@@ -3,69 +3,31 @@
 .smallBar {
   display: flex;
   width: 100%;
-  margin: 0.5rem auto;
-  // margin: 0 auto;
-  // margin-left: 5%;
-  // background: transparent;
   align-items: center;
   color: $mainYellow;
-  // ??????????????????????????????????????????
-  text-align: center;
-  justify-content: space-evenly;
-
-  .smallBar-links {
-    // :first-child {
-    //   color: red !important;
-    // }
-    ul {
-      display: flex;
-      margin: 0 auto;
+  .smallBar__link {
+    opacity: 0.6;
+    color: $mainGrey;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.3s linear;
+    justify-content: center;
+    border-right: 1px solid $mainYellow;
+    margin: 5px 0;
+    padding: 0 15px;
+    &:hover {
+      // color: $mainYellow;
+      opacity: 1;
     }
-
-    li {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      list-style: none;
-      padding: 0 auto;
+    &:first-child {
+      padding-left: 0;
       color: $mainYellow;
-      text-decoration: none;
-      font-size: 0.8rem;
-      transition: all 0.3s linear;
-      justify-content: center;
-      border-right: 1px solid $mainYellow;
-
-      &:hover {
-        color: $mainYellow;
-      }
-      &:first-child {
-        list-style: none;
-        color: $mainYellow;
-        font-family: "Courgette", cursive;
-        text-transform: uppercase;
-      }
-      &:last-child {
-        border: none;
-      }
+      font-family: Melvis;
+      font-size: 2rem;
+      text-transform: uppercase;
     }
-    .smallBar-link0 {
-      color: $mainYellow;
-      text-decoration: none;
-      padding-right: 1rem;
-      opacity: 0.8;
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .smallBar-link {
-      // list-style: circle;
-      color: $mainGrey;
-      padding-right: 1rem;
-      text-decoration: none;
-      opacity: 0.8;
-      &:hover {
-        opacity: 1;
-      }
+    &:last-child {
+      border: none;
     }
   }
 }
@@ -74,25 +36,16 @@
   .smallBar {
     display: flex;
     width: 80%;
-    margin-left: 5%;
-    .smallBar-links {
-      ul {
-        li {
-          border-right: none;
-        }
-      }
+    margin: 0.5rem;
+    .smallBar__link {
+      font-size: 1.4rem;
+      line-height: 2rem;
     }
   }
 }
 @media screen and(min-width:996px) {
   .smallBar {
-    width: 60%;
-    margin-left: 15%;
-    .smallBar-link {
-      font-size: 1rem;
-    }
-    .smallBar-link0 {
-      font-size: 1rem;
-    }
+    width: 70%;
+    margin-left: 5%;
   }
 }

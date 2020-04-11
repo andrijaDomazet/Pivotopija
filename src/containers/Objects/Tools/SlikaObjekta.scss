@@ -1,17 +1,23 @@
 @import "../../../index.scss";
 
 .img-container {
+  border: 1px solid red;
   position: relative;
-
+  img {
+    display: block;
+    border: 1px solid blue;
+    width: 100%;
+    height: auto;
+  }
   .close-btn {
     position: absolute;
     display: block;
-    top: 5%;
-    right: 5%;
-    font-size: 2rem;
+    top: 3%;
+    right: 3%;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s linear;
-    opacity: 0;
+    opacity: 0.5;
     color: red;
 
     &:hover {
