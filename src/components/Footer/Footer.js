@@ -4,6 +4,10 @@ import "./Footer.scss";
 export default function Footer() {
   return (
     <section id="footer">
+      <div className="pivotopija__room">
+        <h1>PIVOTOPIJA ROOM</h1>
+        <h2>coming soon...</h2>
+      </div>
       <div className="konteiner">
         <div className="row text-center text-xs-center text-sm-left text-md-left">
           <div className="col-xs-12 col-sm-4 col-md-4">

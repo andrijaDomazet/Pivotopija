@@ -3,7 +3,6 @@
 .btn_pluto {
   display: none;
   position: absolute;
-  // left: 70%;
   background: transparent;
   cursor: pointer;
   border: none;
@@ -16,8 +15,6 @@
     z-index: +1;
     width: auto;
     height: 60vh;
-    // bottom: -1.2rem;
-    // text-decoration: none;
     &:hover {
       transform: scale(1.02);
     }
@@ -29,23 +26,8 @@
 @media screen and(min-width:769px) {
   .btn_pluto {
     display: flex;
-    // right: 20%;
     img {
       width: auto;
     }
   }
 }
-// @media screen and(min-width:996px) {
-//   .btn_pluto {
-//     // right: 10%;
-//   }
-// }
-// @media screen and(min-width:992px) {
-//   .btn_pluto {
-//     // top: -11%;
-//     // left: 75%;
-//     img {
-//       width: 11rem;
-//     }
-//   }
-// }

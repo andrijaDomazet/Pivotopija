@@ -5,15 +5,15 @@ import InfoObjekta from "./InfoObjekta";
 
 export default class SlikaObjekta extends Component {
   state = {
-    prikazInfoObjekta: false
+    prikazInfoObjekta: false,
   };
   removeCommentBox = () => {
     this.setState({
-      prikazInfoObjekta: false
+      prikazInfoObjekta: false,
     });
   };
   okidacInfoObjekta = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { prikazInfoObjekta: !prevState.prikazInfoObjekta };
     });
   };

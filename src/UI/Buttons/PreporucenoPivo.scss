@@ -1,16 +1,11 @@
 @import "../../index.scss";
 
 .preporucenoPivo-poziv {
-  // position: flex;
-  // top: 0vh;
-  // left: 0;
   color: $mainYellow;
-  //   background: transparent;
   cursor: pointer;
   background-color: #4948483b;
-  // width: 150px;
   z-index: +1;
-  //   border: 1px solid $mainYellow;
+
   &:hover {
     transform: scale(1.03);
   }
