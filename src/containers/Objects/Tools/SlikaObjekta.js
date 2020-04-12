@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./SlikaObjekta.scss";
 import "./Objekat.scss";
 import InfoObjekta from "./InfoObjekta";
+import CloseButton from "../../../UI/Buttons/CloseButton";
 
 export default class SlikaObjekta extends Component {
   state = {
@@ -12,7 +13,7 @@ export default class SlikaObjekta extends Component {
       prikazInfoObjekta: false,
     });
   };
-  okidacInfoObjekta = () => {
+  showInfoObject = () => {
     this.setState((prevState) => {
       return { prikazInfoObjekta: !prevState.prikazInfoObjekta };
     });
@@ -21,10 +22,11 @@ export default class SlikaObjekta extends Component {
     const { id, img } = this.props.podaci;
 
     return (
-      <div className="img-container">
-        <img src={img} alt="" onClick={this.okidacInfoObjekta} />
+      <div className="img__container">
+        <img src={img} alt="" onClick={this.showInfoObject} />
+        <CloseButton classes="close__btn" />
         <span
-          className="close-btn"
+          className="close__btn"
           onClick={() => {
             this.props.removeObjekat(id);
           }}

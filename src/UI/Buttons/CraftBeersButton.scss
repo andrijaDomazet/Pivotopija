@@ -1,0 +1,26 @@
+@import "../../index.scss";
+
+.btn__craftBeers {
+  position: absolute;
+  background: transparent; //because of png element
+  cursor: pointer;
+  border: none;
+  z-index: +1;
+  animation: pulse 2s ease-out infinite;
+  filter: brightness(0.7);
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: brightness(0.7);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

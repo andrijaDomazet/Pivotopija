@@ -7,37 +7,26 @@ export default class ObjectsList extends Component {
   state = {
     objects: objectsList,
     search1: "",
-    search2: ""
+    search2: "",
   };
 
-  updateSearch1 = event => {
+  updateSearch1 = (event) => {
     this.setState({ search1: event.target.value.substr(0, 20) });
   };
-  updateSearch2 = event => {
+  updateSearch2 = (event) => {
     this.setState({ search2: event.target.value.substr(0, 20) });
   };
 
-  removeObjekat = id => {
+  removeObjekat = (id) => {
     const { objects: objekti } = this.state;
-    const filter = objekti.filter(objekat => objekat.id !== id);
+    const filter = objekti.filter((objekat) => objekat.id !== id);
     this.setState({
-      objekti: filter
+      objekti: filter,
     });
   };
 
   render() {
-    let filtiraniObjekti1 = this.state.objects.filter(objekat => {
-      return (
-        objekat.city.toLowerCase().indexOf(this.state.search1.toLowerCase()) !==
-        -1
-      );
-    });
-    let filtiraniObjekti2 = this.state.objects.filter(objekat => {
-      return (
-        objekat.name.toLowerCase().indexOf(this.state.search2.toLowerCase()) !==
-        -1
-      );
-    });
+    let { filtiraniObjekti1, filtiraniObjekti2 } = this.newMethod();
 
     return (
       <div className="objectsList">
@@ -63,8 +52,8 @@ export default class ObjectsList extends Component {
         <Suspense fallback={<div>Loading...</div>}>
           <section className="objektiLista">
             {filtiraniObjekti1
-              .filter(x => filtiraniObjekti2.includes(x))
-              .map(objekat => {
+              .filter((x) => filtiraniObjekti2.includes(x))
+              .map((objekat) => {
                 return (
                   <Objekat
                     key={objekat.id}
@@ -77,5 +66,21 @@ export default class ObjectsList extends Component {
         </Suspense>
       </div>
     );
+  }
+
+  newMethod() {
+    let filtiraniObjekti1 = this.state.objects.filter((objekat) => {
+      return (
+        objekat.city.toLowerCase().indexOf(this.state.search1.toLowerCase()) !==
+        -1
+      );
+    });
+    let filtiraniObjekti2 = this.state.objects.filter((objekat) => {
+      return (
+        objekat.name.toLowerCase().indexOf(this.state.search2.toLowerCase()) !==
+        -1
+      );
+    });
+    return { filtiraniObjekti1, filtiraniObjekti2 };
   }
 }

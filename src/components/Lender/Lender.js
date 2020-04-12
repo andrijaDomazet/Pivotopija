@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-// import BeerLady1 from "../Lender/lenderIMG/BeerLady1.png";
 import "../Lender/Lender.scss";
-// import cover from "../../img/cover2.jpg";
-import ZanatskoPivoButton from "../../UI/Buttons/ZanatskoPivoButton";
 import PlutoButton from "../../UI/Buttons/PlutoButton";
 import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
+import CraftBeersButton from "../../UI/Buttons/CraftBeersButton";
 
 export default class Lender extends Component {
   state = {
@@ -17,21 +15,24 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    if (this.state.displayPosition == 0) {
-      console.log("Interval", 0);
-
-      var intervalId = setInterval(this.reklama, 10000);
-    } else {
-      clearInterval(this.state.intervalId);
-      var intervalId = setInterval(this.reklama, 1000);
-    }
+    var intervalId = setInterval(this.changeCover, 200000);
   };
-
+  // componentWillUpdate = () => {
+  //   if (this.state.displayPosition === 0) {
+  //     console.log("Interval", 0);
+  //     clearInterval(this.state.intervalId);
+  //     var intervalId = setInterval(this.reklama, 20000);
+  //   } else {
+  //     console.log("Interval", 1);
+  //     clearInterval(this.state.intervalId);
+  //     var intervalId = setInterval(this.reklama, 5000);
+  //   }
+  // };
   componentWillUnmount = () => {
     clearInterval(this.state.intervalId);
   };
 
-  reklama = () => {
+  changeCover = () => {
     if (this.state.coverPosition === this.state.cover.length - 1) {
       return this.setState({
         coverPosition: 0,
@@ -60,7 +61,7 @@ export default class Lender extends Component {
           className="srednjeDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <ZanatskoPivoButton toggle2={toggle2} />
+          <CraftBeersButton toggle2={toggle2} />
         </div>
         <div
           className="desnoDugme"
