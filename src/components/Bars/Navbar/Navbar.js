@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import Logo from "../../../../src/img/LogoLNK.svg";
-import { NavLink } from "react-router-dom";
 import ToggleButton from "../SideDrawer/ToggleButton";
 import Backdrop from "../../Backdrop/Backdrop";
 import SideDrawer from "../SideDrawer/SideDrawer";
@@ -34,7 +34,7 @@ export default class Navbar extends Component {
     return (
       <nav className="navBar">
         <img src={Logo} alt="page__logo" />
-        <NavLink to="/" exact className="nav-link">
+        <NavLink to="/" exact className="nav__link">
           <span className="naziv">Pivotopija </span>
         </NavLink>
 
@@ -42,28 +42,18 @@ export default class Navbar extends Component {
           <ToggleButton click={this.drawerToggleClickHandler} />
         </div>
         <div className="nav-links">
-          <ul>
-            <li>
-              <NavLink to="/" exact className="nav-link">
-                Home
+          {options.map((option, index) => {
+            return (
+              <NavLink
+                key={index}
+                to={option.route}
+                exact
+                className="nav__link"
+              >
+                {option.title}
               </NavLink>
-            </li>
-            <li>
-              <NavLink to="/info" className="nav-link">
-                info
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/piva" className="nav-link">
-                Piva
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/objekti" className="nav-link">
-                Objekti
-              </NavLink>
-            </li>
-          </ul>
+            );
+          })}
         </div>
         <SideDrawer
           show={this.state.sideDrawerOpen}
@@ -74,3 +64,9 @@ export default class Navbar extends Component {
     );
   }
 }
+const options = [
+  { title: "Home", route: "/" },
+  { title: "Info", route: "/info" },
+  { title: "Piva", route: "/piva" },
+  { title: "Objekti", route: "/objekti" },
+];

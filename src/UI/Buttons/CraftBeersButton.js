@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "./ZanatskoPivoButton.scss";
+import "./CraftBeersButton.scss";
 import srednjiLogo from "../../components/Lender/lenderIMG/srednjilogo.png";
 
-export default class ZanatskoPivoButton extends Component {
+export default class CraftBeersButton extends Component {
   render() {
     const { toggle2 } = this.props;
     return (
       <div>
-        <button className="btn_zanatskaPiva" onClick={toggle2}>
+        <button className="btn__craftBeers" onClick={toggle2}>
           <img src={srednjiLogo} alt="" />
         </button>
       </div>

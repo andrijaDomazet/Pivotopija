@@ -4,67 +4,47 @@
   width: 100%;
   height: 55px;
   display: flex;
-  text-decoration: none;
   margin: 0 auto;
-
   img {
+    margin: 0 20px;
     width: 50px;
     height: 50px;
   }
-
-  .naziv {
-    flex: 1;
-    align-items: center;
-    font-size: 1.8rem;
-    font-family: Melvis;
-    opacity: 0.7;
-    cursor: pointer;
-    text-decoration: none;
-    padding-right: 20vw;
-
-    &:hover {
-      opacity: 1;
-      font-weight: 500;
-      transition: all 2s;
-    }
-  }
-  .toggle-button {
-    align-self: center;
-    flex: 1;
-    padding-right: 1rem;
-  }
-
-  .nav-links {
-    align-self: center;
-
-    ul {
-      display: flex;
-      list-style: none;
-      margin: auto 0;
-    }
-
-    li {
-      padding: 0 0.5rem;
-      color: $mainYellow;
-      text-transform: capitalize;
-      font-size: 1.5rem;
-      transition: all 0.3s linear;
-    }
-  }
-
-  .nav-link {
+  .nav__link {
+    line-height: 55px;
+    margin-right: 2vw;
+    font-size: 2rem;
     color: $mainGrey;
     text-decoration: none;
     opacity: 0.6;
-    transition: 0.3s;
+    transition: 0.3s all;
+    align-self: center;
+    .naziv {
+      flex: 1;
+      align-items: center;
+      font-size: 3rem;
+      font-family: Melvis;
+      opacity: 0.7;
+      cursor: pointer;
+      padding-right: 15vw;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     &:hover {
       opacity: 1;
-      font-weight: bold;
     }
     &.active {
       color: $mainYellow;
       opacity: 1;
     }
+  }
+
+  .toggle-button {
+    align-self: center;
+    padding-right: 1rem;
   }
 }
 
@@ -78,14 +58,18 @@
     display: flex;
     .naziv {
       font-size: 3rem;
-      line-height: 2rem;
     }
   }
 }
 @media screen and(min-width:996px) {
   .navBar {
-    display: flex;
     width: 90%;
+    .nav__link {
+      .naziv {
+        padding-right: 20vw;
+      }
+    }
+
     .toggle-button {
       display: none;
     }
