@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "../Lender/Lender.scss";
 import PlutoButton from "../../UI/Buttons/PlutoButton";
 import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
-import CraftBeersButton from "../../UI/Buttons/CraftBeersButton";
+import SimpleButton from "../../UI/Buttons/SimpleButton";
+import srednjiLogo from "../../components/Lender/lenderIMG/srednjilogo.png";
 
 export default class Lender extends Component {
   state = {
@@ -58,10 +59,13 @@ export default class Lender extends Component {
           <img src={this.state.fotke[0]} alt="slika2" />
         </div>
         <div
+          //CraftBeersButton
           className="srednjeDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <CraftBeersButton toggle2={toggle2} />
+          <SimpleButton classes="craftBeersButton" clicked={this.newMethod()}>
+            <img src={srednjiLogo} alt="craftBeers" />
+          </SimpleButton>
         </div>
         <div
           className="desnoDugme"
@@ -77,5 +81,11 @@ export default class Lender extends Component {
         </div>
       </div>
     );
+  }
+
+  newMethod() {
+    return () => {
+      this.props.toggle2();
+    };
   }
 }

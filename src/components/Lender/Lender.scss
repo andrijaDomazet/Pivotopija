@@ -34,6 +34,29 @@
       width: auto;
       height: 25vh;
     }
+    .craftBeersButton {
+      position: absolute;
+      background: transparent; //because of png element
+      cursor: pointer;
+      border: none;
+      z-index: +1;
+      animation: pulse 2s ease-out infinite;
+      &:hover {
+        transform: scale(1.02);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: (0.5);
+      }
+      100% {
+        opacity: (1);
+      }
+    }
   }
   .desnoDugme {
     position: absolute;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./SlikaObjekta.scss";
 import "./Objekat.scss";
 import InfoObjekta from "./InfoObjekta";
-import CloseButton from "../../../UI/Buttons/CloseButton";
+import SimpleButton from "../../../UI/Buttons/SimpleButton";
 
 export default class SlikaObjekta extends Component {
   state = {
@@ -24,15 +24,9 @@ export default class SlikaObjekta extends Component {
     return (
       <div className="img__container">
         <img src={img} alt="" onClick={this.showInfoObject} />
-        <CloseButton classes="close__btn" />
-        <span
-          className="close__btn"
-          onClick={() => {
-            this.props.removeObjekat(id);
-          }}
-        >
+        <SimpleButton classes="close__btn" clicked={this.newMethod(id)}>
           <i className="fa fa-window-close" />
-        </span>
+        </SimpleButton>
         <InfoObjekta
           podaci={this.props.podaci}
           removeCommentBox={this.removeCommentBox}
@@ -40,5 +34,11 @@ export default class SlikaObjekta extends Component {
         />
       </div>
     );
+  }
+
+  newMethod(id) {
+    return () => {
+      this.props.removeObjekat(id);
+    };
   }
 }
