@@ -14,23 +14,23 @@ export default class PodaciObjekta extends Component {
     prikazInfoObjekta: false,
     brojSvidjanja: 0,
     brojKomentara: 0,
-    showInfo: false
+    showInfo: false,
   };
 
   okidacPrikazaKomentara = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { prikazKomentaraOpen: !prevState.prikazKomentaraOpen };
     });
   };
 
   okidacUpisaKomentara = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { upisKomentaraOpen: !prevState.upisKomentaraOpen };
     });
   };
 
   okidacInfoObjekta = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { prikazInfoObjekta: !prevState.prikazInfoObjekta };
     });
   };
@@ -38,27 +38,27 @@ export default class PodaciObjekta extends Component {
   brojacSvidjanja = () => {
     let noviBrojac = this.state.brojSvidjanja + 1;
     this.setState({
-      brojSvidjanja: noviBrojac
+      brojSvidjanja: noviBrojac,
     });
   };
 
   brojacKomentara = () => {
     let noviKomentar = this.state.brojKomentara + 1;
     this.setState({
-      brojKomentara: noviKomentar
+      brojKomentara: noviKomentar,
     });
   };
   removeCommentBox = () => {
     this.setState({
       upisKomentaraOpen: false,
       prikazKomentaraOpen: false,
-      prikazInfoObjekta: false
+      prikazInfoObjekta: false,
     });
   };
 
   handleInfo = () => {
     this.setState({
-      showInfo: !this.state.showInfo
+      showInfo: !this.state.showInfo,
     });
   };
 

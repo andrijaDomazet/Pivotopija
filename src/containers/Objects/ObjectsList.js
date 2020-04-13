@@ -18,10 +18,10 @@ export default class ObjectsList extends Component {
   };
 
   removeObjekat = (id) => {
-    const { objects: objekti } = this.state;
-    const filter = objekti.filter((objekat) => objekat.id !== id);
+    const { objects } = this.state;
+    const filter = objects.filter((object) => object.id !== id);
     this.setState({
-      objekti: filter,
+      objects: filter,
     });
   };
 

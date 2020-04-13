@@ -13,9 +13,21 @@
     display: block;
   }
 }
-
+.objekat:hover {
+  animation: changeBackground 0.3s ease-in forwards;
+  // background: white;
+}
 @media screen and(min-width:1140px) {
   .objekat {
     margin: 0.5rem 0;
+  }
+}
+
+@keyframes changeBackground {
+  0% {
+    background: $mainGrey;
+  }
+  100% {
+    background: white;
   }
 }

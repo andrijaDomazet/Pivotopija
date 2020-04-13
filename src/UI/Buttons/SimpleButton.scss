@@ -1,0 +1,20 @@
+@import "../../index";
+
+button {
+  //   display: block;
+  background: transparent;
+  //   text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+}
