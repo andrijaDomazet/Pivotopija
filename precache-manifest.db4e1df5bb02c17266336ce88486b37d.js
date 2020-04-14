@@ -1,67 +1,47 @@
 self.__precacheManifest = [
   {
-    "revision": "7e1f4fdc4d977cb3147f",
-    "url": "/Pivotopija/static/css/main.94b51cc1.chunk.css"
+    "revision": "32a53757e5a77471c3fa",
+    "url": "/Pivotopija/static/css/main.e072b478.chunk.css"
   },
   {
-    "revision": "7e1f4fdc4d977cb3147f",
-    "url": "/Pivotopija/static/js/main.28e188e6.chunk.js"
+    "revision": "32a53757e5a77471c3fa",
+    "url": "/Pivotopija/static/js/main.7967870d.chunk.js"
   },
   {
-    "revision": "840bc92a9a4b83cf3037",
-    "url": "/Pivotopija/static/js/runtime~main.360d48a1.js"
+    "revision": "f1d2d3b9888e13f87454",
+    "url": "/Pivotopija/static/js/runtime~main.16198854.js"
   },
   {
-    "revision": "a1d53367269b864a7eaa",
-    "url": "/Pivotopija/static/css/2.0bb27eb0.chunk.css"
+    "revision": "a18e78c116d533353088",
+    "url": "/Pivotopija/static/css/2.eaf21ffa.chunk.css"
   },
   {
-    "revision": "a1d53367269b864a7eaa",
-    "url": "/Pivotopija/static/js/2.da934e88.chunk.js"
+    "revision": "a18e78c116d533353088",
+    "url": "/Pivotopija/static/js/2.ca787498.chunk.js"
   },
   {
-    "revision": "e4fbafd8d6127586a50d",
-    "url": "/Pivotopija/static/css/3.db7a6021.chunk.css"
+    "revision": "14253f32e8319fb233b4",
+    "url": "/Pivotopija/static/css/3.e1440583.chunk.css"
   },
   {
-    "revision": "e4fbafd8d6127586a50d",
-    "url": "/Pivotopija/static/js/3.6576f6a5.chunk.js"
+    "revision": "14253f32e8319fb233b4",
+    "url": "/Pivotopija/static/js/3.b5866239.chunk.js"
   },
   {
-    "revision": "0905d684187990a6cb89",
-    "url": "/Pivotopija/static/css/4.48dadc88.chunk.css"
+    "revision": "773bb06f873fdc74c6f8",
+    "url": "/Pivotopija/static/css/4.6eee2aeb.chunk.css"
   },
   {
-    "revision": "0905d684187990a6cb89",
-    "url": "/Pivotopija/static/js/4.fa9512aa.chunk.js"
+    "revision": "773bb06f873fdc74c6f8",
+    "url": "/Pivotopija/static/js/4.4bc0cfb2.chunk.js"
   },
   {
     "revision": "69da36a85ceef2b474b2b35f7ec8cb9f",
     "url": "/Pivotopija/static/media/LogoLNK.69da36a8.svg"
   },
   {
-    "revision": "f3221c41bac16a699e8d277878afbf97",
-    "url": "/Pivotopija/static/media/kviz.f3221c41.png"
-  },
-  {
-    "revision": "a1c026e29b22e4c5520229732eaacee3",
-    "url": "/Pivotopija/static/media/pivoclear1.a1c026e2.jpg"
-  },
-  {
-    "revision": "5115e92345cf9ce6a245aeeeb1b169e8",
-    "url": "/Pivotopija/static/media/pivoclear2.5115e923.jpg"
-  },
-  {
-    "revision": "82a1c2bd6c1190012d6be4a41071b69e",
-    "url": "/Pivotopija/static/media/pivoclear3.82a1c2bd.jpg"
-  },
-  {
-    "revision": "28f8447ae7f16d68ebbc309c6564c0a0",
-    "url": "/Pivotopija/static/media/pivoclear4.28f8447a.jpg"
-  },
-  {
-    "revision": "9c5b4c3d895c0ed45234458a0955ddee",
-    "url": "/Pivotopija/static/media/banner4.9c5b4c3d.jpg"
+    "revision": "36ed1b5c7e6623ca619d42098b4691cc",
+    "url": "/Pivotopija/static/media/pluto.36ed1b5c.png"
   },
   {
     "revision": "2f7b5fd3550bcbc4b1bb7cecd47ea039",
@@ -116,19 +96,15 @@ self.__precacheManifest = [
     "url": "/Pivotopija/static/media/filter.b8dbf9a7.jpg"
   },
   {
-    "revision": "36ed1b5c7e6623ca619d42098b4691cc",
-    "url": "/Pivotopija/static/media/pluto.36ed1b5c.png"
-  },
-  {
     "revision": "91bb4cf0c5ebfbbd0244124d33293049",
     "url": "/Pivotopija/static/media/pozadina.91bb4cf0.jpg"
   },
   {
-    "revision": "02d7bb63c802fee5c113c7b7220b7f2d",
-    "url": "/Pivotopija/static/media/cover2.02d7bb63.jpg"
+    "revision": "9f57a5687dbdc89fb550d2a5f2c3b3a4",
+    "url": "/Pivotopija/static/media/Melvis Rough.9f57a568.otf"
   },
   {
-    "revision": "7f18b1b9a8c5523dfd6534e172d0808f",
+    "revision": "3ceb0145dbbdd10dda7c07d058d5c760",
     "url": "/Pivotopija/index.html"
   }
 ];
