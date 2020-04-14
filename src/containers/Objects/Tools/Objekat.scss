@@ -3,6 +3,8 @@
 .objekat {
   background: $mainGrey;
   border-radius: 0.5rem;
+  border: 2px solid black;
+
   margin: 1rem 0;
 
   img {
@@ -12,22 +14,23 @@
     border-top-right-radius: 0.5rem;
     display: block;
   }
+  &:hover {
+    animation: changeLook 0.3s ease-in forwards;
+  }
 }
-.objekat:hover {
-  animation: changeBackground 0.3s ease-in forwards;
-  // background: white;
-}
+
 @media screen and(min-width:1140px) {
   .objekat {
     margin: 0.5rem 0;
   }
 }
 
-@keyframes changeBackground {
+@keyframes changeLook {
   0% {
     background: $mainGrey;
   }
   100% {
     background: white;
+    border: 2px solid $mainYellow;
   }
 }

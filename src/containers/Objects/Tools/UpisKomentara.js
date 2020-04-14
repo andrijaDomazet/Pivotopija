@@ -3,13 +3,13 @@ import "./UpisKomentara.scss";
 
 export default class UpisKomentara extends Component {
   state = {
-    noviKomentar: []
+    noviKomentar: [],
   };
 
   addKomentar() {
     var ime = this.refs.ime.value;
     var ocena = this.refs.ocena.value;
-    console.log("Ime:" + ime + " " + "Komentar:" + ocena);
+    console.log("Ime:", ime, "Komentar:", ocena);
     if (localStorage.getItem("noviKomentar") == null) {
       //---------------unos u lokal storidz
       var noviKomentar = [];
@@ -25,7 +25,7 @@ export default class UpisKomentara extends Component {
     }
 
     this.setState({
-      noviKomentar: JSON.parse(localStorage.getItem("noviKomentar"))
+      noviKomentar: JSON.parse(localStorage.getItem("noviKomentar")),
     });
   }
   componentDidMount() {

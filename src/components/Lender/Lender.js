@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import "../Lender/Lender.scss";
-import PlutoButton from "../../UI/Buttons/PlutoButton";
 import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
-import srednjiLogo from "../../components/Lender/lenderIMG/srednjilogo.png";
-
+import srednjiLogo from "./lenderIMG/srednjilogo.png";
+import bottle from "./lenderIMG/pluto.png";
 export default class Lender extends Component {
   state = {
     cover: ["./img/lenderIMG/cover3.jpg", "./img/lenderIMG/cover2.jpg"],
@@ -16,7 +15,7 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    var intervalId = setInterval(this.changeCover, 200000);
+    setInterval(this.changeCover, 500000);
   };
   // componentWillUpdate = () => {
   //   if (this.state.displayPosition === 0) {
@@ -48,7 +47,7 @@ export default class Lender extends Component {
   };
 
   render() {
-    const { toggle2, toggle3 } = this.props;
+    const { toggle3 } = this.props;
     return (
       <div className="main_cover">
         <img src={this.state.cover[this.state.coverPosition]} alt="cover" />
@@ -59,11 +58,13 @@ export default class Lender extends Component {
           <img src={this.state.fotke[0]} alt="slika2" />
         </div>
         <div
-          //CraftBeersButton
           className="srednjeDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <SimpleButton classes="craftBeersButton" clicked={this.newMethod()}>
+          <SimpleButton
+            classes="craftBeersButton"
+            clicked={this.showCraftBeers()}
+          >
             <img src={srednjiLogo} alt="craftBeers" />
           </SimpleButton>
         </div>
@@ -71,7 +72,12 @@ export default class Lender extends Component {
           className="desnoDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <PlutoButton toggle3={toggle3} />
+          <SimpleButton
+            classes="btn__pluto"
+            clicked={this.showBeerSuggestion()}
+          >
+            <img src={bottle} alt="bottle" />
+          </SimpleButton>
         </div>
         <div
           className="preporucenoPivo"
@@ -83,7 +89,13 @@ export default class Lender extends Component {
     );
   }
 
-  newMethod() {
+  showBeerSuggestion() {
+    return () => {
+      this.props.toggle3();
+    };
+  }
+
+  showCraftBeers() {
     return () => {
       this.props.toggle2();
     };
