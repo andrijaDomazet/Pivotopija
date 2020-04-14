@@ -6,7 +6,7 @@ import { spisakObjekta } from "../../allData";
 export default class Banner1 extends Component {
   state = {
     objekti: spisakObjekta,
-    pozicija: 0
+    pozicija: 0,
     // intervalId: 0
   };
 
@@ -37,7 +37,7 @@ export default class Banner1 extends Component {
         to={{ opacity: 1 }}
         config={{ delay: 500, duration: 2000 }}
       >
-        {props => (
+        {(props) => (
           <div style={props}>
             <div className="banners">
               <div className="banner1-slika">

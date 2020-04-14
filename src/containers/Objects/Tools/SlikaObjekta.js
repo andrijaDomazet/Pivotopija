@@ -24,9 +24,11 @@ export default class SlikaObjekta extends Component {
     return (
       <div className="img__container">
         <img src={img} alt="" onClick={this.showInfoObject} />
-        <SimpleButton classes="close__btn" clicked={this.newMethod(id)}>
-          <i className="fa fa-window-close" />
-        </SimpleButton>
+        <SimpleButton
+          classes="close__btn"
+          clicked={this.closeObject(id)}
+          children={<i className="fa fa-window-close" />}
+        />
         <InfoObjekta
           podaci={this.props.podaci}
           removeCommentBox={this.removeCommentBox}
@@ -36,7 +38,7 @@ export default class SlikaObjekta extends Component {
     );
   }
 
-  newMethod(id) {
+  closeObject(id) {
     return () => {
       this.props.removeObjekat(id);
     };

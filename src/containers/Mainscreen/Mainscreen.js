@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Mainscreen.scss";
 import Smallbar from "../../components/Bars/Smallbar/Smallbar";
-import BottomCover from "../../components/Bottom_menu/Bottom_menu";
+// import BottomCover from "../../components/Bottom_menu/Bottom_menu";
 import Lender from "../../components/Lender/Lender";
 
 export default class Mainscreen extends Component {

@@ -48,25 +48,33 @@
         outline: none;
       }
     }
-
-    @keyframes pulse {
-      0% {
-        opacity: (0.5);
-      }
-      100% {
-        opacity: (1);
-      }
-    }
   }
   .desnoDugme {
     position: absolute;
     left: 70%;
-    top: -5%;
-    img {
+    top: -10%;
+
+    .btn_pluto {
+      display: none;
+      position: absolute;
+      background: transparent;
+      cursor: pointer;
       z-index: +1;
-      width: auto;
+
+      img {
+        position: absolute;
+        z-index: +999;
+        width: auto;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    &:hover {
+      transform: scale(1.02);
     }
   }
+
   .preporucenoPivo {
     position: absolute;
     left: 45%;
@@ -104,8 +112,11 @@
     }
     .desnoDugme {
       left: 70%;
-      img {
-        height: 85vh;
+      .btn__pluto {
+        display: flex;
+        img {
+          height: auto;
+        }
       }
     }
   }
@@ -117,5 +128,13 @@
     .desnoDugme {
       left: 75%;
     }
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: (0.5);
+  }
+  100% {
+    opacity: (1);
   }
 }

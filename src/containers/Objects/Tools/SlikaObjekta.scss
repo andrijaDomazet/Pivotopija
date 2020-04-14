@@ -12,19 +12,13 @@
   }
   .close__btn {
     position: absolute;
-    // display: block;
     top: 3%;
     right: 3%;
     font-size: 1.6rem;
-    // cursor: pointer;
     transition: all 0.3s linear;
-    // opacity: 0.5;
     color: red;
-
-    // &:hover {
-    //   opacity: 1;
-    // }
   }
+
   .fb {
     position: absolute;
     top: 0%;
