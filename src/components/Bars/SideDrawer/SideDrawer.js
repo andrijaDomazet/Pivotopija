@@ -4,16 +4,11 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../../img/LogoLNK.svg";
 
 export default function SideDrawer(props) {
-  let drawerClasses = "side-drawer";
-  if (props.show) {
-    drawerClasses = "side-drawer open";
-  }
-
   return (
     <div>
-      <nav className={drawerClasses}>
-        <div className="logo">
-          <img src={Logo} alt="pivo" width="20%" />
+      <nav className={showSideDrawer(props)}>
+        <div className="side-drawer__logo">
+          <img src={Logo} alt="pivo" />
         </div>
         <span className="naziv">Pivotopija</span>
         <ul>{options(props)}</ul>
@@ -21,7 +16,7 @@ export default function SideDrawer(props) {
     </div>
   );
 }
-const options = props => {
+const options = (props) => {
   return links.map((link, index) => {
     return (
       <li key={index}>
@@ -38,6 +33,15 @@ const options = props => {
     );
   });
 };
+
+const showSideDrawer = (props) => {
+  let drawerClasses = "side-drawer";
+  if (props.show) {
+    drawerClasses = "side-drawer open";
+  }
+  return drawerClasses;
+};
+
 const links = [
   { path: "/", title: "Home" },
   { path: "/info", title: "Info" },
@@ -45,5 +49,5 @@ const links = [
   { path: "/objekti", title: "Objekti" },
   { path: "/login", title: "Login" },
   { path: "/forum", title: "Forum" },
-  { path: "/kontakt", title: "Kontakt" }
+  { path: "/kontakt", title: "Kontakt" },
 ];

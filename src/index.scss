@@ -12,6 +12,7 @@ $mainGrey: #c0c0c0;
 $mainYellow: #cc9900;
 
 body {
+  box-sizing: border-box;
   margin: 0 auto;
   align-self: center;
   background: $mainWhite;
@@ -20,7 +21,19 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
+  width: 100vw;
+  height: 100vh;
 }
 
 // font-family: 'Open Sans', sans-serif;
 // font-family: 'Pacifico', cursive;
+@media screen and(min-width:1500px) {
+  * {
+    font-size: 24px;
+  }
+}
+@media screen and(min-width:1800px) {
+  * {
+    font-size: 32px;
+  }
+}
