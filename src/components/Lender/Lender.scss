@@ -50,12 +50,12 @@
     }
   }
   .desnoDugme {
+    display: none;
     position: absolute;
     left: 70%;
     top: -10%;
 
     .btn_pluto {
-      display: none;
       position: absolute;
       background: transparent;
       cursor: pointer;
@@ -111,6 +111,7 @@
       }
     }
     .desnoDugme {
+      display: block;
       left: 70%;
       .btn__pluto {
         display: flex;

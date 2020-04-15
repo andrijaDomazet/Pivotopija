@@ -14,16 +14,16 @@
     justify-content: center;
     border-right: 1px solid $mainYellow;
     margin: 5px 0;
-    padding: 0 15px;
+
+    padding: 0 5px;
     &:hover {
-      // color: $mainYellow;
       opacity: 1;
     }
     &:first-child {
-      padding-left: 0;
       color: $mainYellow;
       font-family: Melvis;
-      font-size: 2rem;
+
+      font-size: 1rem;
       text-transform: uppercase;
     }
     &:last-child {
@@ -36,16 +36,20 @@
   .smallBar {
     display: flex;
     width: 80%;
-    margin: 0.5rem;
+    padding-left: 5%;
     .smallBar__link {
       font-size: 1.4rem;
       line-height: 2rem;
+      padding: 0 15px;
+      &:first-child {
+        padding-left: 0;
+        font-size: 2rem;
+      }
     }
   }
 }
 @media screen and(min-width:996px) {
   .smallBar {
     width: 70%;
-    margin-left: 5%;
   }
 }
