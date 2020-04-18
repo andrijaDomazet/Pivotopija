@@ -104,12 +104,12 @@ export default class PodaciObjekta extends Component {
         <div className="opsti-podaci">
           <h3 onClick={this.okidacInfoObjekta}>{name}</h3>
           <h4>{city}</h4>
-          <h5>
+          {/* <h5>
             info
             <span onClick={this.handleInfo}>
               <i className="fas fa-caret-square-down" />
             </span>
-          </h5>
+          </h5> */}
           {this.state.showInfo && <p>{info}</p>}
         </div>
       </div>

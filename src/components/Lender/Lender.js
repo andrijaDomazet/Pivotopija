@@ -15,18 +15,23 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    setInterval(this.changeCover, 500000);
+    setInterval(this.changeCover, 10000);
   };
-  // componentWillUpdate = () => {
-  //   if (this.state.displayPosition === 0) {
-  //     console.log("Interval", 0);
-  //     clearInterval(this.state.intervalId);
-  //     var intervalId = setInterval(this.reklama, 20000);
-  //   } else {
-  //     console.log("Interval", 1);
-  //     clearInterval(this.state.intervalId);
-  //     var intervalId = setInterval(this.reklama, 5000);
-  //   }
+  // componentDidUpdate = (prevProps, prevState) => {
+  // if (this.state.displayPosition !== prevState.displayPosition) {
+  // clearInterval(this.state.intervalId);
+  // var intervalId = setInterval(this.reklama, 1000);
+  // this.setState({ interval: setInterval(this.reklama, 1000) });
+  // }
+  // if (this.state.displayPosition === 0) {
+  //   console.log("Interval", 0);
+  //   clearInterval(this.state.intervalId);
+  //   var intervalId = setInterval(this.reklama, 10000);
+  // } else {
+  //   console.log("Interval", 1);
+  //   clearInterval(this.state.intervalId);
+  //   var intervalId = setInterval(this.reklama, 1000);
+  // }
   // };
   componentWillUnmount = () => {
     clearInterval(this.state.intervalId);
