@@ -9,7 +9,6 @@ import Festivals from "./containers/Festivals/Festivals.js";
 import Vrste from "./components/Bars/Smallbar/Vrste/Vrste.js";
 import Postupak from "./components/Bars/Smallbar/Postupak/Postupak.js";
 import Predstavljamo from "./components/Bars/Smallbar/Predstavljamo/Predstavljamo.js";
-import Footer from "./components/Footer/Footer.js";
 import Kontakt from "./components/Bars/Topbar/Kontakt/Kontakt.js";
 import "./App.scss";
 import ObjectsList from "./containers/Objects/ObjectsList";
@@ -35,7 +34,6 @@ export default class App extends Component {
             {/* Za potrebe deploy-a je ubacen Mainscreen umesto NoMatch */}
             <Route component={Mainscreen} />
           </Switch>
-          <Footer />
         </Router>
       </div>
     );
