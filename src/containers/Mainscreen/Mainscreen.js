@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./Mainscreen.scss";
 import Smallbar from "../../components/Bars/Smallbar/Smallbar";
-// import BottomCover from "../../components/Bottom_menu/Bottom_menu";
+import BottomCover from "../../components/Bottom_menu/Bottom_menu";
 import Lender from "../../components/Lender/Lender";
+import Footer from "../../components/Footer/Footer";
 
 export default class Mainscreen extends Component {
   toggle2 = () => {
@@ -17,6 +18,7 @@ export default class Mainscreen extends Component {
       <div className="mainscreen">
         <Lender toggle2={this.toggle2} toggle3={this.toggle3} />
         <Smallbar />
+        {/* <Footer /> */}
         {/* <BottomCover /> */}
       </div>
     );

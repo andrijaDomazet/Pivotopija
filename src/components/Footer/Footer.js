@@ -8,7 +8,7 @@ export default function Footer() {
         <h1>PIVOTOPIJA ROOM</h1>
         <h2>coming soon...</h2>
       </div>
-      <div className="konteiner">
+      {/* <div className="konteiner">
         <div className="row text-center text-xs-center text-sm-left text-md-left">
           <div className="col-xs-12 col-sm-4 col-md-4">
             <h5>Linkovi</h5>
@@ -213,7 +213,7 @@ export default function Footer() {
           </div>
           <br />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

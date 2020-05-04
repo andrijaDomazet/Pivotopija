@@ -32,7 +32,7 @@ export default class Navbar extends Component {
     }
 
     return (
-      <nav className="navBar">
+      <div className="navBar">
         <img src={Logo} alt="page__logo" />
         <NavLink to="/" exact className="nav__link">
           <span className="naziv">Pivotopija </span>
@@ -60,7 +60,7 @@ export default class Navbar extends Component {
           removeCommentBox={this.removeCommentBox}
         />
         {backdrop}
-      </nav>
+      </div>
     );
   }
 }

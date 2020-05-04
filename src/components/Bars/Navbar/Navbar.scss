@@ -7,7 +7,7 @@
   margin: 0 auto;
   img {
     width: 3.5rem;
-    height: 3.5rem;
+    height: auto;
   }
   .nav__link {
     line-height: 3.5rem;
@@ -48,7 +48,10 @@
     padding-right: 1rem;
   }
 }
-
+// .navBar > img {
+//   width: 3.5rem;
+//   height: auto;
+// }
 @media screen and(max-width:995px) {
   .nav-links {
     display: none;
