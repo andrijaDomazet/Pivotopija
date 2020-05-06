@@ -6,6 +6,7 @@ import Backdrop from "../../../components/Backdrop/Backdrop";
 import UpisKomentara from "./UpisKomentara";
 import PrikazKomentara from "./PrikazKomentara";
 import InfoObjekta from "./InfoObjekta";
+import Facilities from "./Facilities";
 
 export default class PodaciObjekta extends Component {
   state = {
@@ -70,14 +71,14 @@ export default class PodaciObjekta extends Component {
     const { city, name, info } = this.props.podaci;
     return (
       <div className="objekat-info">
-        <div className="socialButtons">
-          <div className="svidjanja">
+        {/* <div className="socialButtons"> */}
+        {/* <div className="svidjanja">
             <p>Sviđanja: {this.state.brojSvidjanja}</p>
             <button className="like" onClick={this.brojacSvidjanja}>
               <i className="far fa-thumbs-up" />
             </button>
-          </div>
-          <div className="komentarisanje">
+          </div> */}
+        {/* <div className="komentarisanje">
             <p onClick={this.okidacUpisaKomentara}>
               Komentara: {this.state.brojKomentara}
             </p>
@@ -99,17 +100,23 @@ export default class PodaciObjekta extends Component {
               removeCommentBox={this.removeCommentBox}
               show={this.state.prikazInfoObjekta}
             />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <div className="opsti-podaci">
           <h3 onClick={this.okidacInfoObjekta}>{name}</h3>
           <h4>{city}</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+            doloremque vel similique illo quasi distinctio, commodi eius quidem,
+            odio molestiae sequi quae nostrum facilis tempore.
+          </p>
           {/* <h5>
             info
             <span onClick={this.handleInfo}>
               <i className="fas fa-caret-square-down" />
             </span>
           </h5> */}
+          <Facilities />
           {this.state.showInfo && <p>{info}</p>}
         </div>
       </div>

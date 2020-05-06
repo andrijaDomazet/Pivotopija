@@ -21,11 +21,17 @@ export default class BeersList extends Component {
       return (
         beer.name
           .toLowerCase()
+          .substring(0, this.state.searchBeerName.length)
           .indexOf(this.state.searchBeerName.toLowerCase()) !== -1
       );
     });
     let filterPiva2 = this.state.beers.filter((beer) => {
-      return beer.name.indexOf(this.state.searchBeerAlc.toLowerCase()) !== -1;
+      return (
+        beer.name
+          .toLowerCase()
+          .substring(0, this.state.searchBeerAlc.length)
+          .indexOf(this.state.searchBeerAlc.toLowerCase()) !== -1
+      );
     });
     return (
       <div className="glavniDiv">

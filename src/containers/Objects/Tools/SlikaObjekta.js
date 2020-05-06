@@ -3,6 +3,7 @@ import "./SlikaObjekta.scss";
 import "./Objekat.scss";
 import InfoObjekta from "./InfoObjekta";
 import SimpleButton from "../../../UI/Buttons/SimpleButton";
+import SocialButtons from "./SocialButtons";
 
 export default class SlikaObjekta extends Component {
   state = {
@@ -34,6 +35,7 @@ export default class SlikaObjekta extends Component {
           removeCommentBox={this.removeCommentBox}
           show={this.state.prikazInfoObjekta}
         />
+        <SocialButtons />
       </div>
     );
   }

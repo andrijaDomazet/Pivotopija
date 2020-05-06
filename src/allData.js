@@ -3,11 +3,10 @@ export const spisakObjekta = [
     id: 1,
     price: 1,
     city: "zemun",
-    // img: "./img/objekti/crveni_rak.jpg",
-    img: "./Objekti/img/crveniRak.jpg",
+    img: "./img/objekti/crveni_rak.jpg",
     name: "crveni rak",
     info: "Adresa: Beogradska 14, Zemun",
-    fb: "https://www.facebook.com/CrveniRak/?ref=br_rs"
+    fb: "https://www.facebook.com/CrveniRak/?ref=br_rs",
   },
   {
     id: 2,
@@ -16,7 +15,7 @@ export const spisakObjekta = [
     img: "./img/objekti/crni_mata_pub.jpg",
     name: "crni mata pub",
     info:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 3,
@@ -25,7 +24,7 @@ export const spisakObjekta = [
     img: "./img/objekti/cirkus_pab.jpg",
     name: "cirkus pab",
     info:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 4,
@@ -34,7 +33,7 @@ export const spisakObjekta = [
     img: "./img/objekti/fat_cat.jpg",
     name: "fat cat",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 5,
@@ -43,7 +42,7 @@ export const spisakObjekta = [
     img: "./img/objekti/fest.jpg",
     name: "klub fest",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 6,
@@ -52,7 +51,7 @@ export const spisakObjekta = [
     img: "./img/objekti/taurunum_pub.jpg",
     name: "taurunum pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 7,
@@ -61,7 +60,7 @@ export const spisakObjekta = [
     img: "./img/objekti/lager_pub.jpg",
     name: "lager pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 8,
@@ -70,7 +69,7 @@ export const spisakObjekta = [
     img: "./img/objekti/office_pub.jpg",
     name: "office pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 9,
@@ -79,7 +78,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gvint.jpg",
     name: "gvint",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 10,
@@ -88,7 +87,7 @@ export const spisakObjekta = [
     img: "./img/objekti/ciglaBG.jpg",
     name: "Cigla",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 11,
@@ -97,7 +96,7 @@ export const spisakObjekta = [
     img: "./img/objekti/prviMaj.jpg",
     name: "prvi maj",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 12,
@@ -106,7 +105,7 @@ export const spisakObjekta = [
     img: "./img/objekti/zirafaNBG.jpg",
     name: "žirafa",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 13,
@@ -115,7 +114,7 @@ export const spisakObjekta = [
     img: "./img/objekti/minisNI.jpg",
     name: "Ministarstvo pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 14,
@@ -124,7 +123,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gvo.jpg",
     name: "Gvožđara 1870",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 15,
@@ -133,7 +132,7 @@ export const spisakObjekta = [
     img: "./img/objekti/samoSU.jpg",
     name: "Samo pivo",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 16,
@@ -142,7 +141,7 @@ export const spisakObjekta = [
     img: "./img/objekti/livpoolSU.jpg",
     name: "Liverpool pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 17,
@@ -151,7 +150,7 @@ export const spisakObjekta = [
     img: "./img/objekti/beergardenNI.jpg",
     name: "Beergarden",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 18,
@@ -160,7 +159,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gradskaNS.jpg",
     name: "Gradska pivnica",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 19,
@@ -169,7 +168,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gusanNS.jpg",
     name: "Gusan",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 20,
@@ -178,7 +177,7 @@ export const spisakObjekta = [
     img: "./img/objekti/samoPivoBG.jpg",
     name: "Samo pivo",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 21,
@@ -187,7 +186,7 @@ export const spisakObjekta = [
     img: "./img/objekti/nemirNI.jpg",
     name: "Nemir pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 22,
@@ -196,7 +195,7 @@ export const spisakObjekta = [
     img: "./img/objekti/crni_mata_pub.jpg",
     name: "Dolina Pub",
     info:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 23,
@@ -205,7 +204,7 @@ export const spisakObjekta = [
     img: "./img/objekti/cirkus_pab.jpg",
     name: "Tafaris Pub",
     info:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 24,
@@ -214,7 +213,7 @@ export const spisakObjekta = [
     img: "./img/objekti/fat_cat.jpg",
     name: "Serbish Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 25,
@@ -223,7 +222,7 @@ export const spisakObjekta = [
     img: "./img/objekti/fest.jpg",
     name: "Filigran Caffe",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 26,
@@ -232,7 +231,7 @@ export const spisakObjekta = [
     img: "./img/objekti/taurunum_pub.jpg",
     name: "The Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 27,
@@ -241,7 +240,7 @@ export const spisakObjekta = [
     img: "./img/objekti/lager_pub.jpg",
     name: "Black Dogs Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 28,
@@ -250,7 +249,7 @@ export const spisakObjekta = [
     img: "./img/objekti/office_pub.jpg",
     name: "Barfly Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 29,
@@ -259,7 +258,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gvint.jpg",
     name: "Pub Rock Bulevar",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 30,
@@ -268,7 +267,7 @@ export const spisakObjekta = [
     img: "./img/objekti/ciglaBG.jpg",
     name: "Pub 23",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 31,
@@ -277,7 +276,7 @@ export const spisakObjekta = [
     img: "./img/objekti/prviMaj.jpg",
     name: "Haustor Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 32,
@@ -286,7 +285,7 @@ export const spisakObjekta = [
     img: "./img/objekti/zirafaNBG.jpg",
     name: "Jack Union Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 33,
@@ -295,7 +294,7 @@ export const spisakObjekta = [
     img: "./img/objekti/minisNI.jpg",
     name: "The Dubliner Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 34,
@@ -304,7 +303,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gvo.jpg",
     name: "Stara užička pivnica",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 35,
@@ -313,7 +312,7 @@ export const spisakObjekta = [
     img: "./img/objekti/samoSU.jpg",
     name: "Caffe Bar Garden",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 36,
@@ -322,7 +321,7 @@ export const spisakObjekta = [
     img: "./img/objekti/livpoolSU.jpg",
     name: "IRISH PUB DEUS",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 37,
@@ -331,7 +330,7 @@ export const spisakObjekta = [
     img: "./img/objekti/beergardenNI.jpg",
     name: "Sputnik 1957",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 38,
@@ -340,7 +339,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gradskaNS.jpg",
     name: "CAFE PUB PRO BONO PUBLICO",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 39,
@@ -349,7 +348,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gusanNS.jpg",
     name: "Dajte Vina Hocu Lom",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 40,
@@ -358,7 +357,7 @@ export const spisakObjekta = [
     img: "./img/objekti/samoPivoBG.jpg",
     name: "Pivnica burence",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 41,
@@ -367,7 +366,7 @@ export const spisakObjekta = [
     img: "./img/objekti/nemirNI.jpg",
     name: "Pivnica",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 42,
@@ -376,7 +375,7 @@ export const spisakObjekta = [
     img: "./img/objekti/crni_mata_pub.jpg",
     name: "IRISH PUB",
     info:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 43,
@@ -385,7 +384,7 @@ export const spisakObjekta = [
     img: "./img/objekti/cirkus_pab.jpg",
     name: "Beer bar pivnica",
     info:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 44,
@@ -394,7 +393,7 @@ export const spisakObjekta = [
     img: "./img/objekti/fat_cat.jpg",
     name: "Caffe Bar Torino",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 45,
@@ -403,7 +402,7 @@ export const spisakObjekta = [
     img: "./img/objekti/beergardenNI.jpg",
     name: "Lion Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 46,
@@ -412,7 +411,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gradskaNS.jpg",
     name: "Čađava Furuna",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 47,
@@ -421,7 +420,7 @@ export const spisakObjekta = [
     img: "./img/objekti/gusanNS.jpg",
     name: "Wine Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 48,
@@ -430,7 +429,7 @@ export const spisakObjekta = [
     img: "./img/objekti/samoPivoBG.jpg",
     name: "London Pub",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
   },
   {
     id: 141,
@@ -439,8 +438,8 @@ export const spisakObjekta = [
     img: "./img/objekti/nemirNI.jpg",
     name: "Irish pub Luda krava",
     info:
-      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!"
-  }
+      "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
+  },
 ];
 
 export const spisakPiva = [
@@ -451,7 +450,7 @@ export const spisakPiva = [
     abv: 4.5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 2,
@@ -460,7 +459,7 @@ export const spisakPiva = [
     abv: 4.5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 3,
@@ -469,7 +468,7 @@ export const spisakPiva = [
     abv: 4.5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 4,
@@ -478,7 +477,7 @@ export const spisakPiva = [
     abv: 4.5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 5,
@@ -487,7 +486,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 6,
@@ -496,7 +495,7 @@ export const spisakPiva = [
     abv: 5.2,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 7,
@@ -505,7 +504,7 @@ export const spisakPiva = [
     abv: 5.3,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 8,
@@ -514,7 +513,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 9,
@@ -523,7 +522,7 @@ export const spisakPiva = [
     abv: 4,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 10,
@@ -532,7 +531,7 @@ export const spisakPiva = [
     abv: 4.6,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 11,
@@ -541,7 +540,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 12,
@@ -550,7 +549,7 @@ export const spisakPiva = [
     abv: 4.9,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 13,
@@ -559,7 +558,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 14,
@@ -568,7 +567,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 15,
@@ -577,7 +576,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 16,
@@ -586,7 +585,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 17,
@@ -595,7 +594,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 18,
@@ -604,7 +603,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 19,
@@ -613,7 +612,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 20,
@@ -622,7 +621,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 21,
@@ -631,7 +630,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 22,
@@ -640,7 +639,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 23,
@@ -649,7 +648,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 24,
@@ -658,7 +657,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 25,
@@ -667,7 +666,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 26,
@@ -676,7 +675,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 27,
@@ -685,7 +684,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 28,
@@ -694,7 +693,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 29,
@@ -703,7 +702,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 30,
@@ -712,7 +711,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 31,
@@ -721,7 +720,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 32,
@@ -730,7 +729,7 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
+    oporost: 5,
   },
   {
     id: 33,
@@ -739,6 +738,6 @@ export const spisakPiva = [
     abv: 5,
     color: 3,
     gustina: 4,
-    oporost: 5
-  }
+    oporost: 5,
+  },
 ];
