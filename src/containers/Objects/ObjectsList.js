@@ -67,10 +67,10 @@ export default class ObjectsList extends Component {
   };
   //====================== end =========================
   render() {
-    let { filtiraniObjekti1, filtiraniObjekti2 } = this.newMethod();
+    let { filtriraniObjekti1, filtriraniObjekti2 } = this.newMethod();
     console.log(this.state.objects);
-    let filters12 = filtiraniObjekti1.filter((x) =>
-      filtiraniObjekti2.includes(x)
+    let filters12 = filtriraniObjekti1.filter((x) =>
+      filtriraniObjekti2.includes(x)
     );
     const products = filters12.slice(
       this.state.elemNum[0],
@@ -117,18 +117,24 @@ export default class ObjectsList extends Component {
   }
 
   newMethod() {
-    let filtiraniObjekti1 = this.state.objects.filter((objekat) => {
+    let filtriraniObjekti1 = this.state.objects.filter((objekat) => {
       return (
-        objekat.city.toLowerCase().indexOf(this.state.search1.toLowerCase()) !==
-        -1
+        objekat.city
+          .toLowerCase()
+          .substring(0, this.state.search1.length)
+          .indexOf(this.state.search1.toLowerCase()) !== -1
       );
     });
-    let filtiraniObjekti2 = this.state.objects.filter((objekat) => {
+    console.log(filtriraniObjekti1);
+
+    let filtriraniObjekti2 = this.state.objects.filter((objekat) => {
       return (
-        objekat.name.toLowerCase().indexOf(this.state.search2.toLowerCase()) !==
-        -1
+        objekat.name
+          .toLowerCase()
+          .substring(0, this.state.search2.length)
+          .indexOf(this.state.search2.toLowerCase()) !== -1
       );
     });
-    return { filtiraniObjekti1, filtiraniObjekti2 };
+    return { filtriraniObjekti1, filtriraniObjekti2 };
   }
 }

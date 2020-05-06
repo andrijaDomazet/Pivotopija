@@ -5,33 +5,17 @@
   width: 100%;
   height: 3.5rem;
   margin: 0 auto;
-  img {
-    width: 3.5rem;
-    height: auto;
-  }
+  justify-content: space-between;
   .nav__link {
+    flex: 1;
     line-height: 3.5rem;
-    margin-right: 2vw;
     font-size: 2rem;
     color: $mainGrey;
     text-decoration: none;
     opacity: 0.6;
     transition: 0.3s all;
     align-self: center;
-    .naziv {
-      flex: 1;
-      align-items: center;
-      font-size: 3rem;
-      font-family: Melvis;
-      opacity: 0.7;
-      cursor: pointer;
-      padding-right: 15vw;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
+    text-align: center;
     &:hover {
       opacity: 1;
     }
@@ -40,7 +24,19 @@
       opacity: 1;
     }
   }
-
+  .nav__link:nth-child(3) {
+    flex: 2;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    font-size: 3.3rem;
+    font-family: Melvis;
+    opacity: 0.7;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
   .toggle-button {
     margin-left: auto;
     margin-right: 2.5vw;
@@ -48,32 +44,21 @@
     padding-right: 1rem;
   }
 }
-// .navBar > img {
-//   width: 3.5rem;
-//   height: auto;
-// }
+
 @media screen and(max-width:995px) {
   .nav-links {
     display: none;
   }
 }
 @media screen and(min-width:768px) {
-  .navBar {
+  .nav-links {
+    width: 100%;
     display: flex;
-    .naziv {
-      font-size: 3rem;
-    }
   }
 }
 @media screen and(min-width:996px) {
   .navBar {
-    width: 90%;
-    .nav__link {
-      .naziv {
-        padding-right: 20vw;
-      }
-    }
-
+    width: 60%;
     .toggle-button {
       display: none;
     }

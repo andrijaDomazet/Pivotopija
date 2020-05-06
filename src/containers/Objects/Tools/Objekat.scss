@@ -1,9 +1,8 @@
 @import "../../../index.scss";
 
 .objekat {
-  background: $mainGrey;
-  border: 2px solid black;
-
+  background: white;
+  box-shadow: 2px 3px 8px rgba(255, 0, 0, 0.589);
   margin: 10px 0;
 
   img {
@@ -11,23 +10,10 @@
     height: 100%;
     display: block;
   }
-  &:hover {
-    animation: changeLook 0.3s ease-in forwards;
-  }
 }
 
 @media screen and(min-width:1140px) {
   .objekat {
     margin-top: 0.1rem;
-  }
-}
-
-@keyframes changeLook {
-  0% {
-    background: $mainGrey;
-  }
-  100% {
-    background: white;
-    border: 2px solid $mainYellow;
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
-import Logo from "../../../../src/img/LogoLNK.svg";
 import ToggleButton from "../SideDrawer/ToggleButton";
 import Backdrop from "../../Backdrop/Backdrop";
 import SideDrawer from "../SideDrawer/SideDrawer";
@@ -33,11 +32,6 @@ export default class Navbar extends Component {
 
     return (
       <div className="navBar">
-        <img src={Logo} alt="page__logo" />
-        <NavLink to="/" exact className="nav__link">
-          <span className="naziv">Pivotopija </span>
-        </NavLink>
-
         <div className="toggle-button">
           <ToggleButton click={this.drawerToggleClickHandler} />
         </div>
@@ -67,6 +61,7 @@ export default class Navbar extends Component {
 const options = [
   { title: "Home", route: "/" },
   { title: "Info", route: "/info" },
+  { title: "Pivotopija", route: "/" },
   { title: "Piva", route: "/piva" },
   { title: "Objekti", route: "/objekti" },
 ];
