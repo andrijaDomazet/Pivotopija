@@ -1,10 +1,15 @@
 @import "../../index.scss";
 
 .pagination {
-  flex: 1;
+  grid-column: span 3;
+  width: 100%;
+  max-height: 40px;
+  // bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5px;
+  padding: 5px 0;
   div {
     text-align: center;
     border-radius: 50%;
@@ -16,7 +21,7 @@
     color: $mainYellow;
     font-weight: 600;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 0 10px;
   }
   .open {
     background: $mainYellow;

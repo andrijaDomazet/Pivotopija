@@ -1,0 +1,39 @@
+@import "../../index.scss";
+
+.marquee__bottom {
+  display: none;
+}
+
+@media screen and(min-width:768px) {
+  .marquee__bottom {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+
+    span {
+      letter-spacing: 4px;
+      font-size: 1.5rem;
+      color: $mainYellow;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    p {
+      left: 0px;
+      font-weight: 600;
+      animation-name: marquee-animation;
+      animation-duration: 22s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}

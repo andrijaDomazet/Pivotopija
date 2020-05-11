@@ -13,13 +13,15 @@ import Kontakt from "./components/Bars/Topbar/Kontakt/Kontakt.js";
 import "./App.scss";
 import ObjectsList from "./containers/Objects/ObjectsList";
 import BeersList from "./containers/Beers/BeersList";
+import Bars from "./components/Bars/Bars";
 export default class App extends Component {
   render() {
     return (
       <div className="app">
         <Router>
-          <Topbar />
-          <Navbar />
+          <Bars />
+          {/* <Topbar />
+          <Navbar /> */}
           <Switch>
             <Route exact path="https://andrijadomazet.github.io/Pivotopija/" />
             <Route path="/" exact component={Mainscreen} />

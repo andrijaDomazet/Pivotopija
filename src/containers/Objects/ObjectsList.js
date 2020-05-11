@@ -2,6 +2,8 @@ import React, { Component, lazy, Suspense } from "react";
 import "./ObjectsList.scss";
 import { spisakObjekta as objectsList } from "../../allData";
 import Pagination from "../../UI/Pagination/Pagination";
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
+import Marquee from "../Marquee/MarqueeBottom";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
@@ -12,8 +14,8 @@ export default class ObjectsList extends Component {
 
     //state for pagination
     pageNum: 1,
-    operationPerPage: 17,
-    elemNum: [0, 16],
+    operationPerPage: 16,
+    elemNum: [0, 15],
     //end
   };
 
@@ -50,8 +52,8 @@ export default class ObjectsList extends Component {
   setPaginationPage = (page) => {
     this.setState({
       elemNum: [
-        (page - 1) * 16,
-        (page - 1) * 16 + this.state.operationPerPage - 1,
+        (page - 1) * 15,
+        (page - 1) * 15 + this.state.operationPerPage - 1,
       ],
       pageNum: page,
     });
@@ -79,18 +81,68 @@ export default class ObjectsList extends Component {
     return (
       <div className="objectsList">
         <div className="objectsList__search">
+          <div className="pattern-dots-sm slategray h-5 marquee">
+            <Marquee />
+          </div>
           <input
             type="text"
-            placeholder="Pretraga po lokaciji objekta"
+            placeholder="Pretraga po gradu"
             value={this.state.search}
             onChange={this.updateSearch1.bind(this)}
           />
           <input
             type="text"
-            placeholder="Pretraga po nazivu objekta"
+            placeholder="Pretraga po nazivu"
             value={this.state.search}
             onChange={this.updateSearch2.bind(this)}
           />
+          <div
+            style={{
+              marginBottom: "5px",
+              height: "23vh",
+              border: "1px solid white",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                lineHeight: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  border: "1px solid white",
+                  margin: "5px",
+                }}
+              ></div>
+              <div>pet friendly</div>
+              <div
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  border: "1px solid white",
+                  margin: "5px",
+                  background: "orange",
+                }}
+              ></div>
+              <div>live music</div>
+              <div
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  border: "1px solid white",
+                  margin: "5px",
+                  background: "orange",
+                }}
+              ></div>
+              <div>food</div>
+            </div>
+            More search...
+          </div>
+          <GoogleMap />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">
@@ -104,12 +156,12 @@ export default class ObjectsList extends Component {
                   />
                 );
               })}
+              <Pagination
+                numberOfPages={this.state.numberOfPages}
+                pageNum={this.state.pageNum}
+                clicked={this.setPaginationPage}
+              />
             </section>
-            <Pagination
-              numberOfPages={this.state.numberOfPages}
-              pageNum={this.state.pageNum}
-              clicked={this.setPaginationPage}
-            />
           </div>
         </Suspense>
       </div>
