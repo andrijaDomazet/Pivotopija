@@ -3,18 +3,23 @@
 .objekat-info {
   position: relative;
   padding: 0.5rem;
+
   .opsti-podaci {
-    height: 220px;
+    height: 160px;
     h3 {
-      font-size: 1.2rem;
+      margin: 0;
+      font-size: 1.1rem;
       text-transform: uppercase;
       color: $mainGreen;
       font-weight: bold;
       cursor: pointer;
     }
     h4 {
-      margin-top: 0.5rem;
-      font-size: 1rem;
+      // margin: 0;
+      // padding: 0;
+      // border: 1px solid red;
+      // margin-top: 0.5rem;
+      font-size: 0.9rem;
       text-transform: capitalize;
       color: $mainBlack;
     }
@@ -32,7 +37,7 @@
     }
     p {
       color: rgb(70, 70, 70);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
   }
 }

@@ -108,7 +108,7 @@ export default class PodaciObjekta extends Component {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             doloremque vel similique illo quasi distinctio, commodi eius quidem,
-            odio molestiae sequi quae nostrum facilis tempore.
+            odio molestiae.
           </p>
           {/* <h5>
             info
