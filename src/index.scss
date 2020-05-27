@@ -10,6 +10,7 @@ $mainGreen: #3a3b38f8;
 $mainWhite: #fff;
 $mainGrey: #c0c0c0;
 $mainYellow: #cc9900;
+$mainYellow2: #926e02;
 
 body {
   box-sizing: border-box;
@@ -35,4 +36,25 @@ body {
   * {
     font-size: 32px;
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $mainYellow2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $mainYellow;
 }

@@ -9,7 +9,7 @@ export default class Postupak extends Component {
   render() {
     return (
       <div>
-        <Smallbar />
+        {/* <Smallbar /> */}
         <div className="poststyle">
           <Faza1 />
           <Faza2 />
