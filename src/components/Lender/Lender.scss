@@ -79,13 +79,32 @@
 
   .preporucenoPivo {
     position: absolute;
-    left: 45%;
+    width: 400px;
+    // height: 60px;
+    right: 15%;
     top: 45%;
-  }
-  span {
-    width: 20vw;
-    height: auto;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 2.4rem;
+    font-family: Melvis;
     text-align: center;
+  }
+  .preporucenoPivo::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    transition: top, left, right, bottom, 200ms ease-in-out;
+  }
+  .preporucenoPivo:hover::before,
+  .preporucenoPivo:focus::before {
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
   }
 }
 @media screen and(max-width:768px) {

@@ -4,6 +4,7 @@ import "./Navbar.scss";
 import ToggleButton from "../SideDrawer/ToggleButton";
 import Backdrop from "../../Backdrop/Backdrop";
 import SideDrawer from "../SideDrawer/SideDrawer";
+import { routeOptions } from "../../../shared/shared";
 
 export default class Navbar extends Component {
   state = {
@@ -36,7 +37,7 @@ export default class Navbar extends Component {
           <ToggleButton click={this.drawerToggleClickHandler} />
         </div>
         <div className="nav-links">
-          {options.map((option, index) => {
+          {routeOptions.map((option, index) => {
             return (
               <NavLink
                 key={index}
@@ -58,10 +59,3 @@ export default class Navbar extends Component {
     );
   }
 }
-const options = [
-  { title: "Home", route: "/" },
-  { title: "Info", route: "/info" },
-  { title: "Pivotopija", route: "/" },
-  { title: "Piva", route: "/piva" },
-  { title: "Objekti", route: "/objekti" },
-];

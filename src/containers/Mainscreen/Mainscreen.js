@@ -6,17 +6,16 @@ import Lender from "../../components/Lender/Lender";
 import Footer from "../../components/Footer/Footer";
 
 export default class Mainscreen extends Component {
-  toggle2 = () => {
-    this.props.history.push("/objekti");
-  };
-  toggle3 = () => {
-    this.props.history.push("/predstavljamo");
+  redirect = (e) => {
+    e === "craftBeer"
+      ? this.props.history.push("/objekti")
+      : this.props.history.push("/predstavljamo");
   };
 
   render() {
     return (
       <div className="mainscreen">
-        <Lender toggle2={this.toggle2} toggle3={this.toggle3} />
+        <Lender redirect={this.redirect} />
         <Smallbar />
         {/* <Footer /> */}
         {/* <BottomCover /> */}

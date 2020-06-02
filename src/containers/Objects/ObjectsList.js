@@ -38,7 +38,7 @@ export default class ObjectsList extends Component {
     this.setPageNumber();
   };
   componentDidUpdate = (prevProps, prevState) => {
-    if (this.state.group !== prevState.group) {
+    if (this.state.objects !== prevState.objects) {
       this.setPageNumber();
     }
   };
@@ -70,7 +70,7 @@ export default class ObjectsList extends Component {
   //====================== end =========================
   render() {
     let { filtriraniObjekti1, filtriraniObjekti2 } = this.newMethod();
-    console.log(this.state.objects);
+    // console.log(this.state.objects);
     let filters12 = filtriraniObjekti1.filter((x) =>
       filtriraniObjekti2.includes(x)
     );
@@ -99,7 +99,6 @@ export default class ObjectsList extends Component {
           <div
             style={{
               marginBottom: "5px",
-              height: "23vh",
               border: "1px solid white",
             }}
           >
@@ -177,7 +176,7 @@ export default class ObjectsList extends Component {
           .indexOf(this.state.search1.toLowerCase()) !== -1
       );
     });
-    console.log(filtriraniObjekti1);
+    // console.log(filtriraniObjekti1);
 
     let filtriraniObjekti2 = this.state.objects.filter((objekat) => {
       return (
