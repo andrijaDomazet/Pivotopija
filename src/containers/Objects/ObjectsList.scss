@@ -1,16 +1,13 @@
 @import "../../index.scss";
 
 .objectsList {
-  width: 95vw;
   height: 86vh;
   position: relative;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 
   .objectsList__search {
     flex: 1;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

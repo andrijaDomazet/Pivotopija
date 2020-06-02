@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Topbar from "./components/Bars/Topbar/Topbar";
-import Navbar from "./components/Bars/Navbar/Navbar";
 import Mainscreen from "./containers/Mainscreen/Mainscreen";
 import Info from "./containers/Info/Info";
 // import NoMatch from "./components/Tools/NoMatch/NoMatch";
@@ -20,8 +18,6 @@ export default class App extends Component {
       <div className="app">
         <Router>
           <Bars />
-          {/* <Topbar />
-          <Navbar /> */}
           <Switch>
             <Route exact path="https://andrijadomazet.github.io/Pivotopija/" />
             <Route path="/" exact component={Mainscreen} />

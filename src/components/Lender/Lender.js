@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../Lender/Lender.scss";
-import PreporucenoPivo from "../../UI/Buttons/PreporucenoPivo";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import srednjiLogo from "./lenderIMG/srednjilogo.png";
 import bottle from "./lenderIMG/pluto.png";
@@ -52,7 +51,7 @@ export default class Lender extends Component {
   };
 
   render() {
-    const { toggle3 } = this.props;
+    // const { toggle3 } = this.props;
     return (
       <div className="main_cover">
         <img src={this.state.cover[this.state.coverPosition]} alt="cover" />
@@ -68,41 +67,31 @@ export default class Lender extends Component {
         >
           <SimpleButton
             classes="craftBeersButton"
-            clicked={this.showCraftBeers()}
+            clicked={this.redirectFunc("craftBeer")}
           >
-            <img src={srednjiLogo} alt="craftBeers" />
+            <img src={srednjiLogo} alt="craftBeer" />
           </SimpleButton>
         </div>
         <div
           className="desnoDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <SimpleButton
-            classes="btn__pluto"
-            clicked={this.showBeerSuggestion()}
-          >
+          <SimpleButton classes="btn__pluto" clicked={this.redirectFunc()}>
             <img src={bottle} alt="bottle" />
           </SimpleButton>
         </div>
         <div
-          className="preporucenoPivo"
           style={{ display: this.state.display2[this.state.displayPosition] }}
         >
-          <PreporucenoPivo />
+          <SimpleButton classes="preporucenoPivo" children={"PIVO MESECA..."} />
         </div>
       </div>
     );
   }
 
-  showBeerSuggestion() {
+  redirectFunc(e) {
     return () => {
-      this.props.toggle3();
-    };
-  }
-
-  showCraftBeers() {
-    return () => {
-      this.props.toggle2();
+      this.props.redirect(e);
     };
   }
 }
