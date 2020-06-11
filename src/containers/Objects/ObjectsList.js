@@ -176,8 +176,6 @@ export default class ObjectsList extends Component {
           .indexOf(this.state.search1.toLowerCase()) !== -1
       );
     });
-    // console.log(filtriraniObjekti1);
-
     let filtriraniObjekti2 = this.state.objects.filter((objekat) => {
       return (
         objekat.name

@@ -9,3 +9,10 @@ export const routeOptions = [
   { title: "Piva", route: "/piva" },
   { title: "Objekti", route: "/objekti" },
 ];
+
+export const links = [
+  { path: "/festivali", title: "festivali 2019" },
+  { path: "/postupak", title: "Postupak izrade" },
+  { path: "/vrste", title: "Vrste piva" },
+  { path: "/presdstavljamo", title: "Predstavljamo" },
+];
