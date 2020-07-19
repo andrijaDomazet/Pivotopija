@@ -16,3 +16,9 @@ export const links = [
   { path: "/vrste", title: "Vrste piva" },
   { path: "/presdstavljamo", title: "Predstavljamo" },
 ];
+
+export const facilities = [
+  { petFriendly: "Pet friendly", icon: "paw" },
+  { liveMusic: "Live music", icon: "guitar" },
+  { food: "Food", icon: "utensils" },
+];

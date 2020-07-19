@@ -3,12 +3,11 @@
 .mainscreen {
   width: 100%;
   margin: 0 auto;
-  // overflow-x: hidden;
 }
 
 @media screen and (min-width: 769px) {
   .mainscreen {
     width: 100%;
-    height: calc(100vh - 55px - 24px);
+    height: calc(100vh - 55px - 20px);
   }
 }

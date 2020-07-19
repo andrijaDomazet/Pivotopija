@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
+  // border: 1px solid red;
   .objectsList__search {
     flex: 1;
     display: flex;
@@ -15,6 +15,27 @@
 
     .marquee {
       margin-bottom: 5px;
+    }
+    .objectsList__search-more {
+      margin-bottom: 5px;
+      border: 1px solid white;
+    }
+    .objectsList__search-more > div {
+      display: flex;
+      line-height: 30px;
+      align-items: center;
+      justify-content: space-around;
+      .facility {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .facility > div:first-child {
+        width: 15px;
+        height: 15px;
+        border: 1px solid white;
+        margin: 0 5px;
+      }
     }
   }
   .objectsList__search > input {
