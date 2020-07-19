@@ -14,10 +14,12 @@ class GoogleMap extends Component {
     return (
       <div
         style={{
+          flex: "1",
           border: "1px solid white",
-          height: "45vh",
+          // height: "45vh",
           width: "100%",
           margin: "0 auto",
+          border: "1px solid green",
         }}
       >
         <GoogleMapReact

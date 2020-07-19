@@ -4,6 +4,7 @@ import { spisakObjekta as objectsList } from "../../allData";
 import Pagination from "../../UI/Pagination/Pagination";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
 import Marquee from "../Marquee/MarqueeBottom";
+import { facilities } from "../../shared/shared";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
@@ -78,6 +79,9 @@ export default class ObjectsList extends Component {
       this.state.elemNum[0],
       this.state.elemNum[1]
     );
+    console.log(this.state.objects);
+    console.log(facilities);
+
     return (
       <div className="objectsList">
         <div className="objectsList__search">
@@ -96,50 +100,20 @@ export default class ObjectsList extends Component {
             value={this.state.search}
             onChange={this.updateSearch2.bind(this)}
           />
-          <div
-            style={{
-              marginBottom: "5px",
-              border: "1px solid white",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                lineHeight: "30px",
-                alignItems: "center",
-              }}
-            >
-              <div
-                style={{
-                  width: "15px",
-                  height: "15px",
-                  border: "1px solid white",
-                  margin: "5px",
-                }}
-              ></div>
-              <div>pet friendly</div>
-              <div
-                style={{
-                  width: "15px",
-                  height: "15px",
-                  border: "1px solid white",
-                  margin: "5px",
-                  background: "orange",
-                }}
-              ></div>
-              <div>live music</div>
-              <div
-                style={{
-                  width: "15px",
-                  height: "15px",
-                  border: "1px solid white",
-                  margin: "5px",
-                  background: "orange",
-                }}
-              ></div>
-              <div>food</div>
+          <div className="objectsList__search-more">
+            <div>
+              {facilities.map((facility, index) => {
+                console.log(Object.values(facility));
+
+                return (
+                  <div className="facility" key={index}>
+                    <div></div>
+                    <div>{Object.values(facility)[0]}</div>
+                  </div>
+                );
+              })}
             </div>
-            More search...
+            More search options comming soon...
           </div>
           <GoogleMap />
         </div>
