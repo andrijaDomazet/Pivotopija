@@ -12,6 +12,7 @@ export default class ObjectsList extends Component {
     objects: objectsList,
     search1: "",
     search2: "",
+    search3: "",
 
     //state for pagination
     pageNum: 1,
@@ -26,7 +27,9 @@ export default class ObjectsList extends Component {
   updateSearch2 = (event) => {
     this.setState({ search2: event.target.value.substr(0, 20) });
   };
-
+  updateSearch3 = (event) => {
+    this.setState({ search3: event.target.value });
+  };
   removeObjekat = (id) => {
     const { objects } = this.state;
     const filter = objects.filter((object) => object.id !== id);
@@ -70,24 +73,29 @@ export default class ObjectsList extends Component {
   };
   //====================== end =========================
   render() {
-    let { filtriraniObjekti1, filtriraniObjekti2 } = this.newMethod();
-    // console.log(this.state.objects);
-    let filters12 = filtriraniObjekti1.filter((x) =>
-      filtriraniObjekti2.includes(x)
-    );
+    //search filter
+    let {
+      filtriraniObjekti1,
+      filtriraniObjekti2,
+      filtriraniObjekti3,
+    } = this.searchMethod();
+    let filters12 = filtriraniObjekti1
+      .filter((filtrObj) => {
+        return filtriraniObjekti2.includes(filtrObj);
+      })
+      .filter((obj) => {
+        return filtriraniObjekti3.includes(obj);
+      });
+
+    //pagination
     const products = filters12.slice(
       this.state.elemNum[0],
       this.state.elemNum[1]
     );
-    console.log(this.state.objects);
-    console.log(facilities);
-
     return (
       <div className="objectsList">
         <div className="objectsList__search">
-          <div className="pattern-dots-sm slategray h-5 marquee">
-            <Marquee />
-          </div>
+          <Marquee />
           <input
             type="text"
             placeholder="Pretraga po gradu"
@@ -103,17 +111,19 @@ export default class ObjectsList extends Component {
           <div className="objectsList__search-more">
             <div>
               {facilities.map((facility, index) => {
-                console.log(Object.values(facility));
-
                 return (
                   <div className="facility" key={index}>
-                    <div></div>
+                    <input
+                      className="facility-input"
+                      type="checkbox"
+                      value={Object.keys(facility)[0]}
+                      onChange={this.updateSearch3.bind(this)}
+                    />
                     <div>{Object.values(facility)[0]}</div>
                   </div>
                 );
               })}
             </div>
-            More search options comming soon...
           </div>
           <GoogleMap />
         </div>
@@ -141,7 +151,7 @@ export default class ObjectsList extends Component {
     );
   }
 
-  newMethod() {
+  searchMethod() {
     let filtriraniObjekti1 = this.state.objects.filter((objekat) => {
       return (
         objekat.city
@@ -158,6 +168,21 @@ export default class ObjectsList extends Component {
           .indexOf(this.state.search2.toLowerCase()) !== -1
       );
     });
-    return { filtriraniObjekti1, filtriraniObjekti2 };
+    let filtriraniObjekti3 = this.state.objects.filter((objekat) => {
+      if (this.state.search3 == "") {
+        return true;
+      } else if (this.state.search3 === "petFriendly") {
+        return objekat.facilities.petFriendly === true;
+      } else if (this.state.search3 === "liveMusic") {
+        return objekat.facilities.liveMusic === true;
+      } else if (this.state.search3 === "food") {
+        return objekat.facilities.food === true;
+      } else if (this.state.search3 === "wifi") {
+        return objekat.facilities.wifi === true;
+      } else {
+        // return objekat.facilities.food === true;
+      }
+    });
+    return { filtriraniObjekti1, filtriraniObjekti2, filtriraniObjekti3 };
   }
 }

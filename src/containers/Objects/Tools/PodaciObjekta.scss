@@ -2,42 +2,27 @@
 
 .objekat-info {
   position: relative;
-  padding: 0.5rem;
-
   .opsti-podaci {
-    height: 160px;
+    padding: 5px;
     h3 {
       margin: 0;
       font-size: 1.1rem;
       text-transform: uppercase;
-      color: $mainGreen;
+      color: $mainYellow;
       font-weight: bold;
       cursor: pointer;
     }
     h4 {
-      // margin: 0;
-      // padding: 0;
-      // border: 1px solid red;
-      // margin-top: 0.5rem;
       font-size: 0.9rem;
       text-transform: capitalize;
       color: $mainBlack;
-    }
-    h5 {
-      color: $mainBlack;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      text-transform: capitalize;
-      span {
-        color: $mainGreen;
-        margin: 0.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-      }
+      margin: 0;
     }
     p {
+      padding: 0;
+      margin: 0;
       color: rgb(70, 70, 70);
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
 }

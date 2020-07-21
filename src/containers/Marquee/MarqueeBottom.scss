@@ -2,15 +2,15 @@
 
 .marquee__bottom {
   display: none;
+  margin-bottom: 5px;
 }
 
 @media screen and(min-width:768px) {
   .marquee__bottom {
     display: inline-block;
     width: 100%;
-    height: 30px;
+    height: 34px;
     overflow: hidden;
-
     span {
       letter-spacing: 4px;
       font-size: 1.5rem;
