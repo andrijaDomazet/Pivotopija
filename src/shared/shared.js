@@ -21,4 +21,5 @@ export const facilities = [
   { petFriendly: "Pet friendly", icon: "paw" },
   { liveMusic: "Live music", icon: "guitar" },
   { food: "Food", icon: "utensils" },
+  { wifi: "Wi-fi", icon: "wifi" },
 ];

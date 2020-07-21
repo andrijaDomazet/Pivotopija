@@ -4,7 +4,6 @@
   position: relative;
   height: 280px;
   img {
-    // z-index: 1;
     object-fit: cover;
     overflow: hidden;
   }
@@ -37,11 +36,11 @@
 }
 @media screen and (min-width: 992px) {
   .img__container {
-    height: 160px;
+    height: 180px;
   }
 }
 @media screen and (min-width: 1140px) {
   .img__container {
-    height: 140px;
+    height: 160px;
   }
 }

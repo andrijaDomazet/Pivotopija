@@ -1,5 +1,30 @@
 export const spisakObjekta = [
   {
+    id: 111,
+    price: 1,
+    city: "zemun",
+    img: "./img/objekti/crveni_rak.jpg",
+    name: "test 1",
+    info: "Adresa: Beogradska 14, Zemun",
+    fb: "https://www.facebook.com/CrveniRak/?ref=br_rs",
+    facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
+  },
+  {
+    id: 112,
+    price: 1,
+    city: "zemun",
+    img: "./img/objekti/crveni_rak.jpg",
+    name: "test 2",
+    info: "Adresa: Beogradska 14, Zemun",
+    fb: "https://www.facebook.com/CrveniRak/?ref=br_rs",
+    facilities: {
+      petFriendly: false,
+      liveMusic: false,
+      food: false,
+      wifi: false,
+    },
+  },
+  {
     id: 1,
     price: 1,
     city: "zemun",
@@ -7,7 +32,7 @@ export const spisakObjekta = [
     name: "crveni rak",
     info: "Adresa: Beogradska 14, Zemun",
     fb: "https://www.facebook.com/CrveniRak/?ref=br_rs",
-    facilities: { petFriendly: true, liveMusic: true, food: true },
+    facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
   },
   {
     id: 2,
@@ -17,7 +42,12 @@ export const spisakObjekta = [
     name: "crni mata pub",
     info:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: {
+      petFriendly: true,
+      liveMusic: true,
+      food: false,
+      wifi: false,
+    },
   },
   {
     id: 3,
@@ -27,7 +57,12 @@ export const spisakObjekta = [
     name: "cirkus pab",
     info:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: {
+      petFriendly: true,
+      liveMusic: true,
+      food: false,
+      wifi: false,
+    },
   },
   {
     id: 4,
@@ -37,7 +72,7 @@ export const spisakObjekta = [
     name: "fat cat",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 5,
@@ -47,7 +82,7 @@ export const spisakObjekta = [
     name: "klub fest",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 6,
@@ -57,7 +92,7 @@ export const spisakObjekta = [
     name: "taurunum pub",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: true, wifi: false },
   },
   {
     id: 7,
@@ -67,7 +102,7 @@ export const spisakObjekta = [
     name: "lager pub",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 8,
@@ -77,7 +112,7 @@ export const spisakObjekta = [
     name: "office pub",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
   },
   {
     id: 9,
@@ -87,7 +122,7 @@ export const spisakObjekta = [
     name: "gvint",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
   },
   {
     id: 10,
@@ -97,7 +132,7 @@ export const spisakObjekta = [
     name: "Cigla",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 11,
@@ -107,7 +142,7 @@ export const spisakObjekta = [
     name: "prvi maj",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 12,
@@ -117,7 +152,7 @@ export const spisakObjekta = [
     name: "žirafa",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 13,
@@ -127,7 +162,7 @@ export const spisakObjekta = [
     name: "Ministarstvo pub",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
   },
   {
     id: 14,
@@ -147,7 +182,7 @@ export const spisakObjekta = [
     name: "Samo pivo",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: true, liveMusic: false, food: true },
   },
   {
     id: 16,
@@ -167,7 +202,7 @@ export const spisakObjekta = [
     name: "Beergarden",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: false, liveMusic: true, food: false },
   },
   {
     id: 18,
@@ -177,7 +212,7 @@ export const spisakObjekta = [
     name: "Gradska pivnica",
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
-    facilities: { petFriendly: true, liveMusic: true, food: false },
+    facilities: { petFriendly: false, liveMusic: true, food: false },
   },
   {
     id: 19,
