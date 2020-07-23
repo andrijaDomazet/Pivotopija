@@ -28,6 +28,9 @@
         display: flex;
         flex-wrap: wrap;
       }
+      .facility > div {
+        margin: 0 0.3rem;
+      }
     }
   }
   .objectsList__search > input {

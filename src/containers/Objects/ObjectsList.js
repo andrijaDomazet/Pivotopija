@@ -2,9 +2,9 @@ import React, { Component, lazy, Suspense } from "react";
 import "./ObjectsList.scss";
 import { spisakObjekta as objectsList } from "../../allData";
 import Pagination from "../../UI/Pagination/Pagination";
-import GoogleMap from "../../components/GoogleMap/GoogleMap";
 import Marquee from "../Marquee/MarqueeBottom";
 import { facilities } from "../../shared/shared";
+import Map from "../../components/GoogleMap/Map";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
@@ -92,6 +92,7 @@ export default class ObjectsList extends Component {
       this.state.elemNum[0],
       this.state.elemNum[1]
     );
+
     return (
       <div className="objectsList">
         <div className="objectsList__search">
@@ -125,7 +126,13 @@ export default class ObjectsList extends Component {
               })}
             </div>
           </div>
-          <GoogleMap />
+          <Map
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsyH8AB-hYPNakYSmKWs4C39m0ztql6yw"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `80%` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+            places={products}
+          />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">
@@ -169,9 +176,7 @@ export default class ObjectsList extends Component {
       );
     });
     let filtriraniObjekti3 = this.state.objects.filter((objekat) => {
-      if (this.state.search3 == "") {
-        return true;
-      } else if (this.state.search3 === "petFriendly") {
+      if (this.state.search3 === "petFriendly") {
         return objekat.facilities.petFriendly === true;
       } else if (this.state.search3 === "liveMusic") {
         return objekat.facilities.liveMusic === true;
@@ -180,7 +185,7 @@ export default class ObjectsList extends Component {
       } else if (this.state.search3 === "wifi") {
         return objekat.facilities.wifi === true;
       } else {
-        // return objekat.facilities.food === true;
+        return true;
       }
     });
     return { filtriraniObjekti1, filtriraniObjekti2, filtriraniObjekti3 };
