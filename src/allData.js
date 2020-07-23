@@ -8,6 +8,8 @@ export const spisakObjekta = [
     info: "Adresa: Beogradska 14, Zemun",
     fb: "https://www.facebook.com/CrveniRak/?ref=br_rs",
     facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
+    lat: 44.844527,
+    lng: 20.4161,
   },
   {
     id: 112,
@@ -48,6 +50,8 @@ export const spisakObjekta = [
       food: false,
       wifi: false,
     },
+    lat: 44.847219,
+    lng: 20.411037,
   },
   {
     id: 3,
@@ -63,6 +67,8 @@ export const spisakObjekta = [
       food: false,
       wifi: false,
     },
+    lat: 44.840039,
+    lng: 20.408856,
   },
   {
     id: 4,
@@ -73,6 +79,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
+    lat: 44.848434,
+    lng: 20.409961,
   },
   {
     id: 5,
@@ -83,6 +91,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
+    lat: 44.840364,
+    lng: 20.410921,
   },
   {
     id: 6,
@@ -93,6 +103,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: true, wifi: false },
+    lat: 44.844397,
+    lng: 20.408082,
   },
   {
     id: 7,
@@ -103,6 +115,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
+    lat: 44.846571,
+    lng: 20.40639,
   },
   {
     id: 8,
@@ -113,6 +127,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
+    lat: 44.83297,
+    lng: 20.421015,
   },
   {
     id: 9,
@@ -123,6 +139,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
+    lat: 44.823136,
+    lng: 20.467767,
   },
   {
     id: 10,
@@ -173,6 +191,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false },
+    lat: 44.804895,
+    lng: 20.447588,
   },
   {
     id: 15,
@@ -183,6 +203,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: false, food: true },
+    lat: 46.099316,
+    lng: 19.663647,
   },
   {
     id: 16,
@@ -193,6 +215,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false },
+    lat: 46.098568,
+    lng: 19.662856,
   },
   {
     id: 17,
