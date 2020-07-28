@@ -1,5 +1,6 @@
 export const searchOption = [
-  { name: "", type: "text", placeholder: "", value: "" },
+  { id: "city", type: "text", placeholder: "Pretraga po gradu" },
+  { id: "name", type: "text", placeholder: "Pretraga po nazivu" },
 ];
 
 export const routeOptions = [

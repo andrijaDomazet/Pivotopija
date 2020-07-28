@@ -14,7 +14,7 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    setInterval(this.changeCover, 10000);
+    var intervalId = setInterval(this.changeCover, 10000);
   };
   // componentDidUpdate = (prevProps, prevState) => {
   // if (this.state.displayPosition !== prevState.displayPosition) {
