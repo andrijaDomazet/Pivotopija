@@ -151,6 +151,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
+    lat: 44.817878,
+    lng: 20.458624,
   },
   {
     id: 11,
@@ -161,6 +163,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
+    lat: 44.841716,
+    lng: 20.393879,
   },
   {
     id: 12,
@@ -171,6 +175,8 @@ export const spisakObjekta = [
     info:
       "Lorem ipsum tolor sit amet consectetur adipisicing elit. Vel,repellendus!",
     facilities: { petFriendly: true, liveMusic: true, food: false, wifi: true },
+    lat: 44.806789,
+    lng: 20.424501,
   },
   {
     id: 13,

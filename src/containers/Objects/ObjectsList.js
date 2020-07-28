@@ -3,17 +3,17 @@ import "./ObjectsList.scss";
 import { spisakObjekta as objectsList } from "../../allData";
 import Pagination from "../../UI/Pagination/Pagination";
 import Marquee from "../Marquee/MarqueeBottom";
-import { facilities } from "../../shared/shared";
+import { facilities, searchOption } from "../../shared/shared";
 import Map from "../../components/GoogleMap/Map";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
   state = {
-    objects: objectsList,
     search1: "",
     search2: "",
     search3: "",
-
+    selectedObjects: objectsList,
+    setSearch: objectsList, //????????????????????????????
     //state for pagination
     pageNum: 1,
     operationPerPage: 16,
@@ -21,39 +21,44 @@ export default class ObjectsList extends Component {
     //end
   };
 
-  updateSearch1 = (event) => {
-    this.setState({ search1: event.target.value.substr(0, 20) });
-  };
-  updateSearch2 = (event) => {
-    this.setState({ search2: event.target.value.substr(0, 20) });
-  };
-  updateSearch3 = (event) => {
-    this.setState({ search3: event.target.value });
+  updateSearch = (event) => {
+    event.target.id === "city"
+      ? this.setState({ search1: event.target.value.substr(0, 20) })
+      : event.target.id === "name"
+      ? this.setState({ search2: event.target.value.substr(0, 20) })
+      : this.setState({ search3: event.target.value });
   };
   removeObjekat = (id) => {
-    const { objects } = this.state;
-    const filter = objects.filter((object) => object.id !== id);
+    const filter = objectsList.filter((object) => object.id !== id);
     this.setState({
       objects: filter,
     });
   };
+  componentDidUpdate = (prevProps, prevState) => {
+    if (
+      this.state.search1 !== prevState.search1 ||
+      this.state.search2 !== prevState.search2 ||
+      this.state.search3 !== prevState.search3 ||
+      this.state.elemNum !== prevState.elemNum
+    ) {
+      this.searchMethod();
+    }
+  };
   // functions for Pagination ==========================
   componentDidMount = () => {
     this.setPageNumber();
+    this.searchMethod();
   };
-  componentDidUpdate = (prevProps, prevState) => {
-    if (this.state.objects !== prevState.objects) {
-      this.setPageNumber();
-    }
-  };
-  setPageNumber = () => {
+  setPageNumber = (e) => {
     this.setState({
       numberOfPages: Math.ceil(
-        this.state.objects.length / this.state.operationPerPage
+        this.state.selectedObjects.length / this.state.operationPerPage
       ),
     });
+    // this.setPaginationPage();
   };
   setPaginationPage = (page) => {
+    console.log("Page", page);
     this.setState({
       elemNum: [
         (page - 1) * 15,
@@ -61,10 +66,6 @@ export default class ObjectsList extends Component {
       ],
       pageNum: page,
     });
-    return this.state.objects.slice(
-      this.state.elemNum[0],
-      this.state.elemNum[1]
-    );
   };
   //funkcija kojom se odredjuje da li ce se prikazati pagination
   //trenutno nije aktivna
@@ -73,52 +74,44 @@ export default class ObjectsList extends Component {
   };
   //====================== end =========================
   render() {
-    //search filter
-    let {
-      filtriraniObjekti1,
-      filtriraniObjekti2,
-      filtriraniObjekti3,
-    } = this.searchMethod();
-    let filters12 = filtriraniObjekti1
-      .filter((filtrObj) => {
-        return filtriraniObjekti2.includes(filtrObj);
-      })
-      .filter((obj) => {
-        return filtriraniObjekti3.includes(obj);
-      });
-
-    //pagination
-    const products = filters12.slice(
-      this.state.elemNum[0],
-      this.state.elemNum[1]
-    );
-
     return (
       <div className="objectsList">
         <div className="objectsList__search">
           <Marquee />
-          <input
+          {searchOption.map((option, index) => {
+            return (
+              <input
+                // key={index}
+                id={option.id}
+                type="text"
+                placeholder={option.placeholder}
+                onChange={this.updateSearch.bind(this)}
+              />
+            );
+          })}
+          {/* <input
+            id="city"
             type="text"
             placeholder="Pretraga po gradu"
-            value={this.state.search}
-            onChange={this.updateSearch1.bind(this)}
+            onChange={this.updateSearch.bind(this)}
           />
           <input
+            id="name"
             type="text"
             placeholder="Pretraga po nazivu"
-            value={this.state.search}
-            onChange={this.updateSearch2.bind(this)}
-          />
+            onChange={this.updateSearch.bind(this)}
+          /> */}
           <div className="objectsList__search-more">
             <div>
               {facilities.map((facility, index) => {
                 return (
                   <div className="facility" key={index}>
                     <input
+                      id="facility"
                       className="facility-input"
                       type="checkbox"
                       value={Object.keys(facility)[0]}
-                      onChange={this.updateSearch3.bind(this)}
+                      onChange={this.updateSearch.bind(this)}
                     />
                     <div>{Object.values(facility)[0]}</div>
                   </div>
@@ -131,13 +124,13 @@ export default class ObjectsList extends Component {
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `80%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
-            places={products}
+            places={this.state.selectedObjects}
           />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">
             <section className="objectsList__objects__obj">
-              {products.map((objekat) => {
+              {this.state.setSearch.map((objekat) => {
                 return (
                   <Objekat
                     key={objekat.id}
@@ -157,9 +150,8 @@ export default class ObjectsList extends Component {
       </div>
     );
   }
-
   searchMethod() {
-    let filtriraniObjekti1 = this.state.objects.filter((objekat) => {
+    let filtriraniObjekti1 = objectsList.filter((objekat) => {
       return (
         objekat.city
           .toLowerCase()
@@ -167,7 +159,7 @@ export default class ObjectsList extends Component {
           .indexOf(this.state.search1.toLowerCase()) !== -1
       );
     });
-    let filtriraniObjekti2 = this.state.objects.filter((objekat) => {
+    let filtriraniObjekti2 = objectsList.filter((objekat) => {
       return (
         objekat.name
           .toLowerCase()
@@ -175,7 +167,7 @@ export default class ObjectsList extends Component {
           .indexOf(this.state.search2.toLowerCase()) !== -1
       );
     });
-    let filtriraniObjekti3 = this.state.objects.filter((objekat) => {
+    let filtriraniObjekti3 = objectsList.filter((objekat) => {
       if (this.state.search3 === "petFriendly") {
         return objekat.facilities.petFriendly === true;
       } else if (this.state.search3 === "liveMusic") {
@@ -188,6 +180,17 @@ export default class ObjectsList extends Component {
         return true;
       }
     });
-    return { filtriraniObjekti1, filtriraniObjekti2, filtriraniObjekti3 };
+    let filters12 = filtriraniObjekti1
+      .filter((filtrObj) => {
+        return filtriraniObjekti2.includes(filtrObj);
+      })
+      .filter((obj) => {
+        return filtriraniObjekti3.includes(obj);
+      });
+    const products = filters12.slice(
+      this.state.elemNum[0],
+      this.state.elemNum[1]
+    );
+    this.setState({ selectedObjects: filters12, setSearch: products });
   }
 }
