@@ -4,10 +4,7 @@ import "./Pagination.scss";
 export default function Pagination(props) {
   const pages = Array.from({ length: props.numberOfPages }, (i, v) => v + 1);
   return (
-    <div
-      className="pattern-dots-sm slategray h-5 pagination"
-      style={{ display: `${props.prikaz}` }}
-    >
+    <div className="pattern-dots-sm slategray h-5 pagination">
       {pages.map((page, index) => {
         return (
           <div
