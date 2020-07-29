@@ -12,8 +12,7 @@ export default class ObjectsList extends Component {
     search1: "",
     search2: "",
     search3: "",
-    selectedObjects: objectsList,
-    setSearch: objectsList, //????????????????????????????
+    loadOnPage: objectsList,
     //state for pagination
     pageNum: 1,
     operationPerPage: 16,
@@ -26,7 +25,14 @@ export default class ObjectsList extends Component {
       ? this.setState({ search1: event.target.value.substr(0, 20) })
       : event.target.id === "name"
       ? this.setState({ search2: event.target.value.substr(0, 20) })
-      : this.setState({ search3: event.target.value });
+      : (() => {
+          console.log("pretraga 3", event.target.value);
+          if (this.state.search3.length === 0) {
+            this.setState({ search3: event.target.value });
+          } else {
+            this.setState({ search3: "" });
+          }
+        })(this);
   };
   removeObjekat = (id) => {
     const filter = objectsList.filter((object) => object.id !== id);
@@ -41,24 +47,33 @@ export default class ObjectsList extends Component {
       this.state.search3 !== prevState.search3 ||
       this.state.elemNum !== prevState.elemNum
     ) {
-      this.searchMethod();
+      const promise1 = new Promise((resolve, reject) => {
+        resolve("Success");
+        this.searchMethod();
+      });
+      promise1.then(() => {
+        this.setPageNumber();
+      });
     }
   };
   // functions for Pagination ==========================
   componentDidMount = () => {
-    this.setPageNumber();
-    this.searchMethod();
+    const promise2 = new Promise((resolve, reject) => {
+      resolve("Success");
+      this.searchMethod();
+    });
+    promise2.then(() => {
+      this.setPageNumber();
+    });
   };
-  setPageNumber = (e) => {
+  setPageNumber = () => {
     this.setState({
       numberOfPages: Math.ceil(
         this.state.selectedObjects.length / this.state.operationPerPage
       ),
     });
-    // this.setPaginationPage();
   };
   setPaginationPage = (page) => {
-    console.log("Page", page);
     this.setState({
       elemNum: [
         (page - 1) * 15,
@@ -66,11 +81,6 @@ export default class ObjectsList extends Component {
       ],
       pageNum: page,
     });
-  };
-  //funkcija kojom se odredjuje da li ce se prikazati pagination
-  //trenutno nije aktivna
-  showPagination = () => {
-    return this.state.group.length < this.state.operationPerPage ? "none" : "";
   };
   //====================== end =========================
   render() {
@@ -81,7 +91,7 @@ export default class ObjectsList extends Component {
           {searchOption.map((option, index) => {
             return (
               <input
-                // key={index}
+                key={index}
                 id={option.id}
                 type="text"
                 placeholder={option.placeholder}
@@ -89,18 +99,6 @@ export default class ObjectsList extends Component {
               />
             );
           })}
-          {/* <input
-            id="city"
-            type="text"
-            placeholder="Pretraga po gradu"
-            onChange={this.updateSearch.bind(this)}
-          />
-          <input
-            id="name"
-            type="text"
-            placeholder="Pretraga po nazivu"
-            onChange={this.updateSearch.bind(this)}
-          /> */}
           <div className="objectsList__search-more">
             <div>
               {facilities.map((facility, index) => {
@@ -124,13 +122,13 @@ export default class ObjectsList extends Component {
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `80%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
-            places={this.state.selectedObjects}
+            places={this.state.loadOnPage}
           />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">
             <section className="objectsList__objects__obj">
-              {this.state.setSearch.map((objekat) => {
+              {this.state.loadOnPage.map((objekat) => {
                 return (
                   <Objekat
                     key={objekat.id}
@@ -191,6 +189,6 @@ export default class ObjectsList extends Component {
       this.state.elemNum[0],
       this.state.elemNum[1]
     );
-    this.setState({ selectedObjects: filters12, setSearch: products });
+    this.setState({ selectedObjects: filters12, loadOnPage: products });
   }
 }
