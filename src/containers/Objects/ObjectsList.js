@@ -11,7 +11,7 @@ export default class ObjectsList extends Component {
   state = {
     search1: "",
     search2: "",
-    search3: "",
+    search3: [],
     loadOnPage: objectsList,
     //state for pagination
     pageNum: 1,
@@ -26,11 +26,17 @@ export default class ObjectsList extends Component {
       : event.target.id === "name"
       ? this.setState({ search2: event.target.value.substr(0, 20) })
       : (() => {
-          console.log("pretraga 3", event.target.value);
-          if (this.state.search3.length === 0) {
-            this.setState({ search3: event.target.value });
+          let arr = this.state.search3.flatMap((x) => Object.keys(x));
+          if (arr.indexOf(event.target.value) !== -1) {
+            let currentSearch3 = this.state.search3;
+            let search3Filtered = currentSearch3.filter((item) => {
+              return Object.keys(item)[0] !== event.target.value;
+            });
+            this.setState({ search3: search3Filtered });
           } else {
-            this.setState({ search3: "" });
+            let e = {};
+            e[event.target.value] = true;
+            this.setState({ search3: [...this.state.search3, e] });
           }
         })(this);
   };
@@ -166,17 +172,15 @@ export default class ObjectsList extends Component {
       );
     });
     let filtriraniObjekti3 = objectsList.filter((objekat) => {
-      if (this.state.search3 === "petFriendly") {
-        return objekat.facilities.petFriendly === true;
-      } else if (this.state.search3 === "liveMusic") {
-        return objekat.facilities.liveMusic === true;
-      } else if (this.state.search3 === "food") {
-        return objekat.facilities.food === true;
-      } else if (this.state.search3 === "wifi") {
-        return objekat.facilities.wifi === true;
-      } else {
-        return true;
-      }
+      let checkedFacilityFilters = this.state.search3.flatMap((x) =>
+        Object.keys(x)
+      );
+      let itemsArray = checkedFacilityFilters
+        .map((item) => {
+          return objekat.facilities[item];
+        })
+        .every((x) => x);
+      return itemsArray;
     });
     let filters12 = filtriraniObjekti1
       .filter((filtrObj) => {

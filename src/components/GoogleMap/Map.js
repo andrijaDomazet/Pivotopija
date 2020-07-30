@@ -15,7 +15,7 @@ const Markers = ({ places }) => {
             "https://mt.google.com/vt/icon/name=icons/spotlight/bar_v_L_8x.png&scale=1",
         }}
         key={place.id}
-        position={{ lat: place.lat, lng: place.lng }}
+        position={{ lat: parseFloat(place.lat), lng: parseFloat(place.lng) }}
         onClick={() => {
           console.log("Marker", place.name);
         }}
