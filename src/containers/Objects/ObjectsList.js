@@ -82,8 +82,10 @@ export default class ObjectsList extends Component {
   setPaginationPage = (page) => {
     this.setState({
       elemNum: [
-        (page - 1) * 15,
-        (page - 1) * 15 + this.state.operationPerPage - 1,
+        (page - 1) * (this.state.operationPerPage - 1),
+        (page - 1) * (this.state.operationPerPage - 1) +
+          this.state.operationPerPage -
+          1,
       ],
       pageNum: page,
     });
@@ -94,10 +96,10 @@ export default class ObjectsList extends Component {
       <div className="objectsList">
         <div className="objectsList__search">
           <Marquee />
-          {searchOption.map((option, index) => {
+          {searchOption.map((option) => {
             return (
               <input
-                key={index}
+                key={option.id}
                 id={option.id}
                 type="text"
                 placeholder={option.placeholder}
@@ -155,44 +157,38 @@ export default class ObjectsList extends Component {
     );
   }
   searchMethod() {
-    let filtriraniObjekti1 = objectsList.filter((objekat) => {
-      return (
-        objekat.city
-          .toLowerCase()
-          .substring(0, this.state.search1.length)
-          .indexOf(this.state.search1.toLowerCase()) !== -1
-      );
-    });
-    let filtriraniObjekti2 = objectsList.filter((objekat) => {
-      return (
-        objekat.name
-          .toLowerCase()
-          .substring(0, this.state.search2.length)
-          .indexOf(this.state.search2.toLowerCase()) !== -1
-      );
-    });
-    let filtriraniObjekti3 = objectsList.filter((objekat) => {
-      let checkedFacilityFilters = this.state.search3.flatMap((x) =>
-        Object.keys(x)
-      );
-      let itemsArray = checkedFacilityFilters
-        .map((item) => {
-          return objekat.facilities[item];
-        })
-        .every((x) => x);
-      return itemsArray;
-    });
-    let filters12 = filtriraniObjekti1
-      .filter((filtrObj) => {
-        return filtriraniObjekti2.includes(filtrObj);
+    let filteredObjects = objectsList
+      .filter((objekat) => {
+        return (
+          objekat.city
+            .toLowerCase()
+            .substring(0, this.state.search1.length)
+            .indexOf(this.state.search1.toLowerCase()) !== -1
+        );
       })
-      .filter((obj) => {
-        return filtriraniObjekti3.includes(obj);
+      .filter((objekat) => {
+        return (
+          objekat.name
+            .toLowerCase()
+            .substring(0, this.state.search2.length)
+            .indexOf(this.state.search2.toLowerCase()) !== -1
+        );
+      })
+      .filter((objekat) => {
+        return this.state.search3
+          .flatMap((x) => Object.keys(x))
+          .map((item) => {
+            return objekat.facilities[item];
+          })
+          .every((x) => x);
       });
-    const products = filters12.slice(
+    const products = filteredObjects.slice(
       this.state.elemNum[0],
       this.state.elemNum[1]
     );
-    this.setState({ selectedObjects: filters12, loadOnPage: products });
+    this.setState({
+      selectedObjects: filteredObjects,
+      loadOnPage: products,
+    });
   }
 }

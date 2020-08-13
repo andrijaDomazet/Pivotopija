@@ -157,7 +157,7 @@ export const spisakObjekta = [
   {
     id: 11,
     price: 4,
-    city: "beograd",
+    city: "zemun",
     img: "./img/objekti/prviMaj.jpg",
     name: "prvi maj",
     info:
