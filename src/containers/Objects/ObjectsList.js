@@ -80,6 +80,7 @@ export default class ObjectsList extends Component {
     });
   };
   setPaginationPage = (page) => {
+    window.scrollTo(0, this.myRef.offsetTop);
     this.setState({
       elemNum: [
         (page - 1) * (this.state.operationPerPage - 1),
@@ -135,7 +136,11 @@ export default class ObjectsList extends Component {
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">
-            <section className="objectsList__objects__obj">
+            <section
+              ref={(ref) => (this.myRef = ref)}
+              className="objectsList__objects__obj"
+              style={{ border: "1px solid red" }}
+            >
               {this.state.loadOnPage.map((objekat) => {
                 return (
                   <Objekat
