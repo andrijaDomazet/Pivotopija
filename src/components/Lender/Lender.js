@@ -14,7 +14,7 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    var intervalId = setInterval(this.changeCover, 10000);
+    var intervalId = setInterval(this.changeCover, 1110000);
   };
   // componentDidUpdate = (prevProps, prevState) => {
   // if (this.state.displayPosition !== prevState.displayPosition) {
@@ -51,18 +51,17 @@ export default class Lender extends Component {
   };
 
   render() {
-    // const { toggle3 } = this.props;
     return (
-      <div className="main_cover">
+      <div className="cover">
         <img src={this.state.cover[this.state.coverPosition]} alt="cover" />
         <div
           className="lady"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <img src={this.state.fotke[0]} alt="slika2" />
+          <img src={this.state.fotke[0]} alt="beer" />
         </div>
         <div
-          className="srednjeDugme"
+          className="centerButton"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
           <SimpleButton
