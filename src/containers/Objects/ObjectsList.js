@@ -8,6 +8,7 @@ import Map from "../../components/GoogleMap/Map";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
+  myRef = React.createRef();
   state = {
     search1: "",
     search2: "",
@@ -80,6 +81,8 @@ export default class ObjectsList extends Component {
     });
   };
   setPaginationPage = (page) => {
+    console.log("Myref", this.myRef);
+
     window.scrollTo(0, this.myRef.offsetTop);
     this.setState({
       elemNum: [
@@ -135,27 +138,25 @@ export default class ObjectsList extends Component {
           />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
-          <div className="objectsList__objects">
-            <section
-              ref={(ref) => (this.myRef = ref)}
-              className="objectsList__objects__obj"
-              style={{ border: "1px solid red" }}
-            >
-              {this.state.loadOnPage.map((objekat) => {
-                return (
-                  <Objekat
-                    key={objekat.id}
-                    objekat={objekat}
-                    removeObjekat={this.removeObjekat}
-                  />
-                );
-              })}
-              <Pagination
-                numberOfPages={this.state.numberOfPages}
-                pageNum={this.state.pageNum}
-                clicked={this.setPaginationPage}
-              />
-            </section>
+          <div
+            className="objectsList__objects"
+            ref={(ref) => (this.myRef = ref)}
+            style={{ border: "1px solid red" }}
+          >
+            {this.state.loadOnPage.map((objekat) => {
+              return (
+                <Objekat
+                  key={objekat.id}
+                  objekat={objekat}
+                  removeObjekat={this.removeObjekat}
+                />
+              );
+            })}
+            <Pagination
+              numberOfPages={this.state.numberOfPages}
+              pageNum={this.state.pageNum}
+              clicked={this.setPaginationPage}
+            />
           </div>
         </Suspense>
       </div>
