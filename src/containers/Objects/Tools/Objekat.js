@@ -1,18 +1,18 @@
-import React, { Component, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import "./Objekat.scss";
 import PodaciObjekta from "./PodaciObjekta";
 const SlikaObjekta = lazy(() => import("./SlikaObjekta"));
 
-export default class Objekat extends Component {
-  render() {
-    const { objekat, removeObjekat } = this.props;
-    return (
-      <article className="objekat">
-        <Suspense fallback={<div>Loading...</div>}>
-          <SlikaObjekta podaci={objekat} removeObjekat={removeObjekat} />
-        </Suspense>
-        <PodaciObjekta podaci={objekat} />
-      </article>
-    );
-  }
+export default function Objekat(props) {
+  return (
+    <article className="objekat" ref={props.refProp}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SlikaObjekta
+          podaci={props.objekat}
+          removeObjekat={props.removeObjekat}
+        />
+      </Suspense>
+      <PodaciObjekta podaci={props.objekat} />
+    </article>
+  );
 }

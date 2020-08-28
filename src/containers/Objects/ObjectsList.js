@@ -8,7 +8,11 @@ import Map from "../../components/GoogleMap/Map";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
-  myRef = React.createRef();
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  // myRef = 0;
   state = {
     search1: "",
     search2: "",
@@ -81,9 +85,6 @@ export default class ObjectsList extends Component {
     });
   };
   setPaginationPage = (page) => {
-    console.log("Myref", this.myRef);
-
-    window.scrollTo(0, this.myRef.offsetTop);
     this.setState({
       elemNum: [
         (page - 1) * (this.state.operationPerPage - 1),
@@ -93,6 +94,7 @@ export default class ObjectsList extends Component {
       ],
       pageNum: page,
     });
+    this.scrollTop.scrollIntoView({ behavior: "smooth" });
   };
   //====================== end =========================
   render() {
@@ -138,11 +140,13 @@ export default class ObjectsList extends Component {
           />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
-          <div
-            className="objectsList__objects"
-            ref={(ref) => (this.myRef = ref)}
-            style={{ border: "1px solid red" }}
-          >
+          <div className="objectsList__objects">
+            <div
+              style={{ position: "absolute", top: "0" }}
+              ref={(el) => {
+                this.scrollTop = el;
+              }}
+            ></div>
             {this.state.loadOnPage.map((objekat) => {
               return (
                 <Objekat
