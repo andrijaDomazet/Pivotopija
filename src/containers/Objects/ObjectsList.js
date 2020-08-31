@@ -8,11 +8,6 @@ import Map from "../../components/GoogleMap/Map";
 const Objekat = lazy(() => import("./Tools/Objekat"));
 
 export default class ObjectsList extends Component {
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-  }
-  // myRef = 0;
   state = {
     search1: "",
     search2: "",
