@@ -14,24 +14,8 @@ export default class Lender extends Component {
   };
 
   componentDidMount = () => {
-    var intervalId = setInterval(this.changeCover, 1110000);
+    var intervalId = setInterval(this.changeCover, 100000);
   };
-  // componentDidUpdate = (prevProps, prevState) => {
-  // if (this.state.displayPosition !== prevState.displayPosition) {
-  // clearInterval(this.state.intervalId);
-  // var intervalId = setInterval(this.reklama, 1000);
-  // this.setState({ interval: setInterval(this.reklama, 1000) });
-  // }
-  // if (this.state.displayPosition === 0) {
-  //   console.log("Interval", 0);
-  //   clearInterval(this.state.intervalId);
-  //   var intervalId = setInterval(this.reklama, 10000);
-  // } else {
-  //   console.log("Interval", 1);
-  //   clearInterval(this.state.intervalId);
-  //   var intervalId = setInterval(this.reklama, 1000);
-  // }
-  // };
   componentWillUnmount = () => {
     clearInterval(this.state.intervalId);
   };
@@ -75,9 +59,7 @@ export default class Lender extends Component {
           className="desnoDugme"
           style={{ display: this.state.display[this.state.displayPosition] }}
         >
-          <SimpleButton classes="btn__pluto" clicked={this.redirectFunc()}>
-            <img src={bottle} alt="bottle" />
-          </SimpleButton>
+          <img src={bottle} alt="bottle" onClick={this.redirectFunc()} />
         </div>
         <div
           style={{ display: this.state.display2[this.state.displayPosition] }}

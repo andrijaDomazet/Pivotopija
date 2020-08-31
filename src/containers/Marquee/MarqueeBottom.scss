@@ -2,14 +2,14 @@
 
 .marquee__bottom {
   display: none;
-  margin-bottom: 5px;
 }
 
 @media screen and(min-width:768px) {
   .marquee__bottom {
     display: inline-block;
     width: 100%;
-    height: 34px;
+    height: 2.5rem;
+    margin-bottom: 5px;
     overflow: hidden;
     span {
       letter-spacing: 4px;
@@ -19,7 +19,7 @@
       font-weight: bold;
     }
     p {
-      left: 0px;
+      left: 0;
       font-weight: 600;
       animation-name: marquee-animation;
       animation-duration: 22s;

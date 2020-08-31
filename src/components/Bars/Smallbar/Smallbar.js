@@ -1,6 +1,7 @@
 import React from "react";
 import "./Smallbar.scss";
 import { NavLink } from "react-router-dom";
+import { links } from "../../../shared/shared";
 
 export default function Smallbar() {
   return <div className="smallBar">{options()}</div>;
@@ -14,9 +15,3 @@ const options = () => {
     );
   });
 };
-const links = [
-  { path: "/festivali", title: "festivali 2019" },
-  { path: "/postupak", title: "Postupak izrade" },
-  { path: "/vrste", title: "Vrste piva" },
-  { path: "/presdstavljamo", title: "Predstavljamo" },
-];

@@ -1,10 +1,10 @@
 @import "../../index.scss";
 
 .cover {
-  width: 100%;
-  color: black;
-  height: 40vh;
   position: relative;
+  width: 100%;
+  height: 100%;
+  color: black;
   img {
     width: 100%;
     height: 100%;
@@ -46,24 +46,6 @@
   }
   .desnoDugme {
     display: none;
-    position: absolute;
-    bottom: -3rem;
-    .btn_pluto {
-      position: absolute;
-      background: transparent;
-      cursor: pointer;
-      z-index: +1;
-      img {
-        position: absolute;
-        z-index: +999;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-    &:hover {
-      transform: scale(1.02);
-    }
   }
 
   .preporucenoPivo {
@@ -105,7 +87,6 @@
 }
 @media screen and(min-width:769px) {
   .cover {
-    height: 75vh;
     margin: 0 auto;
     .lady {
       img {
@@ -122,12 +103,23 @@
     }
     .desnoDugme {
       display: block;
-      right: 2rem;
-      .btn__pluto {
-        img {
-          width: auto;
-          height: 90vh;
+      position: absolute;
+      bottom: -1.5rem;
+      right: 1.5rem;
+      height: 85vh;
+      cursor: pointer;
+      z-index: +1;
+      img {
+        top: 0;
+        width: auto;
+        height: 100%;
+        z-index: +999;
+        &:hover {
+          transform: scale(1.02);
         }
+      }
+      &:focus {
+        outline: none;
       }
     }
   }
@@ -136,8 +128,6 @@
 @media screen and(min-width:996px) {
   .cover {
     width: 90%;
-    .desnoDugme {
-    }
   }
 }
 @keyframes pulse {
