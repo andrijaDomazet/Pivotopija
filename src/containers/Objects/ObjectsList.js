@@ -21,6 +21,8 @@ export default class ObjectsList extends Component {
   };
 
   updateSearch = (event) => {
+    console.log("Event", event.target.id);
+
     event.target.id === "city"
       ? this.setState({
           search1: event.target.value.substr(0, 20),
