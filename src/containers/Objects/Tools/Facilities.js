@@ -3,7 +3,7 @@ import "./Facilities.scss";
 import { facilities } from "../../../shared/shared";
 export default function Facilities(props) {
   return (
-    <div className="facilities">
+    <div className={`facilities ${props.classes}`}>
       {Object.entries(props.facilities).map((facility, index) => {
         return facility[1] ? (
           <div key={index}>

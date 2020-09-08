@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import "./Bottom_menu.scss";
-import { spisakObjekta } from "../../allData";
+import { objectsList } from "../../allData";
 
 export default class Banner1 extends Component {
   state = {
-    objekti: spisakObjekta,
+    objekti: objectsList,
     pozicija: 0,
     // intervalId: 0
   };

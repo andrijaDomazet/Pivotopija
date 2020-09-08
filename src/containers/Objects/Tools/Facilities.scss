@@ -6,11 +6,23 @@
   height: 1.1rem;
   line-height: 1.1rem;
   vertical-align: middle;
-  border-top: 0.5px solid black;
-
+  border-top: 1px solid black;
+  margin: 0 0.3rem;
   i {
-    padding-top: 0.2rem;
-    font-size: 1rem;
+    color: $mainGrey2;
+    opacity: 0.8;
+    font-size: 0.8rem;
     margin: 0 0.3rem;
+    &:hover {
+      opacity: 1;
+      color: $mainYellow;
+    }
+  }
+}
+.facilities.small {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  i {
+    font-size: 0.7rem;
   }
 }

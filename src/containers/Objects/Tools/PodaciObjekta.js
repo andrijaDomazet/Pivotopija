@@ -5,7 +5,6 @@ import ToggleComments from "./ToggleComments";
 import Backdrop from "../../../components/Backdrop/Backdrop";
 import UpisKomentara from "./UpisKomentara";
 import PrikazKomentara from "./PrikazKomentara";
-import InfoObjekta from "./InfoObjekta";
 import Facilities from "./Facilities";
 
 export default class PodaciObjekta extends Component {
@@ -71,7 +70,7 @@ export default class PodaciObjekta extends Component {
     const { city, name, info, facilities } = this.props.podaci;
     return (
       <div className="objekat-info">
-        <div className="opsti-podaci">
+        <div className={`opsti-podaci ${this.props.classes}`}>
           <h3 onClick={this.okidacInfoObjekta}>{name}</h3>
           <h4>{city}</h4>
           <p>
@@ -79,7 +78,7 @@ export default class PodaciObjekta extends Component {
             doloremque vel similique illo quasi distinctio, commodi eius quidem,
             odio molestiae.
           </p>
-          <Facilities facilities={facilities} />
+          <Facilities classes={this.props.classes} facilities={facilities} />
           {this.state.showInfo && <p>{info}</p>}
         </div>
       </div>

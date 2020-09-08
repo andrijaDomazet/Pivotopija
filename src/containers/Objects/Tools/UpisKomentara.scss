@@ -24,14 +24,9 @@
     .upisKomentara-nazivObjekta {
       padding: 0.5rem 0 0 0.5rem;
       color: $mainYellow;
-      // flex: 1;
       text-transform: uppercase;
       font-size: 1.5rem;
-      // border-radius: 0.1rem;
-      // color: $mainYellow;
-      // margin-top: 5%;
       opacity: 1;
-      //   border: 1px solid red;
     }
 
     .upisKomentara-komentari {
@@ -43,19 +38,14 @@
         width: 80%;
       }
       li {
-        // color: white;
         text-decoration: none;
         list-style: none;
         border-bottom: 0.1px solid $mainYellow;
-      }
-      .upisKomentara-lista {
-        // color: white;
       }
     }
     .close-btn {
       position: absolute;
       display: block;
-      // top: %;
       right: 2%;
       font-size: 6vh;
       cursor: pointer;
@@ -135,13 +125,11 @@
       }
       .potvrda {
         position: absolute;
-        // border: none;
         outline: none;
         bottom: 5%;
         right: 5%;
-        // border: 2px solid white;
         color: white;
-        background: $mainGreen;
+        // background: $mainGreen;
         font-size: 1rem;
         cursor: pointer;
         border-radius: 0.1rem;

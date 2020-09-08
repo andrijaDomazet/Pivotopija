@@ -1,4 +1,4 @@
-export const spisakObjekta = [
+export const objectsList = [
   {
     id: 111,
     price: 1,

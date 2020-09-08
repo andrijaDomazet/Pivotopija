@@ -1,9 +1,9 @@
 import React from "react";
 import "./SocialButtons.scss";
 
-export default function SocialButtons() {
+export default function SocialButtons(props) {
   return (
-    <div className="socialButtons">
+    <div className={`socialButtons ${props.classes}`}>
       <div className="svidjanja">
         <p>
           Sviđanja:
