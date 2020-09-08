@@ -28,7 +28,7 @@
       margin: 0 0;
       border: none;
       font-size: 0.7rem;
-      color: $mainGreen;
+      color: $mainGrey2;
       background: transparent;
       transform: rotate(360deg) scaleX(-1);
       cursor: pointer;
@@ -60,4 +60,7 @@
       flex: 1;
     }
   }
+}
+.socialButtons.small {
+  display: none;
 }

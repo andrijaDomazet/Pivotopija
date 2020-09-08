@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./SlikaObjekta.scss";
 import "./Objekat.scss";
-import InfoObjekta from "./InfoObjekta";
 import SimpleButton from "../../../UI/Buttons/SimpleButton";
 import SocialButtons from "./SocialButtons";
 
@@ -23,19 +22,19 @@ export default class SlikaObjekta extends Component {
     const { id, img } = this.props.podaci;
 
     return (
-      <div className="img__container">
+      <div className={`img__container ${this.props.classes}`}>
         <img src={img} alt="" onClick={this.showInfoObject} />
+        <SimpleButton
+          classes={`smaller__btn ${this.props.classes}`}
+          clicked={this.closeObject(id)}
+          children={<i className="fas fa-compress-arrows-alt" />}
+        />
         <SimpleButton
           classes="close__btn"
           clicked={this.closeObject(id)}
           children={<i className="fa fa-window-close" />}
         />
-        <InfoObjekta
-          podaci={this.props.podaci}
-          removeCommentBox={this.removeCommentBox}
-          show={this.state.prikazInfoObjekta}
-        />
-        <SocialButtons />
+        <SocialButtons classes={this.props.classes} />
       </div>
     );
   }

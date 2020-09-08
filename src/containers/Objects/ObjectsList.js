@@ -18,11 +18,20 @@ export default class ObjectsList extends Component {
     operationPerPage: 16,
     elemNum: [0, 15],
     //end
+    screen: "",
+    onBigScreen: objectsList[0],
   };
+  changeScreen = (e) => {
+    console.log(e.id);
+    let a = this.state.objectsList.filter((objekat) => objekat.id === e.id);
+    console.log(a);
 
+    this.setState({
+      onBigScreen: a[0],
+      screen: this.state.screen.length === 0 ? "bigScreen" : "",
+    });
+  };
   updateSearch = (event) => {
-    console.log("Event", event.target.id);
-
     event.target.id === "city"
       ? this.setState({
           search1: event.target.value.substr(0, 20),
@@ -139,25 +148,36 @@ export default class ObjectsList extends Component {
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">
-            <div
-              ref={(el) => {
-                this.scrollTop = el;
-              }}
-            ></div>
-            {this.state.loadOnPage.map((objekat) => {
-              return (
-                <Objekat
-                  key={objekat.id}
-                  objekat={objekat}
-                  removeObjekat={this.removeObjekat}
-                />
-              );
-            })}
-            <Pagination
-              numberOfPages={this.state.numberOfPages}
-              pageNum={this.state.pageNum}
-              clicked={this.setPaginationPage}
-            />
+            <div className={`selectedObject ${this.state.screen}`}>
+              <Objekat
+                classes="bigScreen"
+                objekat={this.state.onBigScreen}
+                changeScreen={this.changeScreen}
+              />
+            </div>
+            <div className={`objectsList__objects-list ${this.state.screen}`}>
+              <div
+                ref={(el) => {
+                  this.scrollTop = el;
+                }}
+              ></div>
+              {this.state.loadOnPage.map((objekat) => {
+                return (
+                  <Objekat
+                    key={objekat.id}
+                    classes={this.state.screen.length === 0 ? "" : "small"}
+                    objekat={objekat}
+                    removeObjekat={this.removeObjekat}
+                    changeScreen={this.changeScreen}
+                  />
+                );
+              })}
+              <Pagination
+                numberOfPages={this.state.numberOfPages}
+                pageNum={this.state.pageNum}
+                clicked={this.setPaginationPage}
+              />
+            </div>
           </div>
         </Suspense>
       </div>

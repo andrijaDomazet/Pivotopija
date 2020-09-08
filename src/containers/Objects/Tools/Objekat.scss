@@ -1,16 +1,24 @@
 @import "../../../index.scss";
 
 .objekat {
-  background: white;
-  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.85);
   max-height: 295px;
+  border-radius: 0.5rem;
   img {
     width: 100%;
     height: 100%;
     display: block;
   }
 }
+.objekat.small {
+  max-height: 180px;
+  border: 0.5px solid grey;
 
+  border-radius: 5px;
+}
+.objekat.bigScreen {
+  min-height: 100%;
+}
 @media screem and(min-width:768px) {
   .objekat {
     box-shadow: 2px 3px 8px rgba(255, 0, 0, 0.589);
