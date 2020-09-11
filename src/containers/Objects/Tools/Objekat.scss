@@ -1,8 +1,8 @@
 @import "../../../index.scss";
 
 .objekat {
-  background: rgba(255, 255, 255, 0.85);
-  max-height: 295px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 0.5rem;
   img {
     width: 100%;
@@ -10,22 +10,51 @@
     display: block;
   }
 }
+.objekat::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: rgba(255, 255, 255, 0.25);
+  z-index: +999;
+}
+.objekat:hover::before {
+  background: rgba(255, 255, 255, 0.1);
+}
 .objekat.small {
   max-height: 180px;
   border: 0.5px solid grey;
-
   border-radius: 5px;
 }
+.objekat.small::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  z-index: +999;
+}
+.objekat.small:hover::before {
+  background: rgba(255, 255, 255, 0.25);
+}
 .objekat.bigScreen {
-  min-height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 0 1px 0;
+  border: 1px solid $mainYellow2;
+}
+.objekat.bigScreen::before {
+  display: none;
 }
 @media screem and(min-width:768px) {
   .objekat {
     box-shadow: 2px 3px 8px rgba(255, 0, 0, 0.589);
-  }
-}
-@media screen and(min-width:1140px) {
-  .objekat {
-    margin-top: 0.1rem;
   }
 }

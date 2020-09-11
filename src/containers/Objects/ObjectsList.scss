@@ -74,8 +74,10 @@
       display: none;
     }
     .selectedObject.bigScreen {
-      display: inline;
+      position: relative;
+      display: inline-block;
       flex: 3;
+      height: 100%;
     }
     .objectsList__objects-list {
       position: relative;
