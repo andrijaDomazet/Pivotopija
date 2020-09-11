@@ -26,7 +26,7 @@ export default class SlikaObjekta extends Component {
         <img src={img} alt="" onClick={this.showInfoObject} />
         <SimpleButton
           classes={`smaller__btn ${this.props.classes}`}
-          clicked={this.closeObject(id)}
+          clicked={this.setSmallObjects()}
           children={<i className="fas fa-compress-arrows-alt" />}
         />
         <SimpleButton
@@ -42,6 +42,11 @@ export default class SlikaObjekta extends Component {
   closeObject(id) {
     return () => {
       this.props.removeObjekat(id);
+    };
+  }
+  setSmallObjects() {
+    return () => {
+      this.props.setSmallObjects();
     };
   }
 }

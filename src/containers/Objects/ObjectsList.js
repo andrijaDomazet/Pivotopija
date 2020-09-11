@@ -21,15 +21,38 @@ export default class ObjectsList extends Component {
     screen: "",
     onBigScreen: objectsList[0],
   };
+  componentWillMount = () => {
+    this.promiseFunc();
+  };
+  componentDidUpdate = (prevProps, prevState) => {
+    if (
+      this.state.objectsList !== prevState.objectsList ||
+      this.state.search1 !== prevState.search1 ||
+      this.state.search2 !== prevState.search2 ||
+      this.state.search3 !== prevState.search3 ||
+      this.state.elemNum !== prevState.elemNum
+    ) {
+      this.promiseFunc();
+    }
+  };
+  promiseFunc = () => {
+    const promise2 = new Promise((resolve, reject) => {
+      resolve("Success");
+      this.searchMethod();
+    });
+    promise2.then(() => {
+      this.setPageNumber();
+    });
+  };
   changeScreen = (e) => {
-    console.log(e.id);
     let a = this.state.objectsList.filter((objekat) => objekat.id === e.id);
-    console.log(a);
-
     this.setState({
       onBigScreen: a[0],
-      screen: this.state.screen.length === 0 ? "bigScreen" : "",
+      screen: "bigScreen",
     });
+  };
+  setSmallObjects = () => {
+    this.setState({ screen: "" });
   };
   updateSearch = (event) => {
     event.target.id === "city"
@@ -59,21 +82,8 @@ export default class ObjectsList extends Component {
       objectsList: filter,
     });
   };
-  componentDidUpdate = (prevProps, prevState) => {
-    if (
-      this.state.objectsList !== prevState.objectsList ||
-      this.state.search1 !== prevState.search1 ||
-      this.state.search2 !== prevState.search2 ||
-      this.state.search3 !== prevState.search3 ||
-      this.state.elemNum !== prevState.elemNum
-    ) {
-      this.promiseFunc();
-    }
-  };
+
   // functions for Pagination ==========================
-  componentWillMount = () => {
-    this.promiseFunc();
-  };
   setPageNumber = () => {
     this.setState({
       numberOfPages: Math.ceil(
@@ -94,16 +104,6 @@ export default class ObjectsList extends Component {
     this.scrollTop.scrollIntoView({ behavior: "smooth" });
   };
   //====================== end =========================
-
-  promiseFunc = () => {
-    const promise2 = new Promise((resolve, reject) => {
-      resolve("Success");
-      this.searchMethod();
-    });
-    promise2.then(() => {
-      this.setPageNumber();
-    });
-  };
   render() {
     return (
       <div className="objectsList">
@@ -152,7 +152,7 @@ export default class ObjectsList extends Component {
               <Objekat
                 classes="bigScreen"
                 objekat={this.state.onBigScreen}
-                changeScreen={this.changeScreen}
+                setSmallObjects={this.setSmallObjects}
               />
             </div>
             <div className={`objectsList__objects-list ${this.state.screen}`}>
