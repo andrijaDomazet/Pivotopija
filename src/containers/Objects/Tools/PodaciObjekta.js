@@ -69,7 +69,7 @@ export default class PodaciObjekta extends Component {
     }
     const { city, name, info, facilities } = this.props.podaci;
     return (
-      <div className="objekat-info">
+      <div className={`objekat-info ${this.props.classes}`}>
         <div className={`opsti-podaci ${this.props.classes}`}>
           <h3 onClick={this.okidacInfoObjekta}>{name}</h3>
           <h4>{city}</h4>

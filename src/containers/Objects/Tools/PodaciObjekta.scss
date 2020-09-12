@@ -2,7 +2,6 @@
 
 .objekat-info {
   position: relative;
-  // border: 1px solid red;
   .opsti-podaci {
     padding: 5px;
     h3 {
@@ -26,9 +25,31 @@
       font-size: 0.7rem;
     }
   }
-  .opsti-podaci.small {
-    p {
-      display: none;
-    }
+}
+.objekat-info.bigScreen {
+  position: absolute;
+  top: 350px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.opsti-podaci.small {
+  p {
+    display: none;
   }
+}
+.opsti-podaci.bigScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  h3 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+.opsti-podaci.bigScreen > div:last-of-type {
+  border: none;
+  margin-top: auto;
 }

@@ -45,6 +45,7 @@ export default class ObjectsList extends Component {
     });
   };
   changeScreen = (e) => {
+    console.log(e.id);
     let a = this.state.objectsList.filter((objekat) => objekat.id === e.id);
     this.setState({
       onBigScreen: a[0],
