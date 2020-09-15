@@ -9,7 +9,6 @@ export default class BeersList extends Component {
     searchBeerName: "",
     searchBeerAlc: "",
   };
-
   updateSearch1 = (event) => {
     this.setState({ searchBeerName: event.target.value.substr(0, 20) });
   };
