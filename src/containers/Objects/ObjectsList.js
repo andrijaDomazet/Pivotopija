@@ -20,6 +20,7 @@ export default class ObjectsList extends Component {
     //end
     screen: "",
     onBigScreen: objectsList[0],
+    showOnMap: 0,
   };
   componentWillMount = () => {
     this.promiseFunc();
@@ -45,6 +46,7 @@ export default class ObjectsList extends Component {
     });
   };
   changeScreen = (e) => {
+    // console.log(e);
     console.log(e.id);
     let a = this.state.objectsList.filter((objekat) => objekat.id === e.id);
     this.setState({
@@ -52,8 +54,15 @@ export default class ObjectsList extends Component {
       screen: "bigScreen",
     });
   };
+  changeScreen1 = (e) => {
+    console.log("idemooo 777", e);
+  };
   setSmallObjects = () => {
     this.setState({ screen: "" });
+  };
+  showOnMap = (e) => {
+    console.log("idemooo", e);
+    this.setState({ showOnMap: e });
   };
   updateSearch = (event) => {
     event.target.id === "city"
@@ -145,6 +154,8 @@ export default class ObjectsList extends Component {
             containerElement={<div style={{ height: `80%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
             places={this.state.loadOnPage}
+            showOnMap={this.state.showOnMap}
+            changeScreen={this.changeScreen}
           />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
@@ -154,6 +165,7 @@ export default class ObjectsList extends Component {
                 classes="bigScreen"
                 objekat={this.state.onBigScreen}
                 setSmallObjects={this.setSmallObjects}
+                showOnMap={this.showOnMap}
               />
             </div>
             <div className={`objectsList__objects-list ${this.state.screen}`}>
@@ -170,6 +182,7 @@ export default class ObjectsList extends Component {
                     objekat={objekat}
                     removeObjekat={this.removeObjekat}
                     changeScreen={this.changeScreen}
+                    showOnMap={this.showOnMap}
                   />
                 );
               })}

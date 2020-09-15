@@ -13,6 +13,9 @@ export default function Objekat(props) {
           ? ""
           : props.changeScreen(props.objekat);
       }}
+      onMouseOver={() => {
+        props.showOnMap(props.objekat.id);
+      }}
     >
       <Suspense fallback={<div>Loading...</div>}>
         <SlikaObjekta

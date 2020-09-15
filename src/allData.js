@@ -67,8 +67,8 @@ export const objectsList = [
       food: false,
       wifi: false,
     },
-    lat: 44.840039,
-    lng: 20.408856,
+    lat: 44.839526,
+    lng: 20.407919,
   },
   {
     id: 4,

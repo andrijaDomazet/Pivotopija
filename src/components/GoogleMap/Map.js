@@ -6,18 +6,24 @@ import {
   withScriptjs,
 } from "react-google-maps";
 
-const Markers = ({ places }) => {
+const Markers = ({ places, showOnMap, changeScreen }) => {
   return places.map((place) => {
+    const show = () => {
+      return place.id === showOnMap
+        ? "http://maps.google.com/mapfiles/marker_green.png"
+        : "http://maps.google.com/mapfiles/marker_yellow.png";
+    };
+
     return (
       <Marker
         icon={{
-          url:
-            "https://mt.google.com/vt/icon/name=icons/spotlight/bar_v_L_8x.png&scale=1",
+          url: show(),
+          // "https://mt.google.com/vt/icon/name=icons/spotlight/bar_v_L_8x.png&scale=1",
         }}
         key={place.id}
         position={{ lat: parseFloat(place.lat), lng: parseFloat(place.lng) }}
         onClick={() => {
-          console.log("Marker", place.name);
+          changeScreen(place);
         }}
       />
     );
@@ -30,16 +36,23 @@ const zoom1 = 12;
 //ToDo- change center with fifferent objects list
 const center1 = { lat: 44.821726, lng: 20.443851 };
 
-const Map = ({ places, zoom, center }) => {
+// const showOnMap = this.props.showOnMap;
+const Map = ({ places, showOnMap, changeScreen }) => {
   return (
     <GoogleMap defaultZoom={zoom1} defaultCenter={center1}>
-      <Markers places={places} />
+      <Markers
+        places={places}
+        showOnMap={showOnMap}
+        changeScreen={changeScreen}
+      />
     </GoogleMap>
   );
 };
 
 class MapWithMarker extends React.Component {
-  state = { places: this.props.places }; //initialize initial state from props
+  state = {
+    places: this.props.places,
+  }; //initialize initial state from props
 
   addPlace() {
     const newPlaces = () => {
@@ -62,7 +75,15 @@ class MapWithMarker extends React.Component {
     }
   };
   render() {
-    return <Map center={center1} zoom={zoom1} places={this.state.places} />;
+    return (
+      <Map
+        center={center1}
+        zoom={zoom1}
+        places={this.state.places}
+        showOnMap={this.props.showOnMap}
+        changeScreen={this.props.changeScreen}
+      />
+    );
   }
 }
 
