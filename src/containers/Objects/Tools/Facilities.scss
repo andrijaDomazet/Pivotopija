@@ -20,19 +20,22 @@
   }
 }
 .facilities.small {
-  height: 0.7rem;
-  line-height: 0.7rem;
+  height: 1rem;
+  line-height: 1rem;
+  border: none;
+  margin: 0;
   i {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    margin: 0 0.2rem;
   }
 }
 .facilities.bigScreen {
   margin: 0;
   justify-content: flex-end;
-  height: 1.4rem;
-  line-height: 1.4rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
   i {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0 0.5rem;
   }
 }
