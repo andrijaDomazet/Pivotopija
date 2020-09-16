@@ -35,6 +35,8 @@ export const objectsList = [
     info: "Adresa: Beogradska 14, Zemun",
     fb: "https://www.facebook.com/CrveniRak/?ref=br_rs",
     facilities: { petFriendly: true, liveMusic: true, food: true, wifi: true },
+    description:
+      "Pivnica Crveni Rak je najstariji pub u Zemunu i dobro poznata adresa za istinske ljubitelje piva svih generacija. Pored 14 godina duge tradicije, ono po čemu se naš pub razlikuje od drugih je specifična atmosfera, kao i najraznovrsniji izbor točenog i flaširanog piva u gradu.",
   },
   {
     id: 2,

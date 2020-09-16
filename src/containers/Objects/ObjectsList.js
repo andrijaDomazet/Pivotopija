@@ -46,25 +46,21 @@ export default class ObjectsList extends Component {
     });
   };
   changeScreen = (e) => {
-    // console.log(e);
-    console.log(e.id);
     let a = this.state.objectsList.filter((objekat) => objekat.id === e.id);
     this.setState({
       onBigScreen: a[0],
       screen: "bigScreen",
     });
   };
-  changeScreen1 = (e) => {
-    console.log("idemooo 777", e);
-  };
   setSmallObjects = () => {
     this.setState({ screen: "" });
   };
   showOnMap = (e) => {
-    console.log("idemooo", e);
     this.setState({ showOnMap: e });
   };
   updateSearch = (event) => {
+    this.setState({ screen: "" });
+
     event.target.id === "city"
       ? this.setState({
           search1: event.target.value.substr(0, 20),

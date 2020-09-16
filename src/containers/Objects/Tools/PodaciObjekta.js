@@ -61,23 +61,29 @@ export default class PodaciObjekta extends Component {
       showInfo: !this.state.showInfo,
     });
   };
-
+  description = (desc) => {
+    if (desc === undefined) {
+      return "Ne postoji opis lokala";
+    } else {
+      return desc;
+    }
+  };
   render() {
+    let e1 = "233";
+    let e = e1.length;
+    console.log(e);
+
     let backdrop;
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
-    const { city, name, info, facilities } = this.props.podaci;
+    const { city, name, info, facilities, description } = this.props.podaci;
     return (
       <div className={`objekat-info ${this.props.classes}`}>
         <div className={`opsti-podaci ${this.props.classes}`}>
           <h3 onClick={this.okidacInfoObjekta}>{name}</h3>
           <h4>{city}</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            doloremque vel similique illo quasi distinctio, commodi eius quidem,
-            odio molestiae.
-          </p>
+          <p>{this.description(description)}</p>
           <Facilities classes={this.props.classes} facilities={facilities} />
           {this.state.showInfo && <p>{info}</p>}
         </div>
