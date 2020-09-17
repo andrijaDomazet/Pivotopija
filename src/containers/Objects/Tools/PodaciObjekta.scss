@@ -19,7 +19,7 @@
       margin: 0;
     }
     p {
-      min-height: 150px;
+      // min-height: 150px;
       padding: 0;
       margin: 0;
       color: rgb(70, 70, 70);
@@ -54,4 +54,10 @@
 .opsti-podaci.bigScreen > div:last-of-type {
   border: none;
   margin-top: auto;
+}
+
+@media screen and(min-width:768px) {
+  p {
+    min-height: 120px;
+  }
 }

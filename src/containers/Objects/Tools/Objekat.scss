@@ -18,7 +18,7 @@
   right: 0;
   bottom: 0;
   content: "";
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   z-index: +999;
 }
 .objekat:hover::before {
@@ -49,7 +49,7 @@
   right: 0;
   top: 0;
   margin: 0 0 1px 0;
-  border: 1px solid $mainYellow2;
+  border: 1px solid $mainYellow2; //???????????
 }
 .objekat.bigScreen::before {
   display: none;

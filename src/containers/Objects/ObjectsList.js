@@ -144,15 +144,17 @@ export default class ObjectsList extends Component {
               })}
             </div>
           </div>
-          <Map
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlWxwplOXzrSL4iiZFCYl19MzootQg3js"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `80%` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-            places={this.state.loadOnPage}
-            showOnMap={this.state.showOnMap}
-            changeScreen={this.changeScreen}
-          />
+          <div className="objectsList__search-map">
+            <Map
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlWxwplOXzrSL4iiZFCYl19MzootQg3js"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `100%` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+              places={this.state.loadOnPage}
+              showOnMap={this.state.showOnMap}
+              changeScreen={this.changeScreen}
+            />
+          </div>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="objectsList__objects">

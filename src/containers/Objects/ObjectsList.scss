@@ -1,20 +1,24 @@
 @import "../../index.scss";
 
 .objectsList {
-  height: 86vh;
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   .objectsList__search {
-    flex: 1;
     display: flex;
+    min-height: 50%;
+    position: relative;
     flex-direction: column;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     margin: 0 10px;
-
     .objectsList__search-more {
       margin-bottom: 5px;
       border: 1px solid white;
+    }
+    .objectsList__search-map {
+      flex: 1;
+      height: 100%;
     }
     .objectsList__search-more > div {
       display: flex;
@@ -59,43 +63,56 @@
   }
 
   .objectsList__objects {
-    flex: 2;
-    height: 100%;
+    flex: 1;
+    .selectedObject {
+      display: none;
+    }
+    .objectsList__objects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 0 0.3rem;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .objectsList {
+    height: 86vh;
     flex-direction: row;
-  }
-  .objectsList__objects {
-    display: flex;
-    grid-column-gap: 1rem;
-    .selectedObject {
-      display: none;
-    }
-    .selectedObject.bigScreen {
-      position: relative;
-      display: inline-block;
-      flex: 3;
-      height: 100%;
-    }
-    .objectsList__objects-list {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      overflow-y: scroll;
-      padding-right: 10px;
-      height: 100%;
-    }
-    .objectsList__objects-list.bigScreen {
-      display: inline-flex;
-      flex-direction: column;
+    .objectsList__search {
       flex: 1;
-      gap: 5px;
+      max-height: 100%;
+    }
+    .objectsList__objects {
+      flex: 2;
+      display: flex;
+      grid-column-gap: 1rem;
+      .selectedObject.bigScreen {
+        position: relative;
+        display: inline-block;
+        flex: 3;
+        height: 100%;
+      }
+      .objectsList__objects-list {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        overflow-y: scroll;
+        margin: 0;
+        padding-right: 10px;
+        height: 100%;
+      }
+      .objectsList__objects-list.bigScreen {
+        display: inline-flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 5px;
+      }
     }
   }
+
   .objectsList__objects-list > div:first-child {
     position: absolute;
     top: 0;
