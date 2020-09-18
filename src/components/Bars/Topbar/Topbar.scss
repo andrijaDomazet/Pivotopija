@@ -1,13 +1,10 @@
 @import "../../../index.scss";
 
 .topbar-header {
-  z-index: +2;
   top: 0;
-  width: 100%;
   height: 1.4rem;
   align-items: center;
   padding: 0 auto;
-
   background: #523d00;
   background: -moz-linear-gradient(left, #523d00 0%, #856300 31%, #cc9900 100%);
   background: -webkit-linear-gradient(
@@ -21,8 +18,6 @@
 
 .topbar-nav {
   display: flex;
-  height: 100%;
-  padding: 0 1rem;
 }
 
 .navigation-items ul {
@@ -84,12 +79,10 @@
 
 @media screen and(min-width:996px) {
   .topbar-header {
-    padding-right: 15%;
+    padding-right: 5%;
     .topbar-nav {
       display: flex;
       height: 100%;
-      margin-right: 0 0;
-      padding: 0 1rem;
     }
     .toggle-button {
       display: none;
