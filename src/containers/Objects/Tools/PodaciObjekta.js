@@ -69,10 +69,6 @@ export default class PodaciObjekta extends Component {
     }
   };
   render() {
-    let e1 = "233";
-    let e = e1.length;
-    console.log(e);
-
     let backdrop;
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />;

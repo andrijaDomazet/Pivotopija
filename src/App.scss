@@ -11,3 +11,14 @@
   src: local("Melvis"),
     url("./UI/Fonts/Fonts/Melvis Rough.otf") format("opentype");
 }
+
+@media screen and(max-width:768px) {
+  .app {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
