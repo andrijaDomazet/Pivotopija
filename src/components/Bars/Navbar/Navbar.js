@@ -33,9 +33,6 @@ export default class Navbar extends Component {
 
     return (
       <div className="navBar">
-        <div className="toggle-button">
-          <ToggleButton click={this.drawerToggleClickHandler} />
-        </div>
         <div className="nav-links">
           {routeOptions.map((option, index) => {
             return (
@@ -44,11 +41,13 @@ export default class Navbar extends Component {
                 to={option.route}
                 exact
                 className="nav__link"
-              >
-                {option.title}
-              </NavLink>
+                children={option.title}
+              />
             );
           })}
+        </div>
+        <div className="toggle-button">
+          <ToggleButton click={this.drawerToggleClickHandler} />
         </div>
         <SideDrawer
           show={this.state.sideDrawerOpen}

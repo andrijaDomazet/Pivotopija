@@ -10,7 +10,7 @@ const Markers = ({ places, showOnMap, changeScreen }) => {
   return places.map((place) => {
     const show = () => {
       return place.id === showOnMap
-        ? "http://maps.google.com/mapfiles/marker_green.png"
+        ? "http://maps.google.com/mapfiles/marker_black.png"
         : "http://maps.google.com/mapfiles/marker_yellow.png";
     };
 
