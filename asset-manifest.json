@@ -1,14 +1,14 @@
 {
-  "main.css": "/Pivotopija/static/css/main.de26545e.chunk.css",
-  "main.js": "/Pivotopija/static/js/main.094f17d5.chunk.js",
-  "main.js.map": "/Pivotopija/static/js/main.094f17d5.chunk.js.map",
-  "runtime~main.js": "/Pivotopija/static/js/runtime~main.1ce44ee3.js",
-  "runtime~main.js.map": "/Pivotopija/static/js/runtime~main.1ce44ee3.js.map",
-  "static/js/2.87218de3.chunk.js": "/Pivotopija/static/js/2.87218de3.chunk.js",
-  "static/js/2.87218de3.chunk.js.map": "/Pivotopija/static/js/2.87218de3.chunk.js.map",
-  "index.html": "/Pivotopija/index.html",
-  "precache-manifest.a0d13a52f00598da6bb65681a585f891.js": "/Pivotopija/precache-manifest.a0d13a52f00598da6bb65681a585f891.js",
-  "service-worker.js": "/Pivotopija/service-worker.js",
-  "static/css/main.de26545e.chunk.css.map": "/Pivotopija/static/css/main.de26545e.chunk.css.map",
-  "static/media/App.scss": "/Pivotopija/static/media/beer.e5337971.jpg"
+  "main.css": "/static/css/main.2b5195d4.chunk.css",
+  "main.js": "/static/js/main.ea112427.chunk.js",
+  "main.js.map": "/static/js/main.ea112427.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.87218de3.chunk.js": "/static/js/2.87218de3.chunk.js",
+  "static/js/2.87218de3.chunk.js.map": "/static/js/2.87218de3.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.4c6d5809320fb1b04dbb98130294c5cb.js": "/precache-manifest.4c6d5809320fb1b04dbb98130294c5cb.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.2b5195d4.chunk.css.map": "/static/css/main.2b5195d4.chunk.css.map",
+  "static/media/App.scss": "/static/media/beer.e5337971.jpg"
 }
